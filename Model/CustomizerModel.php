@@ -18,6 +18,14 @@ class CustomizerFileModel extends FileModel
      * @var string
      */
     const TABLE = 'customizer_files';
+    
+     /**
+     * Events
+     *
+     * @var string
+     */
+    const EVENT_CREATE = 'custom.file.create';
+   
 
     /**
      * Get the table
@@ -41,7 +49,7 @@ class CustomizerFileModel extends FileModel
      */
     protected function getForeignKey()
     {
-        return 'wikipage_id';
+        return 'custom_id';
     }
 
     /**
@@ -57,18 +65,6 @@ class CustomizerFileModel extends FileModel
     }
 
     /**
-     * Get projectId from fileId
-     *
-     * @access public
-     * @param  integer $file_id
-     * @return integer
-     */
-    public function getProjectId($file_id)
-    {
-        return 1;
-    }
-
-    /**
      * Handle screenshot upload
      *
      * @access public
@@ -76,10 +72,10 @@ class CustomizerFileModel extends FileModel
      * @param  string   $blob         Base64 encoded image
      * @return bool|integer
      */
-    public function uploadScreenshot($wiki_id, $blob)
+    public function uploadScreenshot($custom_id, $blob)
     {
         $original_filename = e('Screenshot taken %s', $this->helper->dt->datetime(time())).'.png';
-        return $this->uploadContent($wiki_id, $original_filename, $blob);
+        return $this->uploadContent($custom_id, $original_filename, $blob);
     }
 
     /**
