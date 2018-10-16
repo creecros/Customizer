@@ -67,14 +67,10 @@ class CustomizerFileController extends BaseController
      */
     public function show()
     {
-        $file = $file = $this->wikiFile->getById($this->request->getIntegerParam('fid'));
+        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
         $type = $this->helper->file->getPreviewType($file['name']);
-        $params = array('file_id' => $file['id'], 'project_id' => $this->request->getIntegerParam('project_id'));
-
+        $params = array('file_id' => $file['id'], 'custom_id' => $file['custom_id']);
         
-        $params['wikipage_id'] = $file['wikipage_id'];
-        
-
         $this->response->html($this->template->render('file_viewer/show', array(
             'file' => $file,
             'params' => $params,
@@ -90,7 +86,7 @@ class CustomizerFileController extends BaseController
      */
     public function image()
     {
-        $file = $this->wikiFile->getById($this->request->getIntegerParam('fid'));
+        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
     }
 
@@ -101,7 +97,7 @@ class CustomizerFileController extends BaseController
      */
     public function browser()
     {
-        $file = $this->wikiFile->getById($this->request->getIntegerParam('fid'));
+        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
         $this->renderFileWithCache($file, $this->helper->file->getBrowserViewType($file['name']));
     }
 
@@ -112,8 +108,8 @@ class CustomizerFileController extends BaseController
      */
     public function thumbnail()
     {
-        $file = $this->wikiFile->getById($this->request->getIntegerParam('fid'));
-        $model = 'wikiFile';
+        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
+        $model = 'customizerFileModel';
         $filename = $this->$model->getThumbnailPath($file['path']);
         $etag = md5($filename);
 
@@ -148,8 +144,8 @@ class CustomizerFileController extends BaseController
     public function download()
     {
         try {
-            $file = $this->wikiFile->getById($this->request->getIntegerParam('fid'));
-            $file['model'] = 'wikiFile';
+            $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
+            $file['model'] = 'customizerFileModel';
             $this->response->withFileDownload($file['name']);
             $this->response->send();
             $this->objectStorage->output($file['path']);
@@ -157,17 +153,7 @@ class CustomizerFileController extends BaseController
             $this->logger->error($e->getMessage());
         }
     }
-    public function screenshot()
-    {
-        $wiki = $this->wiki->getWiki();
-        if ($this->request->isPost() && $this->wikiFile->uploadScreenshot($wiki['id'], $this->request->getValue('screenshot')) !== false) {
-            $this->flash->success(t('Screenshot uploaded successfully.'));
-            return $this->response->redirect($this->helper->url->to('WikiViewController', 'show', array('wiki_id' => $wiki['id'], 'project_id' => $wiki['project_id'])), true);
-        }
-        return $this->response->html($this->template->render('wiki:wiki_file/screenshot', array(
-            'wiki' => $wiki,
-        )));
-    }
+    
     /**
      * File upload form
      *
@@ -179,9 +165,6 @@ class CustomizerFileController extends BaseController
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
         $wiki = $this->wiki->getWiki();
-        // $this->hourlyRate->getAllByProject($records[0]['project_id']);
-        // $this->wikiFile->getAllByProject($records[0]['project_id']);
-        // $this->wiki->getDailyWikiBreakdown($project['id']),
         $this->response->html($this->template->render('wiki:wiki_file/create', array(
             'wiki' => $wiki,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
