@@ -10,7 +10,7 @@ function version_1(PDO $pdo)
 {
    $pdo->exec("CREATE TABLE customizer_files (
         id INT NOT NULL AUTO_INCREMENT,
-        name VARCHAR(50),
+        name VARCHAR(255),
         path VARCHAR(255),
         is_image TINYINT(1) DEFAULT 0,
         date INT NOT NULL DEFAULT 0,
