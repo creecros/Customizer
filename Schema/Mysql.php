@@ -16,8 +16,7 @@ function version_1(PDO $pdo)
         date INT NOT NULL DEFAULT 0,
         user_id INT NOT NULL DEFAULT 0,
         size INT NOT NULL DEFAULT 0,
-        PRIMARY KEY (id),
-        FOREIGN KEY(wikipage_id) REFERENCES wikipage(id) ON DELETE CASCADE
+        PRIMARY KEY (id)
     ) ENGINE=InnoDB CHARSET=utf8"
     );
 }
