@@ -113,7 +113,7 @@ class CustomizerFileController extends BaseController
         error_reporting(E_ALL);
         $custom_id = $this->request->getIntegerParam('custom_id');
         
-        $result = $this->customizerFileModel->uploadFile($custom_id, $this->request->getFileInfo('files'));
+        $result = $this->customizerFileModel->uploadFiles($custom_id, $this->request->getFileInfo('files'));
         if ($this->request->isAjax()) {
             if (!$result) {
                 $this->response->json(array('message' => t('Unable to upload files, check the permissions of your data folder.')), 500);
