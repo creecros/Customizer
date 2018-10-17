@@ -3,7 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div>
-        <img src="<?= $this->url->href('CustomizerController', 'image', array('file_id' => $logo['id']) ?>" alt="<?= $this->text->e($logo['name']) ?>">
+        <img src="<?= $this->url->href('CustomizerController', 'image', array('file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>">
     </div>
      <ul>
     <?php
