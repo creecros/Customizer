@@ -1,5 +1,3 @@
-<?php if (! empty($image)): ?>
-    <div class="file-thumbnails">
-        <img src="'.$image['path'].'" />
-    </div>
+<?php if (! empty($logo)): ?>
+        <img src="'.$logo['path'].'" />
 <?php endif ?>
