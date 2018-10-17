@@ -1,5 +1,5 @@
-<?php if (! empty($image)): ?>
+<?php if (! empty($flavicon)): ?>
     <div class="file-thumbnails">
-        <img src="'.$image['path'].'" />
+        <img src="'.$flavicon['path'].'" />
     </div>
 <?php endif ?>
