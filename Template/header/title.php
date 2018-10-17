@@ -1,7 +1,9 @@
 <h1>
     <?php if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <span class="logo">
-        <?= $this->url->link('<img src="' . <?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getByType(1))) ?> . '" alt="<?= $this->text->e($logo['name']) ?>"/>', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
+      <a href="default.asp">
+        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getByType(1))) ?>" height="50">
+      </a>
     </span>
     <?php else: ?>
     <span class="logo">
