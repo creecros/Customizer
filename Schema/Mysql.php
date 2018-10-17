@@ -17,7 +17,6 @@ function version_1(PDO $pdo)
         date INT NOT NULL DEFAULT 0,
         user_id INT NOT NULL DEFAULT 0,
         size INT NOT NULL DEFAULT 0,
-        FOREIGN KEY(custom_id) REFERENCES customizer(id) ON DELETE CASCADE,
         PRIMARY KEY (id)
     ) ENGINE=InnoDB CHARSET=utf8"
     );
