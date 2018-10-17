@@ -3,7 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div>
-        <img src="'.$logo['path'].'" />
+        <img src='"' . $logo['path'] . '"' />
     </div>
      <ul>
     <?php
