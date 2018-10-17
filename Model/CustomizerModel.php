@@ -2,7 +2,10 @@
 
 namespace Kanboard\Plugin\Customizer\Model;
 
-use Kanboard\Model\FileModel;
+use Exception;
+use Kanboard\Core\Base;
+use Kanboard\Core\Thumbnail;
+use Kanboard\Core\ObjectStorage\ObjectStorageException;
 
 /**
  * Customizer File Model
@@ -10,7 +13,7 @@ use Kanboard\Model\FileModel;
  * @package  Customizer\Model
  * @author   creecros
  */
-class CustomizerFileModel extends FileModel
+class CustomizerFileModel
 {
     /**
      * Table name
@@ -18,14 +21,6 @@ class CustomizerFileModel extends FileModel
      * @var string
      */
     const TABLE = 'customizer_files';
-    
-     /**
-     * Events
-     *
-     * @var string
-     */
-    const EVENT_CREATE = 'custom.file.create';
-   
 
     /**
      * Get the table
@@ -34,24 +29,11 @@ class CustomizerFileModel extends FileModel
      * @access protected
      * @return string
      */
-    protected function getTable()
+    public function getTable()
     {
         return self::TABLE;
     }
     
-
-    /**
-     * Define the foreign key
-     *
-     * @abstract
-     * @access protected
-     * @return string
-     */
-    protected function getForeignKey()
-    {
-        return 'custom_id';
-    }
-
     /**
      * Define the path prefix
      *
@@ -59,34 +41,201 @@ class CustomizerFileModel extends FileModel
      * @access protected
      * @return string
      */
-    protected function getPathPrefix()
+    public function getPathPrefix()
     {
         return 'customizer';
     }
 
-    /**
-     * Handle screenshot upload
+     /**
+     * Get a file by the Id
      *
      * @access public
-     * @param  integer  $wiki_id      Wiki id
-     * @param  string   $blob         Base64 encoded image
+     * @param  integer   $file_id    File id
+     * @return array
+     */
+    public function getById($file_id)
+    {
+        return $this->db->table($this->getTable())->eq('id', $file_id)->findOne();
+    }
+    
+    /**
+     * Create a file entry in the database
+     *
+     * @access public
+     * @param  string  $name           Filename
+     * @param  string  $path           Path on the disk
+     * @param  integer $size           File size
      * @return bool|integer
      */
-    public function uploadScreenshot($custom_id, $blob)
+    public function create($foreign_key_id, $name, $path, $size)
     {
-        $original_filename = e('Screenshot taken %s', $this->helper->dt->datetime(time())).'.png';
-        return $this->uploadContent($custom_id, $original_filename, $blob);
+        $values = array(
+            'name' => substr($name, 0, 255),
+            'path' => $path,
+            'is_image' => $this->isImage($name) ? 1 : 0,
+            'size' => $size,
+            'user_id' => $this->userSession->getId() ?: 0,
+            'date' => time(),
+        );
+        $result = $this->db->table($this->getTable())->insert($values);
+        if ($result) {
+            $file_id = (int) $this->db->getLastId();
+            return $file_id;
+        }
+        return false;
     }
-
+    
     /**
-     * Fire file creation event
+     * Remove a file
      *
-     * @access protected
-     * @param  integer $file_id
+     * @access public
+     * @param  integer   $file_id    File id
+     * @return bool
      */
-    protected function fireCreationEvent($file_id)
+    public function remove($file_id)
     {
-        return null;
+        try {
+            $file = $this->getById($file_id);
+            $this->objectStorage->remove($file['path']);
+            if ($file['is_image'] == 1) {
+                $this->objectStorage->remove($this->getThumbnailPath($file['path']));
+            }
+            return $this->db->table($this->getTable())->eq('id', $file['id'])->remove();
+        } catch (ObjectStorageException $e) {
+            $this->logger->error($e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Check if a filename is an image (file types that can be shown as thumbnail)
+     *
+     * @access public
+     * @param  string   $filename   Filename
+     * @return bool
+     */
+    public function isImage($filename)
+    {
+        switch (get_file_extension($filename)) {
+            case 'jpeg':
+            case 'jpg':
+            case 'png':
+            case 'gif':
+                return true;
+        }
+        return false;
+    }
+    /**
+     * Generate the path for a thumbnails
+     *
+     * @access public
+     * @param  string  $key  Storage key
+     * @return string
+     */
+    public function getThumbnailPath($key)
+    {
+        return 'thumbnails'.DIRECTORY_SEPARATOR.$key;
+    }
+    
+    /**
+     * Generate the path for a new filename
+     *
+     * @access public
+     * @param  integer   $id            Foreign key
+     * @param  string    $filename      Filename
+     * @return string
+     */
+    public function generatePath($id, $filename)
+    {
+        return $this->getPathPrefix().DIRECTORY_SEPARATOR.$id.DIRECTORY_SEPARATOR.hash('sha1', $filename.time());
+    }
+    
+    /**
+     * Upload a file
+     *
+     * @access public
+     * @param  integer $id
+     * @param  array   $file
+     * @throws Exception
+     */
+    public function uploadFile($id, array $file)
+    {
+        if ($file['error'] == UPLOAD_ERR_OK && $file['size'] > 0) {
+            $destination_filename = $this->generatePath($id, $file['name']);
+            if ($this->isImage($file['name'])) {
+                $this->generateThumbnailFromFile($file['tmp_name'], $destination_filename);
+            }
+            $this->objectStorage->moveUploadedFile($file['tmp_name'], $destination_filename);
+            $this->create($id, $file['name'], $destination_filename, $file['size']);
+        } else {
+            throw new Exception('File not uploaded: '.var_export($file['error'], true));
+        }
+    }
+    
+    /**
+     * Handle file upload (base64 encoded content)
+     *
+     * @access public
+     * @param  integer $id
+     * @param  string  $originalFilename
+     * @param  string  $data
+     * @param  bool    $isEncoded
+     * @return bool|int
+     */
+    public function uploadContent($id, $originalFilename, $data, $isEncoded = true)
+    {
+        try {
+            if ($isEncoded) {
+                $data = base64_decode($data);
+            }
+            if (empty($data)) {
+                $this->logger->error(__METHOD__.': Content upload with no data');
+                return false;
+            }
+            $destinationFilename = $this->generatePath($id, $originalFilename);
+            $this->objectStorage->put($destinationFilename, $data);
+            if ($this->isImage($originalFilename)) {
+                $this->generateThumbnailFromData($destinationFilename, $data);
+            }
+            return $this->create(
+                $id,
+                $originalFilename,
+                $destinationFilename,
+                strlen($data)
+            );
+        } catch (ObjectStorageException $e) {
+            $this->logger->error($e->getMessage());
+            return false;
+        }
+    }
+    
+        /**
+     * Generate thumbnail from a blob
+     *
+     * @access public
+     * @param  string   $destination_filename
+     * @param  string   $data
+     */
+    public function generateThumbnailFromData($destination_filename, &$data)
+    {
+        $blob = Thumbnail::createFromString($data)
+            ->resize()
+            ->toString();
+        $this->objectStorage->put($this->getThumbnailPath($destination_filename), $blob);
+    }
+    /**
+     * Generate thumbnail from a local file
+     *
+     * @access public
+     * @param  string   $uploaded_filename
+     * @param  string   $destination_filename
+     */
+    public function generateThumbnailFromFile($uploaded_filename, $destination_filename)
+    {
+        $blob = Thumbnail::createFromFile($uploaded_filename)
+            ->resize()
+            ->toString();
+        $this->objectStorage->put($this->getThumbnailPath($destination_filename), $blob);
     }
     
 }
