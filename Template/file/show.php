@@ -3,7 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div>
-        <img src="'.$logopath.'" />
+        <img src="<?= $logopath; ?>" alt="logo">
     </div>
      <ul>
     <?php
@@ -14,7 +14,7 @@
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
       </ul>
     <div>
-        <img src="'.$flaviconpath.'" />
+        <img src="<?= $flaviconpath; ?>" alt="flavicon">
     </div>
      <ul>
     <?php
