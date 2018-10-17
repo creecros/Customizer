@@ -60,6 +60,18 @@ class CustomizerFileController extends BaseController
         }
     }
     
+    public function show()
+    {
+        $logo = $this->customizerFileModel->getByType(1);
+        $flavicon = $this->customizerFileModel->getByType(2);
+        $this->response->html($this->helper->layout->app('wiki:wiki/show', array(
+            'logo' => $logo,
+            'title' => t('Customizer'),
+            'flavicon' => $flavicon,
+        )));
+        
+    }
+    
     /**
      * File upload form
      *
