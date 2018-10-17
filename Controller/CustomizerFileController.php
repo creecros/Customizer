@@ -63,7 +63,7 @@ class CustomizerFileController extends BaseController
     
     public function show()
     {
-        $logo = $this->customizerFileModel->getById(1);
+        $logo = $this->customizerFileModel->getByType(1);
         $flavicon = $this->customizerFileModel->getByType(2);
         $logopath = $logo['path'];
         $flaviconpath = $flavicon['path'];
@@ -75,6 +75,12 @@ class CustomizerFileController extends BaseController
             'flaviconpath' => $flaviconpath, 
         )));
         
+    }
+    
+    public function image($file_id)
+    {
+        $file = $this->customizerFileModel->getById($file_id);
+        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
     }
     
     /**
