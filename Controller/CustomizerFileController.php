@@ -63,7 +63,7 @@ class CustomizerFileController extends BaseController
     
     public function show()
     {
-        $logo = $this->customizerFileModel->getByType(1);
+        $logo = $this->customizerFileModel->getById(1);
         $flavicon = $this->customizerFileModel->getByType(2);
         $logopath = $logo['path'];
         $flaviconpath = $flavicon['path'];
