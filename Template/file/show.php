@@ -3,7 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div>
-        <?= $this->render('customizer:file/logo', array('custom_id' => 1, 'image' => $image)) ?>
+        <?= $this->render('customizer:file/logo', array('custom_id' => 1, 'image' => $logo)) ?>
     </div>
      <ul>
     <?php
@@ -14,7 +14,7 @@
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
       </ul>
     <div>
-        <?= $this->render('customizer:file/flavicon', array('custom_id' => 2, 'image' => $image)) ?>
+        <?= $this->render('customizer:file/flavicon', array('custom_id' => 2, 'image' => $flavicon)) ?>
     </div>
      <ul>
     <?php
