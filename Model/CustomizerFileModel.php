@@ -13,7 +13,7 @@ use Kanboard\Core\ObjectStorage\ObjectStorageException;
  * @package  Customizer\Model
  * @author   creecros
  */
-class CustomizerFileModel
+class CustomizerFileModel extends Base
 {
     /**
      * Table name
