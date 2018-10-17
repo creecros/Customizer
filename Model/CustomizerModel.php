@@ -62,14 +62,16 @@ class CustomizerFileModel
      * Create a file entry in the database
      *
      * @access public
+     * @param  integer $custom_id      1=logo 2=flavicon
      * @param  string  $name           Filename
      * @param  string  $path           Path on the disk
      * @param  integer $size           File size
      * @return bool|integer
      */
-    public function create($foreign_key_id, $name, $path, $size)
+    public function create($custom_id, $name, $path, $size)
     {
         $values = array(
+            'custom_id' => $custom_id,
             'name' => substr($name, 0, 255),
             'path' => $path,
             'is_image' => $this->isImage($name) ? 1 : 0,
