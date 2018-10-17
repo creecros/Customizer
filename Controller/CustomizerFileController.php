@@ -52,7 +52,8 @@ class CustomizerFileController extends BaseController
         } else {
             try {
                 $this->response->withContentType($mimetype);
-                $this->response->withCache(5 * 86400, $etag);
+                $this->response->withOutCache();
+                // $this->response->withCache(5 * 86400, $etag);
                 $this->response->send();
                 $this->objectStorage->output($file['path']);
             } catch (ObjectStorageException $e) {
