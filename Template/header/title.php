@@ -1,7 +1,7 @@
 <h1>
     <?php if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <span class="logo">
-        <?= $this->url->link('<img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getByType(1))) ?>" >', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
+        <?= $this->url->link('<img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getByType(1))) ?>">', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
     </span>
     <?php else: ?>
     <span class="logo">
