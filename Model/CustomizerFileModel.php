@@ -91,7 +91,12 @@ class CustomizerFileModel extends Base
             'user_id' => $this->userSession->getId() ?: 0,
             'date' => time(),
         );
-        if (null !== $this->getByType($custom_id)) { $result = $this->db->table($this->getTable())->update($values); } else { $result = $this->db->table($this->getTable())->insert($values); }
+        if (null !== $this->getByType($custom_id)) { 
+            $values['file_id'] = $custom_id;
+            $result = $this->db->table($this->getTable())->update($values); 
+        } else { 
+            $result = $this->db->table($this->getTable())->insert($values);
+        }
         if ($result) {
             $file_id = (int) $this->db->getLastId();
             return $file_id;
