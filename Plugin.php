@@ -11,6 +11,7 @@ class Plugin extends Base
     public function initialize()
     {
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
+        $this->template->setTemplateOverride('header/title', 'customizer:header/title');
 
     }
     
