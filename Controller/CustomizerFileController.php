@@ -93,6 +93,7 @@ class CustomizerFileController extends BaseController
             'custom_id' => $custom_id,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
         )));
+        }
     }
         
     /**
