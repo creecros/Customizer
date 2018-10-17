@@ -70,8 +70,21 @@ class CustomizerFileModel extends Base
         return $this->db->table($this->getTable())->eq('custom_id', $custom_id)->findOne();
     }
     
+     /**
+     * Get a file id by the type
+     *
+     * @access public
+     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @return array
+     */
+    public function getIdByType($custom_id)
+    {
+        $file = $this->db->table($this->getTable())->eq('custom_id', $custom_id)->findOne();
+        return $file['id'];
+    }
+    
          /**
-     * Get a file by the type
+     * Get all files by the type
      *
      * @access public
      * @param  integer   $custom_id    1=logo 2=flavicon
