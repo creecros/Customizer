@@ -58,6 +58,18 @@ class CustomizerFileModel
         return $this->db->table($this->getTable())->eq('id', $file_id)->findOne();
     }
     
+     /**
+     * Get a file by the type
+     *
+     * @access public
+     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @return array
+     */
+    public function getByType($custom_id)
+    {
+        return $this->db->table($this->getTable())->eq('custom_id', $custom_id)->findOne();
+    }
+    
     /**
      * Create a file entry in the database
      *
