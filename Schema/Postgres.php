@@ -18,8 +18,7 @@ $pdo->exec("
             is_image BOOLEAN DEFAULT '0',
             size INTEGER DEFAULT 0 NOT NULL,
             user_id INTEGER DEFAULT 0 NOT NULL,
-            date INTEGER DEFAULT 0 NOT NULL,
-            FOREIGN KEY(custom_id) REFERENCES customizer(id) ON DELETE CASCADE
+            date INTEGER DEFAULT 0 NOT NULL
         )"
     );
     
