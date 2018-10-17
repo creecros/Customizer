@@ -12,6 +12,8 @@ class Plugin extends Base
     {
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
+        $this->template->hook->attach('template:layout:head', 'customizer:layout/head');
+
 
     }
     
