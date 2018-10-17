@@ -70,6 +70,18 @@ class CustomizerFileModel extends Base
         return $this->db->table($this->getTable())->eq('custom_id', $custom_id)->findOne();
     }
     
+         /**
+     * Get a file by the type
+     *
+     * @access public
+     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @return array
+     */
+    public function getAllByType($custom_id)
+    {
+        return $this->db->table($this->getTable())->eq('custom_id', $custom_id)->findAll();
+    }
+    
     /**
      * Create a file entry in the database
      *
@@ -92,8 +104,8 @@ class CustomizerFileModel extends Base
             'date' => time(),
         );
         if (null !== $this->getByType($custom_id)) { 
-            $values['file_id'] = $custom_id;
-            $result = $this->db->table($this->getTable())->update($values); 
+            foreach ($this->getAllByType($custom_id) as $image) { $this->remove($image['id']); }
+            $result = $this->db->table($this->getTable())->insert($values); 
         } else { 
             $result = $this->db->table($this->getTable())->insert($values);
         }
