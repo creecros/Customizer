@@ -3,6 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div>
+        <?= $logopath; ?>
         <img src="<?= $logopath; ?>" alt="logo">
     </div>
      <ul>
