@@ -2,7 +2,7 @@
     <?php if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <span class="logo">
       <a href="default.asp">
-        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getByType(1))) ?>" height="50">
+        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $this->task->customizerFileModel->getIdByType(1))) ?>" height="50">
       </a>
     </span>
     <?php else: ?>
