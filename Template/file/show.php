@@ -14,7 +14,7 @@
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
       </ul>
     <div>
-        <img src="<?= $flaviconpath; ?>" alt="flavicon">
+        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>">
     </div>
      <ul>
     <?php
