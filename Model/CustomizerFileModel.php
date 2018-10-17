@@ -165,6 +165,36 @@ class CustomizerFileModel extends Base
     }
     
     /**
+     * Upload multiple files
+     *
+     * @access public
+     * @param  integer  $id
+     * @param  array    $files
+     * @return bool
+     */
+    public function uploadFiles($id, array $files)
+    {
+        try {
+            if (empty($files)) {
+                return false;
+            }
+            foreach (array_keys($files['error']) as $key) {
+                $file = array(
+                    'name' => $files['name'][$key],
+                    'tmp_name' => $files['tmp_name'][$key],
+                    'size' => $files['size'][$key],
+                    'error' => $files['error'][$key],
+                );
+                $this->uploadFile($id, $file);
+            }
+            return true;
+        } catch (Exception $e) {
+            $this->logger->error($e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
      * Upload a file
      *
      * @access public
