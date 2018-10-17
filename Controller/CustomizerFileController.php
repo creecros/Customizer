@@ -65,10 +65,14 @@ class CustomizerFileController extends BaseController
     {
         $logo = $this->customizerFileModel->getByType(1);
         $flavicon = $this->customizerFileModel->getByType(2);
+        $logopath = $logo['path'];
+        $flaviconpath = $flavicon['path'];
         $this->response->html($this->helper->layout->app('customizer:file/show', array(
             'logo' => $logo,
             'title' => t('Customizer'),
             'flavicon' => $flavicon,
+            'logopath' => $logopath,
+            'flaviconpath' => $flaviconpath, 
         )));
         
     }
