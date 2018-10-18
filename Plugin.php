@@ -15,7 +15,7 @@ class Plugin extends Base
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
     	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         
-        $this->applicationAccessMap->add('CustomizerFileController', '*', Role::APP_PUBLIC);
+        $this->applicationAccessMap->add('CustomizerFileController', array('logo', 'link"), Role::APP_PUBLIC);
     }
     
     public function getClasses() {
