@@ -77,39 +77,7 @@ class CustomizerFileController extends BaseController
         )));
         
     }
-    
-    public function logo()
-    {
-        $file = $this->customizerFileModel->getByType(1));
-        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
-    }
-    
-    public function link()
-    {
-        return $this->configModel->getOptions('login_link', 'https://kanboard.org');
-    }
-    
-    public function logoexists()
-    {
-        if (null !== $this->customizerFileModel->getByType(1)) { return true; } else { return false; }  
-    }
    
-    public function linkexists()
-    {
-        if ($this->configModel->exists('login_link')) { return true; } else { return false; }  
-    }
-    
-    public function loginpage()
-    {
-        if ($this->logoexists() && $this->linkexists()) {
-            return 	'<a href="" target="_blank"><?php endif ?>
-		             <img src="' . $this->logo() . '" height="50">
-	                 </a>';
-        } else if ($this->logoexists()) {
-            return '<img src="' . $this->logo() . '" height="50">'
-        } else {
-            return '';            
-    }
     
     public function image()
     {
