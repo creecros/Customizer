@@ -40,7 +40,7 @@ Customizer
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/26339368/47174103-bf117d80-d2dd-11e8-972d-1e0167218e31.png" height="150"></td>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47184344-6ac7c700-d2f8-11e8-84dc-6b4abfbd94e0.png" height="150"></td>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47184545-f4779480-d2f8-11e8-80d6-d3bd0fc1594b.png" height="150"></td>
   </tr>
 </table>
 
