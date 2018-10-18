@@ -1,10 +1,9 @@
 <section>
-    <div>
+    <div class="page-header">
         <h3><?= t('Assets') ?></h3>
     </div>
-    <div>
+    <div class="panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="50">
-    </div>
     <br>
      <ul>
     <?php
@@ -15,6 +14,7 @@
                   
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
     </ul>
+    </div>    
     <br>     
     <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
@@ -30,9 +30,8 @@
     </div>
 </form>     
 <br>
-    <div>
+    <div class="panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="50">
-    </div>
     <br>
      <ul>
     <?php
@@ -42,4 +41,5 @@
     ?>
     <?= $this->modal->medium('file', t('Upload Flavicon'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 2))?>
       </ul>
+    </div>
 </section>
