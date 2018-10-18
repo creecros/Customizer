@@ -5,17 +5,11 @@ namespace Kanboard\Plugin\Customizer\Helper;
 use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
 use Kanboard\Plugin\Customizer\Controller\CustomizerFileController;
 use Kanboard\Model\ConfigModel;
-
 use Kanboard\Core\Base;
 
-/**
- * Login helper
- *
- */
 class LoginHelper extends Base
 {
 
- 
     public function logo()
     {
         $file = $this->customizerFileModel->getByType(1));
