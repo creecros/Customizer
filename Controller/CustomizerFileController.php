@@ -87,7 +87,7 @@ class CustomizerFileController extends BaseController
     
     public function link()
     {
-        return $this->response->html($this->configModel->get('login_link', 'https://kanboard.org'));
+        return $this->response->redirect($this->configModel->get('login_link', 'https://kanboard.org'));
     }
     
     public function logoexists()
