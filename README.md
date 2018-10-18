@@ -19,4 +19,5 @@ Logo:
 ![image](https://user-images.githubusercontent.com/26339368/47174103-bf117d80-d2dd-11e8-972d-1e0167218e31.png)
 
 
-## Will probably not function fully with other CSS plugins that override templates related to layout or headers
+* Will probably not function fully with other CSS plugins that override templates related to layout or headers
+ * Tested with https://github.com/kenlog/nebula - works, but header does not take the css properties of the plugin.
