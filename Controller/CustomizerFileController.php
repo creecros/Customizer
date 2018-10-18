@@ -87,6 +87,16 @@ class CustomizerFileController extends BaseController
 	} 
     }
 	
+    public function loginlogo()
+    {
+	if ($this->logoexists()) {
+        $file = $this->customizerFileModel->getByType(1);
+        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	} else {
+		return $this->response->redirect('https://avatars2.githubusercontent.com/u/13722943?s=200&v=4');
+	}	    
+    }
+	
     public function icon()
     {
 	if ($this->iconexists()) {
