@@ -15,6 +15,7 @@
                   
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
     </ul>
+    <?= if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <ul>
     <?php
         ini_set('display_errors', 1);
@@ -24,6 +25,7 @@
                   
     <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
     </ul>
+    <?= endif ?>
     </div>    
     <br>     
     <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
@@ -53,6 +55,7 @@
     <?= $this->modal->medium('file', t('Upload Flavicon'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 2))?>
       </ul>
     </ul>
+    <?= if (null !== $this->task->customizerFileModel->getByType(2)) : ?>
     <ul>
     <?php
         ini_set('display_errors', 1);
@@ -62,5 +65,6 @@
                   
     <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 2, 'file_id' => $flavicon['id']))?>
     </ul>
+    <?= endif ?>
     </div>
 </section>
