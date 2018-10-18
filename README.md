@@ -22,9 +22,28 @@ Customizer
 
 :star:  **Logo:**
 
-![image](https://user-images.githubusercontent.com/26339368/47174135-cf295d00-d2dd-11e8-8237-493a3013e2ba.png)
+<table>
+  <tr>
+    <th>Normal KB</th>
+    <th>Nebula CSS</th>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47174135-cf295d00-d2dd-11e8-8237-493a3013e2ba.png" height="150"></td>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47184294-479d1780-d2f8-11e8-96f7-7ab6215a67bd.png" height="150"></td>
+  </tr>
+</table>
 
-![image](https://user-images.githubusercontent.com/26339368/47174103-bf117d80-d2dd-11e8-972d-1e0167218e31.png)
+<table>
+  <tr>
+    <th>Normal KB</th>
+    <th>Nebula CSS</th>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47174103-bf117d80-d2dd-11e8-972d-1e0167218e31.png" height="150"></td>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47184344-6ac7c700-d2f8-11e8-84dc-6b4abfbd94e0.png" height="150"></td>
+  </tr>
+</table>
+
 
 :smirk:	**Considerations:**
 
