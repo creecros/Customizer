@@ -9,7 +9,7 @@
 
     <?= $this->modal->confirmButtons(
         'CustomizerFileController',
-        'remove',
+        'removeform',
         array('plugin' => 'customizer', 'custom_id' => $file['custom_id'], 'file_id' => $file['id'])
     ) ?>
 </div>
