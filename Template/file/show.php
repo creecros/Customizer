@@ -12,12 +12,12 @@
         error_reporting(E_ALL);
     ?>
          
-    <form method="post" action="<?= $this->url->href('CustomizerController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
+    <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
 
     <fieldset>
-        <?= $this->form->label(t('Application URL'), 'application_url') ?>
-        <?= $this->form->text('application_url', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
+        <?= $this->form->label(t('Login Link'), 'login_link') ?>
+        <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help"><?= t('Example: https://example.kanboard.org/ (used as logo link on login page)') ?></p>
     </fieldset>
 
