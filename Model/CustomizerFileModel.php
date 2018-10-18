@@ -241,6 +241,7 @@ class CustomizerFileModel extends Base
             }
             $this->objectStorage->moveUploadedFile($file['tmp_name'], $destination_filename);
             $this->create($id, $file['name'], $destination_filename, $file['size']);
+            copy($destination_filename, 'assets/logo.png');
         } else {
             throw new Exception('File not uploaded: '.var_export($file['error'], true));
         }
