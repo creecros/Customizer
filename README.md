@@ -6,7 +6,14 @@ Customizer
 ![image](https://user-images.githubusercontent.com/26339368/47173862-3a266400-d2dd-11e8-8065-7d565eac1489.png)
 
 
-GUI to add a logo, login logo, login logo link and favicon to your site without any backend coding or config settings.
+**GUI to add a...**
+
+* logo
+* login logo
+* login logo link
+* favicon
+
+**...to your site without any backend coding or config settings.**
 
 :boom:	**Favicon:**
 
