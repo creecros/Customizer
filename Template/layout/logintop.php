@@ -1,2 +1,1 @@
-<?= $this->url->href('CustomizerFileController', 'loginpage', array('plugin' => 'customizer')) ?>
-	
+<?= $this->response->html($this->customizerFileController->loginpage()) ?>
