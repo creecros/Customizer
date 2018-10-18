@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\Customizer\Controller;
 use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
 use Kanboard\Core\ObjectStorage\ObjectStorageException;
 use Kanboard\Controller\BaseController;
+use Kanboard\Model\ConfigModel;
 
 /**
  * Customizer Controller
