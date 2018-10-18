@@ -13,6 +13,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
+    	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
     }
     
     public function getClasses() {
