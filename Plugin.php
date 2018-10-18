@@ -10,11 +10,11 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        $this->helper->register('loginHelper', '\Kanboard\Plugin\Customizer\Helper\LoginHelper');
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
-    	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
-        
+        $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         $this->applicationAccessMap->add('CustomizerFileController', array('logo', 'link', 'logoexists', 'linkexists', 'loginpage'), Role::APP_PUBLIC);
     }
     
