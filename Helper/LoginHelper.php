@@ -3,7 +3,7 @@
 namespace Kanboard\Plugin\Customizer\Helper;
 
 use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
-use Kanboard\Plugin\Customizer\Controller\CustomizerFileController->
+use Kanboard\Plugin\Customizer\Controller\CustomizerFileController;
 use Kanboard\Model\ConfigModel;
 
 use Kanboard\Core\Base;
