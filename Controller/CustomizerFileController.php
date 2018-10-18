@@ -99,6 +99,18 @@ class CustomizerFileController extends BaseController
         if ($this->configModel->exists('login_link')) { return true; } else { return false; }  
     }
     
+    public function loginpage()
+    {
+        if ($this->logoexists() && $this->linkexists()) {
+            return 	'<a href="" target="_blank"><?php endif ?>
+		             <img src="' . $this->logo() . '" height="50">
+	                 </a>';
+        } else if ($this->logoexists()) {
+            return '<img src="' . $this->logo() . '" height="50">'
+        } else {
+            return '';            
+    }
+    
     public function image()
     {
         $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
