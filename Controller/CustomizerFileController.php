@@ -100,7 +100,7 @@ class CustomizerFileController extends BaseController
 	if ($this->logoexists() && $this->linkexists()) {
         	return $this->response->redirect($this->configModel->get('login_link', 'https://kanboard.org'));
 	} else {
-		return $this->response->redirect($this->configModel->get('application_url', '')) . 'login';
+		return $this->response->redirect($this->configModel->get('application_url', '') . 'login');
 	}	    
     }
     
@@ -203,7 +203,7 @@ class CustomizerFileController extends BaseController
             $this->flash->failure(t('Unable to remove this file.'));
         }
 	    
-	return $this->response->redirect($this->configModel->get('application_url', '')) . 'settings/customizer';
+	return $this->response->redirect($this->configModel->get('application_url', '') . 'settings/customizer');
         
     }
     /**
