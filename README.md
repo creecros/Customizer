@@ -1,4 +1,4 @@
-Customizer
+Customizer - it's like magic!
 ----------
 
 :sparkles:	**Adds a settings panel settings>customizer:**
