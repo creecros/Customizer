@@ -191,6 +191,21 @@ class CustomizerFileController extends BaseController
         }
         
     }
+	
+    public function removeform()
+    {
+        $this->checkCSRFParam();
+        $custom_id = $this->request->getIntegerParam('custom_id');
+        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
+        if ($this->customizerFileModel->remove($file['id'])) {
+            $this->flash->success(t('File removed successfully.'));
+        } else {
+            $this->flash->failure(t('Unable to remove this file.'));
+        }
+	    
+	return $this->response->redirect($this->configModel->get('application_url', '')) . 'settings/customizer';
+        
+    }
     /**
      * Confirmation dialog before removing a file
      *
