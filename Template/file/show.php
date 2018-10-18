@@ -5,6 +5,7 @@
     <div class="panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="50">
     <br>
+    <br>
      <ul>
     <?php
         ini_set('display_errors', 1);
@@ -32,6 +33,7 @@
 <br>
     <div class="panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="50">
+    <br>
     <br>
      <ul>
     <?php
