@@ -12,7 +12,7 @@ class LoginHelper extends Base
 
     public function logo()
     {
-        $file = $this->customizerFileModel->getByType(1));
+        $file = $this->customizerFileModel->getByType(1);
         $this->customizerFileController->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
     }
     
