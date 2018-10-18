@@ -1,1 +1,1 @@
-<?= $this->response->html($this->customizerFileController->loginpage()) ?>
+<?= $this->customizerFileController->loginpage() ?>
