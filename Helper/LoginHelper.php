@@ -38,7 +38,7 @@ class LoginHelper extends Base
 		             <img src="' . $this->logo() . '" height="50">
 	                 </a>';
         } else if ($this->logoexists()) {
-            return '<img src="' . $this->logo() . '" height="50">'
+            return '<img src="' . $this->logo() . '" height="50">';
         } else {
             return '';         
 	}
