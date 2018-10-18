@@ -81,13 +81,19 @@ class CustomizerFileController extends BaseController
     
     public function logo()
     {
+	if ($this->logoexists) {
         $file = $this->customizerFileModel->getByType(1);
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	} 
     }
     
     public function link()
     {
-        return $this->response->redirect($this->configModel->get('login_link', 'https://kanboard.org'));
+	if ($this->logoexists && $this->linkexists) {
+        	return $this->response->redirect($this->configModel->get('login_link', 'https://kanboard.org'));
+	} else {
+		return $this->response->redirect($this->configModel->get('application_url', '') . 'login';
+	}	    
     }
     
     public function logoexists()
