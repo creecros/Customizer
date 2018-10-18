@@ -108,8 +108,10 @@ class CustomizerFileController extends BaseController
         
     public function image()
     {
-        $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
-        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	if ($this->logoexists()) {
+       	 $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
+       	 $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	}
     }
     
     /**
