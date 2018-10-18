@@ -3,7 +3,7 @@
         <h3><?= t('Assets') ?></h3>
     </div>
     <div class="panel">
-        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="50">
+        <img src="<?= $this->url->href('CustomizerFileController', 'image', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="100">
     <br>
     <br>
      <ul>
