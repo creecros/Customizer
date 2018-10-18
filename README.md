@@ -8,10 +8,10 @@ Customizer
 
 **GUI to add a...**
 
-* logo
+* logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
 * login logo
 * login logo link
-* favicon
+* favicon (Best size 50x50px, 20kb limit, *.png*)
 
 **...to your site without any backend coding or config settings.**
 
