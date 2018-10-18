@@ -17,7 +17,7 @@
     </ul>
     </div>    
     <br>     
-    <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'customizer')) ?>" autocomplete="off">
+    <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
 
     <fieldset>
