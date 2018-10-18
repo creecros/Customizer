@@ -11,6 +11,21 @@
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
     ?>
+         
+    <form method="post" action="<?= $this->url->href('CustomizerController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
+    <?= $this->form->csrf() ?>
+
+    <fieldset>
+        <?= $this->form->label(t('Application URL'), 'application_url') ?>
+        <?= $this->form->text('application_url', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
+        <p class="form-help"><?= t('Example: https://example.kanboard.org/ (used as logo link on login page)') ?></p>
+    </fieldset>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+    </div>
+</form>     
+         
     <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
       </ul>
     <div>
