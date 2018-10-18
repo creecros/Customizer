@@ -22,7 +22,7 @@
         error_reporting(E_ALL);
     ?>
                   
-    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, , 'file_id' => $logo['id']))?>
+    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
     </ul>
     </div>    
     <br>     
@@ -60,7 +60,7 @@
         error_reporting(E_ALL);
     ?>
                   
-    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 2, , 'file_id' => $flavicon['id']))?>
+    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 2, 'file_id' => $flavicon['id']))?>
     </ul>
     </div>
 </section>
