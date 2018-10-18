@@ -78,6 +78,18 @@ class CustomizerFileController extends BaseController
         
     }
     
+    public function logo()
+    {
+        $file = $this->customizerFileModel->getByType(1));
+        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+    }
+    
+    public function link()
+    {
+        return $this->configModel->getOptions('login_link', 'https://kanboard.org');
+    }
+   
+    
     public function image()
     {
         $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
