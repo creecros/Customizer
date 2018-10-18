@@ -86,6 +86,14 @@ class CustomizerFileController extends BaseController
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
 	} 
     }
+	
+    public function icon()
+    {
+	if ($this->iconexists()) {
+        $file = $this->customizerFileModel->getByType(2);
+        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	} 
+    }
     
     public function link()
     {
@@ -104,6 +112,11 @@ class CustomizerFileController extends BaseController
     public function linkexists()
     {
         if ($this->configModel->exists('login_link')) { return true; } else { return false; }  
+    }
+	
+    public function iconexists()
+    {
+        if (null !== $this->customizerFileModel->getByType(2)) { return true; } else { return false; }  
     }
         
     public function image()
