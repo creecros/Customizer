@@ -48,7 +48,8 @@ Customizer - it's like magic!
 :smirk:	**Considerations:**
 
 1. Will probably not function fully with other CSS plugins that override templates related to layout or headers
-   * Tested with https://github.com/kenlog/nebula - works, but header does not take the css properties of the plugin.
+   * Fully supported by: https://github.com/kenlog/nebula :dash:
+   * Fully supported by: https://github.com/kenlog/Moon :waning_gibbous_moon:
    
 
 :lollipop: **Future Enhancements:**
