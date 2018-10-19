@@ -52,7 +52,7 @@
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
     ?>
-    <?= $this->modal->medium('file', t('Upload Flavicon'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 2))?>
+    <?= $this->modal->medium('file', t('Upload Favicon'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 2))?>
       </ul>
     </ul>
     <?php if (null !== $this->task->customizerFileModel->getByType(2)) : ?>
@@ -63,7 +63,7 @@
         error_reporting(E_ALL);
     ?>
                   
-    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 2, 'file_id' => $flavicon['id']))?>
+    <?= $this->modal->medium('remove', t('Remove Favicon'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 2, 'file_id' => $flavicon['id']))?>
     </ul>
     <?php endif ?>
     </div>
