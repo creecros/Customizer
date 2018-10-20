@@ -62,7 +62,7 @@ class CustomizerFileModel extends Base
      * Get a file by the type
      *
      * @access public
-     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @param  integer   $custom_id    1=logo 2=flavicon 3=loginlogo
      * @return array
      */
     public function getByType($custom_id)
@@ -74,7 +74,7 @@ class CustomizerFileModel extends Base
      * Get a file id by the type
      *
      * @access public
-     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @param  integer   $custom_id    1=logo 2=flavicon 3=loginlogo
      * @return array
      */
     public function getIdByType($custom_id)
@@ -87,7 +87,7 @@ class CustomizerFileModel extends Base
      * Get all files by the type
      *
      * @access public
-     * @param  integer   $custom_id    1=logo 2=flavicon
+     * @param  integer   $custom_id    1=logo 2=flavicon 3=loginlogo
      * @return array
      */
     public function getAllByType($custom_id)
