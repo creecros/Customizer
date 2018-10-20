@@ -1,7 +1,7 @@
 <div class="page-header">
     <h2><?= t('Header Logo') ?></h2>
         <br>
-    <?= t('Recommend 100 pixels in height, *.png, *.jpg, *.gif, max size 500kb.')
+    <?= t('Recommend 100 pixels in height, *.png, *.jpg, *.gif, max size 500kb.') ?>
 </div>
 
 <?= $this->app->component('file-upload', array(
