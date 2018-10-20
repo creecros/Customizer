@@ -119,7 +119,7 @@ class CustomizerFileController extends BaseController
         if (null !== $this->customizerFileModel->getByType(1)) { return true; } else { return false; }  
     }
 	
-    public function logoexists()
+    public function loginlogoexists()
     {
         if (null !== $this->customizerFileModel->getByType(3)) { return true; } else { return false; }  
     }
