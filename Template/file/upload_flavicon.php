@@ -1,7 +1,7 @@
 <div class="page-header">
     <h2><?= t('Favicon') ?></h2>
     <br>
-    <?= t('Recommend 50x50 pixels, *.png only, max size 20kb.')
+    <?= t('Recommend 50x50 pixels, *.png only, max size 20kb.') ?>
 </div>
 
 <?= $this->app->component('file-upload', array(
