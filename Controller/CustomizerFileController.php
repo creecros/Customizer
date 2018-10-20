@@ -89,8 +89,8 @@ class CustomizerFileController extends BaseController
 	
     public function loginlogo()
     {
-	if ($this->logoexists()) {
-        $file = $this->customizerFileModel->getByType(1);
+	if ($this->loginlogoexists()) {
+        $file = $this->customizerFileModel->getByType(3);
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
 	} else {
 		return $this->response->redirect('https://avatars2.githubusercontent.com/u/13722943?s=200&v=4');
@@ -118,6 +118,12 @@ class CustomizerFileController extends BaseController
     {
         if (null !== $this->customizerFileModel->getByType(1)) { return true; } else { return false; }  
     }
+	
+    public function loginlogoexists()
+    {
+        if (null !== $this->customizerFileModel->getByType(3)) { return true; } else { return false; }  
+    }
+   
    
     public function linkexists()
     {
