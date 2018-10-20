@@ -1,12 +1,12 @@
 <div class="page-header">
     <h2><?= t('Login Logo') ?></h2>
         <br>
-    <?= t('Recommend 100 pixels in height, *.png, *.jpg, *.gif, max size 500kb.')
+    <?= t('Recommend 100 pixels in height, *.png, *.jpg, *.gif, max size 500kb.') ?>
 </div>
 
 <?= $this->app->component('file-upload', array(
     'maxSize'           => 500000,
-    'url'               => $this->url->to('CustomizerFileController', 'save', array('plugin' => 'customizer', 'custom_id' => 1)),
+    'url'               => $this->url->to('CustomizerFileController', 'save', array('plugin' => 'customizer', 'custom_id' => 3)),
     'labelDropzone'     => t('Drag and drop your file here'),
     'labelOr'           => t('or'),
     'labelChooseFiles'  => t('choose file'),
