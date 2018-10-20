@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h2><?= t('Flavicon') ?></h2>
+    <h2><?= t('Favicon') ?></h2>
 </div>
 
 <?= $this->app->component('file-upload', array(
