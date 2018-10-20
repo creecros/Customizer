@@ -1,0 +1,7 @@
+/* KANBOARD PLUGIN - CUSTOMIZER CSS FILE */
+
+/*------ PAGE HEADER ------*/
+.logo > a > img {vertical-align:middle;} /* This aligns the logo certically to the text */
+
+/*------ LOGIN FORM ------*/
+.form-login > a > img {display: block;margin: auto;} /* This aligns the logo certically to the text */

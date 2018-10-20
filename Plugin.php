@@ -16,6 +16,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
         $this->applicationAccessMap->add('CustomizerFileController', array('loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Template/customizer.css'));
     }
     
     public function getClasses() {
