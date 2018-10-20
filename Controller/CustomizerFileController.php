@@ -150,13 +150,21 @@ class CustomizerFileController extends BaseController
             $this->response->html($this->template->render('customizer:file/upload_logo', array(
             'custom_id' => $custom_id,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
         )));
-        } else {
+        } else if ($custom_id == 2) {
             $this->response->html($this->template->render('customizer:file/upload_flavicon', array(
             'custom_id' => $custom_id,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
         )));
-        }
+        } else if ($custom_id == 3) {
+            $this->response->html($this->template->render('customizer:file/upload_loginlogo', array(
+            'custom_id' => $custom_id,
+            'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
+        )));
+	}
     }
         
     /**
