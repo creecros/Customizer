@@ -13,7 +13,7 @@
         error_reporting(E_ALL);
     ?>
                   
-    <?= $this->modal->medium('file', t('Upload Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
+    <?= $this->modal->medium('file', t('Upload Header Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 1))?>
     </ul>
     <?php if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <ul>
@@ -23,11 +23,37 @@
         error_reporting(E_ALL);
     ?>
                   
-    <?= $this->modal->medium('remove', t('Remove Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
+    <?= $this->modal->medium('remove', t('Remove Header Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
     </ul>
     <?php endif ?>
     </div>    
-    <br>     
+    <br> 
+        <div class="panel">
+        <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="75">
+    <br>
+    <br>
+     <ul>
+    <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+    ?>
+                  
+    <?= $this->modal->medium('file', t('Upload Login Logo'), 'CustomizerFileController', 'create', array('plugin' => 'customizer', 'custom_id' => 3))?>
+    </ul>
+    <?php if (null !== $this->task->customizerFileModel->getByType(3)) : ?>
+    <ul>
+    <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+    ?>
+                  
+    <?= $this->modal->medium('remove', t('Remove Login Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 3, 'file_id' => $loginlogo['id']))?>
+    </ul>
+    <?php endif ?>
+    </div>    
+    <br> 
     <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
 
