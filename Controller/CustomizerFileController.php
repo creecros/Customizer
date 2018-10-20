@@ -67,7 +67,6 @@ class CustomizerFileController extends BaseController
     {
         $logo = $this->customizerFileModel->getByType(1);
         $flavicon = $this->customizerFileModel->getByType(2);
-	$loginlogo = $this->customizerFileModel->getByType(3);
         $logopath = $logo['path'];
         $flaviconpath = $flavicon['path'];
         $this->response->html($this->helper->layout->config('customizer:file/show', array(
@@ -75,8 +74,7 @@ class CustomizerFileController extends BaseController
             'title' => t('Settings').' &gt; '.t('Customizer'),
             'flavicon' => $flavicon,
             'logopath' => $logopath,
-            'flaviconpath' => $flaviconpath,
-            'loginlogo' => $loginlogo,
+            'flaviconpath' => $flaviconpath, 
         )));
         
     }
@@ -91,8 +89,8 @@ class CustomizerFileController extends BaseController
 	
     public function loginlogo()
     {
-	if ($this->loginlogoexists()) {
-        $file = $this->customizerFileModel->getByType(3);
+	if ($this->logoexists()) {
+        $file = $this->customizerFileModel->getByType(1);
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
 	} else {
 		return $this->response->redirect('https://avatars2.githubusercontent.com/u/13722943?s=200&v=4');
@@ -120,12 +118,6 @@ class CustomizerFileController extends BaseController
     {
         if (null !== $this->customizerFileModel->getByType(1)) { return true; } else { return false; }  
     }
-	
-    public function loginlogoexists()
-    {
-        if (null !== $this->customizerFileModel->getByType(3)) { return true; } else { return false; }  
-    }
-   
    
     public function linkexists()
     {
@@ -158,13 +150,21 @@ class CustomizerFileController extends BaseController
             $this->response->html($this->template->render('customizer:file/upload_logo', array(
             'custom_id' => $custom_id,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
         )));
-        } else {
+        } else if ($custom_id == 2) {
             $this->response->html($this->template->render('customizer:file/upload_flavicon', array(
             'custom_id' => $custom_id,
             'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
         )));
-        }
+        } else if ($custom_id == 3) {
+            $this->response->html($this->template->render('customizer:file/upload_loginlogo', array(
+            'custom_id' => $custom_id,
+            'max_size' => $this->helper->text->phpToBytes(get_upload_max_size()),
+	    'multiple' => false,
+        )));
+	}
     }
         
     /**
