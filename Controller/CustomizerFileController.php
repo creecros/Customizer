@@ -15,8 +15,6 @@ use Kanboard\Model\ConfigModel;
  */
 class CustomizerFileController extends BaseController
 {
-    global $loginCheck;
-
     /**
      * Get file content from object storage
      *
