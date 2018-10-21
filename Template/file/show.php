@@ -1,4 +1,4 @@
-<?php global backURL; ?>
+<?php global $backURL; ?>
 <section>
     <div class="page-header">
         <h3><?= t('Assets') ?></h3>
