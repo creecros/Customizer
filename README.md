@@ -54,7 +54,7 @@ Customizer - it's like magic!
    * https://github.com/kenlog/nebula :dash:
    * https://github.com/kenlog/Moon :waning_gibbous_moon:
 
-*Make pull request to add other theme support, must come from theme maintainer.
+*Make pull request to add other theme support, must come from theme maintainer.*
 
 :lollipop: **Future Enhancements:**
 
