@@ -3,7 +3,7 @@
     <div class="page-header">
         <h3><?= t('Assets') ?></h3>
     </div>
-    <div class="panel">
+    <div class="panel header-logo-panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="100">
     <br>
     <br>
@@ -29,7 +29,7 @@
     <?php endif ?>
     </div>    
     <br> 
-        <div class="panel">
+        <div class="panel login-logo-panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="75">
     <br>
     <br>
@@ -55,16 +55,16 @@
     <?php endif ?>
     </div>    
     <br> 
-    <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
+    <form class="url-links" method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
     <?php $backURL = $this->task->configModel->get('background_url', '') ?>
     <fieldset>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
-        <p class="form-help"><?= t('Example: https://example.kanboard.org/ (used as logo link on login page)') ?></p>
+        <p class="form-help login-link-desc"><?= t('Example: https://example.kanboard.org/ (used as logo link on login page)') ?></p>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
-        <p class="form-help"><?= t('Example: https://source.unsplash.com/random (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
+        <p class="form-help background-img-link-desc"><?= t('Example: https://source.unsplash.com/random (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
     </fieldset>
 
     <div class="form-actions">
@@ -72,7 +72,7 @@
     </div>
 </form>     
 <br>
-    <div class="panel">
+    <div class="panel favicon-panel">
         <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="50">
     <br>
     <br>
