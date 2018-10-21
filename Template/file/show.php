@@ -62,9 +62,9 @@
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help"><?= t('Example: https://example.kanboard.org/ (used as logo link on login page)') ?></p>
-        <?= $this->form->label(t('Background Image URL'), 'background_url') ?>
+        <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
-        <p class="form-help"><?= t('Example: https://source.unsplash.com/random (URL for a background image, centered, autoscale, no-repeat)') ?></p>
+        <p class="form-help"><?= t('Example: https://source.unsplash.com/random (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
     </fieldset>
 
     <div class="form-actions">
