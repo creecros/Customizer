@@ -55,6 +55,6 @@ Customizer - it's like magic!
 
 :lollipop: **Future Enhancements:**
 
-- [ ] Custom CSS uploader and Selector
+- [ ] Custom Theme Creator with Color Pickers
 - [ ] Preloaded Theme Selector
 
