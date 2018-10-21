@@ -53,6 +53,7 @@ Customizer - it's like magic!
 ## Theme Plugins that support Customizer
    * https://github.com/kenlog/nebula :dash:
    * https://github.com/kenlog/Moon :waning_gibbous_moon:
+   * https://github.com/aljawaid/KanboardCSS :computer:
 
 *Make pull request to add other theme support, must come from theme maintainer.*
 
