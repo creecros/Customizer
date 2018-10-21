@@ -48,13 +48,17 @@ Customizer - it's like magic!
 
 :smirk:	**Considerations:**
 
-1. Will probably not function fully with other CSS plugins that override templates related to layout or headers
-   * Fully supported by: https://github.com/kenlog/nebula :dash:
-   * Fully supported by: https://github.com/kenlog/Moon :waning_gibbous_moon:
-   
+**Will probably not function fully with other CSS plugins that override templates related to layout or headers**
+
+## Theme Plugins that support Customizer
+   * https://github.com/kenlog/nebula :dash:
+   * https://github.com/kenlog/Moon :waning_gibbous_moon:
+
+*Make pull request to add other theme support, must come from theme maintainer.
 
 :lollipop: **Future Enhancements:**
 
 - [ ] Custom Theme Creator with Color Pickers
 - [ ] Preloaded Theme Selector
+- [ ] Sizing and alignment options
 
