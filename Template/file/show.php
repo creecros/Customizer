@@ -1,3 +1,4 @@
+<?php global backURL; ?>
 <section>
     <div class="page-header">
         <h3><?= t('Assets') ?></h3>
@@ -56,7 +57,7 @@
     <br> 
     <form method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
-
+    <?= $backURL = $this->task->configModel->get('background_url', '') ?>
     <fieldset>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
