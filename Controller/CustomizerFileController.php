@@ -15,7 +15,6 @@ use Kanboard\Model\ConfigModel;
  */
 class CustomizerFileController extends BaseController
 {
-
     /**
      * Get file content from object storage
      *
@@ -94,9 +93,7 @@ class CustomizerFileController extends BaseController
 	if ($this->loginlogoexists()) {
         $file = $this->customizerFileModel->getByType(3);
         $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
-	} else {
-		return $this->response->redirect('https://avatars2.githubusercontent.com/u/13722943?s=200&v=4');
-	}	    
+	}    
     }
 	
     public function icon()
@@ -123,7 +120,13 @@ class CustomizerFileController extends BaseController
 	
     public function loginlogoexists()
     {
-        if (null !== $this->customizerFileModel->getByType(3)) { return true; } else { return false; }  
+        if (null !== $this->customizerFileModel->getByType(3)) { 
+		$loginCheck = true;
+		return true; 
+	} else { 
+		$loginCheck = false;
+		return false; 
+	}  
     }
    
     public function linkexists()
@@ -185,6 +188,7 @@ class CustomizerFileController extends BaseController
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
         $custom_id = $this->request->getIntegerParam('custom_id');
+	    if ($custom_id ==3) { $loginCheck = true; }
         
         $result = $this->customizerFileModel->uploadFiles($custom_id, $this->request->getFileInfo('files'));
         if ($this->request->isAjax()) {
@@ -221,6 +225,7 @@ class CustomizerFileController extends BaseController
     {
         $this->checkCSRFParam();
         $custom_id = $this->request->getIntegerParam('custom_id');
+	if ($custom_id == 3) { $loginCheck = false; }
         $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
         if ($this->customizerFileModel->remove($file['id'])) {
             $this->flash->success(t('File removed successfully.'));

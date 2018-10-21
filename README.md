@@ -3,13 +3,14 @@ Customizer - it's like magic!
 
 :sparkles:	**Adds a settings panel settings>customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/47173862-3a266400-d2dd-11e8-8065-7d565eac1489.png)
+<img src="https://user-images.githubusercontent.com/26339368/47262704-a8c21800-d4bd-11e8-871b-c6483010c7cd.png" height="500">
 
 
 **GUI to add a...**
 
 * logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
 * login logo
+* login page background image url (will display centered on login page with auto scale)
 * login logo link
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 
@@ -47,13 +48,17 @@ Customizer - it's like magic!
 
 :smirk:	**Considerations:**
 
-1. Will probably not function fully with other CSS plugins that override templates related to layout or headers
-   * Fully supported by: https://github.com/kenlog/nebula :dash:
-   * Fully supported by: https://github.com/kenlog/Moon :waning_gibbous_moon:
-   
+**Will probably not function fully with other CSS plugins that override templates related to layout or headers**
+
+## Theme Plugins that support Customizer
+   * https://github.com/kenlog/nebula :dash:
+   * https://github.com/kenlog/Moon :waning_gibbous_moon:
+
+*Make pull request to add other theme support, must come from theme maintainer.*
 
 :lollipop: **Future Enhancements:**
 
-- [ ] Custom CSS uploader and Selector
+- [ ] Custom Theme Creator with Color Pickers
 - [ ] Preloaded Theme Selector
+- [ ] Sizing and alignment options
 
