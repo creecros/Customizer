@@ -19,7 +19,7 @@ class Plugin extends Base
 		    $loginCheck = false;
 	    } 
 	    
-	$backURL = $this->configModel->get('back_image', '');
+	$backURL = $this->configModel->get('background_url', '');
         
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
