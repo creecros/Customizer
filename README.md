@@ -3,13 +3,14 @@ Customizer - it's like magic!
 
 :sparkles:	**Adds a settings panel settings>customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/47173862-3a266400-d2dd-11e8-8065-7d565eac1489.png)
+![image](https://user-images.githubusercontent.com/26339368/47262704-a8c21800-d4bd-11e8-871b-c6483010c7cd.png)
 
 
 **GUI to add a...**
 
 * logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
 * login logo
+* login page background image url (will display centered on login page with auto scale)
 * login logo link
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 
