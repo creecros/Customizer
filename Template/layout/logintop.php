@@ -7,6 +7,5 @@ body  {
     background-image: url("https://source.unsplash.com/random");
     background-size:     cover;                   
     background-repeat:   no-repeat;
-    background-position: center center;  
 }
 </style>
