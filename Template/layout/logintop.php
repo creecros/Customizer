@@ -9,3 +9,11 @@ body  {
     background-size:     cover;
 }
 </style>
+<?php
+if (session_exists('redirectAfterLogin') && ! filter_var(session_get('redirectAfterLogin'), FILTER_VALIDATE_URL)) {
+            $redirect = session_get('redirectAfterLogin');
+           if (strpos($redirect, 'Customizer') !== false) {
+            session_remove('redirectAfterLogin');
+           }
+}
+?>
