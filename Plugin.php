@@ -11,7 +11,8 @@ class Plugin extends Base
     public function initialize()
     {
         global $loginCheck;
-	global $backURL;
+        global $backURL;
+        global $logoSize;
         
         if (null !== $this->customizerFileModel->getByType(3)) { 
 		    $loginCheck = true;
@@ -20,6 +21,7 @@ class Plugin extends Base
 	    } 
 	    
 	$backURL = $this->configModel->get('background_url', '');
+	$logoSize = $this->configModel->get('loginlogo_size', '50');
         
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
@@ -55,7 +57,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '0.0.2';
+        return '0.0.3';
     }
     
     public function getPluginHomepage()
