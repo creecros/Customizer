@@ -13,6 +13,7 @@ class Plugin extends Base
         global $loginCheck;
         global $backURL;
         global $logoSize;
+        global $backColor;
         
         if (null !== $this->customizerFileModel->getByType(3)) { 
 		    $loginCheck = true;
@@ -21,6 +22,7 @@ class Plugin extends Base
 	    } 
 	    
 	$backURL = $this->configModel->get('background_url', '');
+	$backColor = $this->configModel->get('loginbackground_color', '#ffffff');
 	$logoSize = $this->configModel->get('loginlogo_size', '50');
         
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
