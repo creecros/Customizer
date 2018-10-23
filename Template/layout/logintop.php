@@ -39,3 +39,11 @@ label:nth-of-type(1):after, label:nth-of-type(2n):after {
 } /* This repositions the standard required asterisk */
 
 </style>
+<?php
+if (session_exists('redirectAfterLogin') && ! filter_var(session_get('redirectAfterLogin'), FILTER_VALIDATE_URL)) {
+            $redirect = session_get('redirectAfterLogin');
+           if (strpos($redirect, 'Customizer') !== false) {
+            session_remove('redirectAfterLogin');
+           }
+}
+?>
