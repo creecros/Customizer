@@ -1,7 +1,7 @@
 Customizer - it's like magic!
 ----------
 
-:sparkles:	**Adds a settings panel settings>customizer:**
+:sparkles:	**Adds a settings panel Settings>Customizer:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47381691-9b2fac80-d6ce-11e8-9cdd-c915f8686c35.png)
 
