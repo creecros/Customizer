@@ -3,16 +3,18 @@ Customizer - it's like magic!
 
 :sparkles:	**Adds a settings panel settings>customizer:**
 
-<img src="https://user-images.githubusercontent.com/26339368/47262704-a8c21800-d4bd-11e8-871b-c6483010c7cd.png" height="500">
+<img src="https://user-images.githubusercontent.com/26339368/47368197-32850780-d6af-11e8-9f49-8e352c274909.png" height="400">
 
 
 **GUI to add a...**
 
-* logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
+* header logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
 * login logo
 * login page background image url (will display centered on login page with auto scale)
 * login logo link
 * favicon (Best size 50x50px, 20kb limit, *.png*)
+* set header logo size
+* set login logo size
 
 **...to your site without any backend coding or config settings.**
 
@@ -21,7 +23,7 @@ Customizer - it's like magic!
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
 
 
-:star:  **Logo:**
+:star:  **Header Logo:**
 
 <table>
   <tr>
@@ -34,16 +36,22 @@ Customizer - it's like magic!
   </tr>
 </table>
 
+:star:  **Login Logo:**
+
 <table>
   <tr>
     <th>Normal KB</th>
     <th>Nebula CSS</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47174103-bf117d80-d2dd-11e8-972d-1e0167218e31.png" height="150"></td>
+    <td><img src="https://user-images.githubusercontent.com/26339368/47368502-c0f98900-d6af-11e8-8b20-2116a37c66f5.png" height="150"></td>
     <td><img src="https://user-images.githubusercontent.com/26339368/47184545-f4779480-d2f8-11e8-80d6-d3bd0fc1594b.png" height="150"></td>
   </tr>
 </table>
+
+:star:  **Background Image:**
+
+![image](https://user-images.githubusercontent.com/26339368/47368889-7e847c00-d6b0-11e8-8d9c-d10c2cbd00bd.png)
 
 
 :smirk:	**Considerations:**
@@ -61,5 +69,5 @@ Customizer - it's like magic!
 
 - [ ] Custom Theme Creator with Color Pickers
 - [ ] Preloaded Theme Selector
-- [ ] Sizing and alignment options
+- [x] Sizing options
 
