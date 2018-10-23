@@ -1,4 +1,7 @@
-<?php global $backURL; ?>
+<?php global $backURL; 
+// if ($this->task->configModel->get('headerlogo_size', '30') == '') { $this->task->configModel->save(array('headerlogo_size' => '30')); }
+// if ($this->task->configModel->get('loginlogo_size', '50') == '') { $this->task->configModel->save(array('headerlogo_size' => '50')); }
+?>
 <section>
     <div class="page-header">
         <h2><?= t('Assets') ?></h2>
@@ -7,7 +10,7 @@
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header') ?></h3>
     	</div>
-        <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="30">
+        <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="<?= $this->task->configModel->get('headerlogo_size', '30') ?>">
     <br>
     <br>
      <ul class="upload-link">
@@ -35,7 +38,7 @@
         	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Login') ?></h3>
     	</div>
-        <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="50">
+        <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
     <br>
     <br>
      <ul class="upload-link">
@@ -100,6 +103,12 @@
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
+        <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
+        <?= $this->form->text('headerlogo_size', $values, $errors, array('placeholder="30"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>30</code> (Default is 30px in height)') ?></p>
+        <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
+        <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height)') ?></p>
     </fieldset>
 
     <div class="form-actions">
