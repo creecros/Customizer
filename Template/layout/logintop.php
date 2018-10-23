@@ -8,6 +8,9 @@ body  {
     background-size:     cover;
     background-color: <?= $customizer['backColor'] ?>;
 }
+.form-login {
+    background-color: <?= $customizer['loginpanel_color'] ?>;
+}
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
 	text-align: center;
