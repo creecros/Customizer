@@ -90,7 +90,7 @@
     </ul>
     <?php endif ?>
     </div>
-    <form class="url-links" method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
+    <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
     <?php $backURL = $this->task->configModel->get('background_url', '') ?>
     <fieldset class="login-link-block">
