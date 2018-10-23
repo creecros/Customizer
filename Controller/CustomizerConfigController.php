@@ -4,7 +4,6 @@ namespace Kanboard\Plugin\Customizer\Controller;
 
 use Kanboard\Model\ConfigModel;
 use Kanboard\Model\LanguageModel;
-use Kanboard\Plugin\Controller\CustomizerFileController;
 
 /**
  * Config Controller
@@ -55,7 +54,19 @@ class CustomizerConfigController extends BaseController
      */
     public function application()
     {
-        $this->customizerFileController->show();
+        $logo = $this->customizerFileModel->getByType(1);
+        $flavicon = $this->customizerFileModel->getByType(2);
+	    $loginlogo = $this->customizerFileModel->getByType(3);
+        $logopath = $logo['path'];
+        $flaviconpath = $flavicon['path'];
+        $this->response->html($this->helper->layout->config('customizer:file/show', array(
+            'logo' => $logo,
+            'title' => t('Settings').' &gt; '.t('Customizer'),
+            'flavicon' => $flavicon,
+            'logopath' => $logopath,
+            'flaviconpath' => $flaviconpath, 
+            'loginlogo' => $loginlogo
+        )));
     }
 
     
