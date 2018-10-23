@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\Customizer\Controller;
 use Kanboard\Model\ConfigModel;
 use Kanboard\Model\LanguageModel;
 use Kanboard\Controller\BaseController;
+use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
 
 /**
  * Config Controller
