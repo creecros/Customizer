@@ -5,3 +5,74 @@
 
 /*------ LOGIN FORM ------*/
 .form-login > a > img {display: block;margin: auto;} /* This aligns the logo certically to the text */
+
+.form-login {
+    -webkit-box-shadow: 0px 0px 47px 17px rgba(0,0,0,0.75); 
+    -moz-box-shadow: 0px 0px 47px 17px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 47px 17px rgba(0,0,0,0.75);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+} /* This adds the box for login with rounded borders and a blending shadow on a white box background */
+
+
+/*------ LOGIN PAGE-SPECIFIC STYLES MOVED TO logintop.php SO THEY WON'T AFFECT OTHER PARTS OF KANBOARD ------*/
+
+
+/*------ PLUGIN SETTINGS PAGE ------*/
+.form-help {margin-top: 5px;} /* This gives line spacing above the help text */
+
+code {
+	margin: 0;
+	padding: 2px 0.4em;
+	background-color: rgba(27, 31, 35, 0.32);
+	border-radius: 3px;
+	color: #000;
+	font-family: Tahoma;
+	font-size: 95%!important;
+	letter-spacing: 1px;
+} /* This styles the url link examples */
+
+.login-link-block > label {
+	font-weight: bold;
+	margin-bottom: 5px;
+} /* This is to highlight the title fields */
+
+.panel-heading {
+	margin: -2px -25px;
+	float: right;
+	font-size: 1.2em;
+} /* This adds a heading area to each section */
+
+.panel-title {
+	margin-top: 0;
+	font-weight: bold;
+} /* This is the title text for the heading area */
+
+.links-title {
+	margin: -2px 25px;
+} /* This is the title text for the links heading area, styled uniquely as the type is fieldset */
+
+.upload-link {
+	float: left;
+	list-style: outside none none;
+	width: auto;
+	display: inline-block;
+	margin: 0px 10px;
+} /* This places the upload link on the same line as the remove link */
+
+.remove-link {
+	float: left;
+	list-style: outside none none;
+	width: auto;
+	display: inline-block;
+	margin: 0px 10px;
+} /* This places the upload link on the same line as the remove link */
+
+.upload-link > a > i {
+	color: green;
+} /* This colours the upload icon to green */
+
+.remove-link > a > i {
+	color: red;
+} /* This colours the upload icon to red */
