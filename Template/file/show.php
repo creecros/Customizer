@@ -7,7 +7,7 @@
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header') ?></h3>
     	</div>
-        <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="100">
+        <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="30">
     <br>
     <br>
      <ul class="upload-link">
@@ -31,12 +31,11 @@
     </ul>
     <?php endif ?>
     </div>    
-    <br> 
         <div class="panel login-logo-panel">
         	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Login') ?></h3>
     	</div>
-        <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="75">
+        <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="50">
     <br>
     <br>
      <ul class="upload-link">
@@ -60,12 +59,11 @@
     </ul>
     <?php endif ?>
     </div>    
-    <br> 
     <div class="panel favicon-panel">
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Favicon') ?></h3>
     	</div>
-        <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="50">
+        <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
     <br>
     <br>
      <ul class="upload-link">
