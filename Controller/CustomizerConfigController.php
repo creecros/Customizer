@@ -46,7 +46,7 @@ class CustomizerConfigController extends BaseController
             $this->flash->failure(t('Unable to save your settings.'));
         }
 
-        $this->response->redirect($this->helper->url->to('ConfigController', $redirect));
+        $this->response->redirect($this->helper->url->to('CustomizerConfigController', $redirect));
     }
 
     /**
