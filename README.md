@@ -34,10 +34,13 @@ Customizer - it's like magic!
 
 ![image](https://user-images.githubusercontent.com/26339368/47368502-c0f98900-d6af-11e8-8b20-2116a37c66f5.png)
 
-:star:  **Background Image:**
+:star:  **Customizable Colors for Login Screen:**
+
+![image](https://user-images.githubusercontent.com/26339368/47381801-d631e000-d6ce-11e8-9953-6b2342525cac.png)
+
+:star:  **Login Screen Background Image:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47368889-7e847c00-d6b0-11e8-8d9c-d10c2cbd00bd.png)
-
 
 :smirk:	**Considerations:**
 
