@@ -1,7 +1,3 @@
-<?php global $backURL; 
-// if ($this->task->configModel->get('headerlogo_size', '30') == '') { $this->task->configModel->save(array('headerlogo_size' => '30')); }
-// if ($this->task->configModel->get('loginlogo_size', '50') == '') { $this->task->configModel->save(array('headerlogo_size' => '50')); }
-?>
 <section>
     <div class="page-header">
         <h2><?= t('Assets') ?></h2>
@@ -92,7 +88,6 @@
     </div>
     <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
-    <?php $backURL = $this->task->configModel->get('background_url', '') ?>
     <fieldset class="login-link-block">
     	<div class="panel-heading">
     		<h3 class="panel-title links-title"><?= t('Links & Settings') ?></h3>
