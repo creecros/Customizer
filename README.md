@@ -25,29 +25,11 @@ Customizer - it's like magic!
 
 :star:  **Header Logo:**
 
-<table>
-  <tr>
-    <th>Normal KB</th>
-    <th>Nebula CSS</th>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47174135-cf295d00-d2dd-11e8-8237-493a3013e2ba.png" height="150"></td>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47184294-479d1780-d2f8-11e8-96f7-7ab6215a67bd.png" height="150"></td>
-  </tr>
-</table>
+![image](https://user-images.githubusercontent.com/26339368/47369113-f9e62d80-d6b0-11e8-90e0-974c31b4b535.png)
 
 :star:  **Login Logo:**
 
-<table>
-  <tr>
-    <th>Normal KB</th>
-    <th>Nebula CSS</th>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47368502-c0f98900-d6af-11e8-8b20-2116a37c66f5.png" height="150"></td>
-    <td><img src="https://user-images.githubusercontent.com/26339368/47184545-f4779480-d2f8-11e8-80d6-d3bd0fc1594b.png" height="150"></td>
-  </tr>
-</table>
+![image](https://user-images.githubusercontent.com/26339368/47368502-c0f98900-d6af-11e8-8b20-2116a37c66f5.png)
 
 :star:  **Background Image:**
 
