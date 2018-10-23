@@ -3,8 +3,7 @@ Customizer - it's like magic!
 
 :sparkles:	**Adds a settings panel settings>customizer:**
 
-<img src="https://user-images.githubusercontent.com/26339368/47368197-32850780-d6af-11e8-9f49-8e352c274909.png" height="400">
-
+![image](https://user-images.githubusercontent.com/26339368/47381691-9b2fac80-d6ce-11e8-9cdd-c915f8686c35.png)
 
 **GUI to add a...**
 
