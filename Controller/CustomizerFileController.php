@@ -121,10 +121,10 @@ class CustomizerFileController extends BaseController
     public function loginlogoexists()
     {
         if (null !== $this->customizerFileModel->getByType(3)) { 
-		$loginCheck = true;
+		$customizer['loginCheck'] = true;
 		return true; 
 	} else { 
-		$loginCheck = false;
+		$customizer['loginCheck'] = false;
 		return false; 
 	}  
     }
