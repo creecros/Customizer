@@ -1,6 +1,7 @@
 <?php global $loginCheck; ?>
 <?php global $backURL; ?>
 <?php global $logoSize; ?>
+<?php global $backColor; ?>
 <?php if ($loginCheck): ?>
 <?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="' . $logoSize . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
 <?php endif ?>
@@ -8,6 +9,7 @@
 body  {
     background: url("<?= $backURL ?>") no-repeat center center fixed;
     background-size:     cover;
+    background-color: <?= $backColor ?>;
 }
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
