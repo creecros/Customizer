@@ -9,12 +9,16 @@ Customizer - it's like magic!
 **GUI to add a...**
 
 * header logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
-* login logo
-* login page background image url (will display centered on login page with auto scale)
-* login logo link
+* customizable login screen
+  * login logo
+  * login page background image url (will display centered on login page with auto scale)
+  * login logo link
+  * set login logo size
+  * set login page background color
+  * set login panel color
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
-* set login logo size
+
 
 **...to your site without any backend coding or config settings.**
 
