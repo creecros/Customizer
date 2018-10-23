@@ -95,7 +95,7 @@
     <?php $backURL = $this->task->configModel->get('background_url', '') ?>
     <fieldset class="login-link-block">
     	<div class="panel-heading">
-    		<h3 class="panel-title links-title"><?= t('Links') ?></h3>
+    		<h3 class="panel-title links-title"><?= t('Links & Settings') ?></h3>
     	</div>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
