@@ -2,7 +2,7 @@
 <?php global $backURL; ?>
 <?php global $logoSize; ?>
 <?php if ($loginCheck): ?>
-<?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="<?= $logoSize ?>">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
+<?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="' . $logoSize . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
 <?php endif ?>
 <style>
 body  {
