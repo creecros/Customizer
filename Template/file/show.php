@@ -61,26 +61,6 @@
     <?php endif ?>
     </div>    
     <br> 
-    <form class="url-links" method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
-    <?= $this->form->csrf() ?>
-    <?php $backURL = $this->task->configModel->get('background_url', '') ?>
-    <fieldset class="login-link-block">
-    	<div class="panel-heading">
-    		<h3 class="panel-title links-title"><?= t('Links') ?></h3>
-    	</div>
-        <?= $this->form->label(t('Login Link'), 'login_link') ?>
-        <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
-        <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
-        <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
-        <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
-    </fieldset>
-
-    <div class="form-actions">
-        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
-    </div>
-</form>     
-<br>
     <div class="panel favicon-panel">
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Favicon') ?></h3>
@@ -109,4 +89,24 @@
     </ul>
     <?php endif ?>
     </div>
+    <form class="url-links" method="post" action="<?= $this->url->href('ConfigController', 'save', array('redirect' => 'application')) ?>" autocomplete="off">
+    <?= $this->form->csrf() ?>
+    <?php $backURL = $this->task->configModel->get('background_url', '') ?>
+    <fieldset class="login-link-block">
+    	<div class="panel-heading">
+    		<h3 class="panel-title links-title"><?= t('Links') ?></h3>
+    	</div>
+        <?= $this->form->label(t('Login Link'), 'login_link') ?>
+        <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
+        <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
+        <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
+        <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
+    </fieldset>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+    </div>
+</form>     
+<br>
 </section>
