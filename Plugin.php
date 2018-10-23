@@ -13,9 +13,9 @@ class Plugin extends Base
 	global $customizer;
         
         if (null !== $this->customizerFileModel->getByType(3)) { 
-		    $customizer['logincheck'] = true;
+		    $customizer['loginCheck'] = true;
 	    } else { 
-		    $customizer['logincheck'] = false;
+		    $customizer['loginCheck'] = false;
 	    } 
 	    
 	$customizer['backURL'] = $this->configModel->get('background_url', '');
