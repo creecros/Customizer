@@ -18,7 +18,9 @@
             <?= $this->text->e($title) ?>
         <?php endif ?>
     </span>
+<?php if (version_compare(APP_VERSION, '1.1.0') >= 0) : ?>
     <?php if (! empty($description)): ?>
         <?= $this->app->tooltipHTML($description) ?>
     <?php endif ?>
+ <?php endif ?>
 </h1>
