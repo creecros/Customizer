@@ -14,33 +14,29 @@ body  {
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
 	text-align: center;
-} /* This moves the login button to the centre of the box */
+	padding-top: unset;
+} /* This moves the login button to the centre of the box and removes the useless padding above the login button */
 
 label:nth-of-type(3n) {
 	font-size: smaller;
 	color: grey;
-} /* This makes the 'remember me' smaller */
+	text-align: center;
+} /* This makes the 'remember me' smaller and centralised*/
 
 label:nth-of-type(1), label:nth-of-type(2n), .form-actions > .btn-blue {
 	font-variant-caps: all-small-caps;
 	text-align: center;
-} /* This makes the title text of the labels and the login button all capitals */
+	transition: ease-in-out 0.4s;
+	-webkit-transition: ease-in-out 0.4s;
+} /* This makes the title text of the labels and the login button all capitals.  Also adds smoothing when hover on the login button */
 
 input[type="password"], input[type="text"]:not(.input-addon-field) {
 	margin: auto;
 	display: block;
-} /* This centralises the input fields */
+	border-radius: 5px;
+} /* This centralises the input fields and makes the borders consistent with the outer form */
 
 .form-required { display: none;} /* This removes the standard required asterisk */
-
-label:nth-of-type(1):after, label:nth-of-type(2n):after {
-	content: "*";
-	transform: scale(1.3);
-	margin-left: 5px;
-	color: red;
-	transform: scale(1.3);
-	display: inline-block;
-} /* This repositions the standard required asterisk */
 
 </style>
 <?php
