@@ -58,5 +58,5 @@ Customizer - it's like magic!
 - [ ] Custom Theme Creator with Color Pickers
 - [ ] Preloaded Theme Selector
 - [x] Sizing options
-- [x] Increasing Compatibility(currently working on this)
+- [x] Increasing Compatibility
 
