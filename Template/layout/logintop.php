@@ -23,6 +23,7 @@ label:nth-of-type(3n) {
 
 label:nth-of-type(1), label:nth-of-type(2n), .form-actions > .btn-blue {
 	font-variant-caps: all-small-caps;
+	text-align: center;
 } /* This makes the title text of the labels and the login button all capitals */
 
 input[type="password"], input[type="text"]:not(.input-addon-field) {
