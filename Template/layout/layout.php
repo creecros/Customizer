@@ -15,7 +15,9 @@
         <?= $this->asset->colorCss() ?>
         <?= $this->asset->css('assets/css/vendor.min.css') ?>
         <?= $this->asset->css('assets/css/app.min.css') ?>
+        <?php if (file_exists('assets/css/print.min.css')) :?>
         <?= $this->asset->css('assets/css/print.min.css', true, 'print') ?>
+        <?php endif ?>
         <?= $this->asset->customCss() ?>
 
         <?php if (! isset($not_editable)): ?>
