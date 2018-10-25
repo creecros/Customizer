@@ -15,7 +15,7 @@
         <?= $this->form->text('username', $values, $errors, array('autofocus', 'required', 'placeholder="Enter your username.")) ?>
 
         <?= $this->form->label(t('Password'), 'password') ?>
-        <?= $this->form->password('password', $values, $errors, array('required', 'placeholder="Enter your password.")) ?>
+        <?= $this->form->password('password', $values, $errors, array('required', 'placeholder="Enter your password."')) ?>
 
         <?php if (isset($captcha) && $captcha): ?>
             <?= $this->form->label(t('Enter the text below'), 'captcha') ?>
