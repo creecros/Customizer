@@ -26,6 +26,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
+        $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
         $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
         $this->applicationAccessMap->add('CustomizerFileController', array('loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
@@ -57,7 +58,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '0.0.4';
+        return '0.0.5';
     }
     
     public function getPluginHomepage()
