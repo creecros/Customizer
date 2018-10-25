@@ -12,7 +12,7 @@
         <?= $this->form->csrf() ?>
 
         <?= $this->form->label(t('Username'), 'username') ?>
-        <?= $this->form->text('username', $values, $errors, array('autofocus', 'required', 'placeholder="Enter your username.")) ?>
+        <?= $this->form->text('username', $values, $errors, array('autofocus', 'required', 'placeholder="Enter your username."')) ?>
 
         <?= $this->form->label(t('Password'), 'password') ?>
         <?= $this->form->password('password', $values, $errors, array('required', 'placeholder="Enter your password."')) ?>
