@@ -15,7 +15,8 @@ body  {
 .form-actions {
 	text-align: center;
 	padding-top: unset;
-} /* This moves the login button to the centre of the box and removes the useless padding above the login button */
+	padding-bottom: 10px;
+} /* This moves the login button to the centre of the box and removes the useless padding above the login button.  Adds padding to bottom of login button. */
 
 label:nth-of-type(3n) {
 	font-size: smaller;
@@ -23,12 +24,49 @@ label:nth-of-type(3n) {
 	text-align: center;
 } /* This makes the 'remember me' smaller and centralised*/
 
-label:nth-of-type(1), label:nth-of-type(2n), .form-actions > .btn-blue {
+.form-actions > .btn-blue {
 	font-variant-caps: all-small-caps;
 	text-align: center;
 	transition: ease-in-out 0.4s;
 	-webkit-transition: ease-in-out 0.4s;
-} /* This makes the title text of the labels and the login button all capitals.  Also adds smoothing when hover on the login button */
+} /* This makes the title text of the login button all capitals.  Also adds smoothing when hover on the login button */
+
+label:nth-of-type(1) {
+	visibility: hidden;
+} /* This hides (to maintain the gap) the text of the labels */
+
+label:nth-of-type(2n) {
+	visibility: hidden;
+	margin-top: -5px;
+} /* This hides (to maintain the gap) the text of the labels and also reduces the top margin */
+
+input::-webkit-input-placeholder {
+	font-weight: bold;
+	color: #000;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+} /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
+
+input::-moz-placeholder {
+	font-weight: bold;
+	color: #000;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+} /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
+
+input:-ms-input-placeholder {
+	font-weight: bold;
+	color: #000;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+} /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
+
+input::placeholder {
+	font-weight: bold;
+	color: #000;
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+} /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input[type="password"], input[type="text"]:not(.input-addon-field) {
 	margin: auto;
