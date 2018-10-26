@@ -105,11 +105,11 @@
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
         <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
-        <?= $this->form->text('headerlogo_size', $values, $errors, array('placeholder="30"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>30</code> (Default is 30px in height)') ?></p>
+        <?= $this->form->text('headerlogo_size', $values, $errors, array('placeholder="30"', 'pattern="[0-9]{1,3}"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>30</code> (Default is 30px in height, intgers only, max 999)') ?></p>
         <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
-        <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height)') ?></p>
+        <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
     </fieldset>
 
     <div class="form-actions">
