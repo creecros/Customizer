@@ -78,10 +78,19 @@ input[type="password"], input[type="text"]:not(.input-addon-field) {
 
 </style>
 <?php
+if (version_compare(APP_VERSION, '1.2.0') >= 0) {
 if (session_exists('redirectAfterLogin') && ! filter_var(session_get('redirectAfterLogin'), FILTER_VALIDATE_URL)) {
             $redirect = session_get('redirectAfterLogin');
            if (strpos($redirect, 'Customizer') !== false) {
             session_remove('redirectAfterLogin');
            }
+}
+} else {
+if (isset($this->task->sessionStorage->redirectAfterLogin) && ! empty($this->task->sessionStorage->redirectAfterLogin) && ! filter_var($this->task->sessionStorage->redirectAfterLogin, FILTER_VALIDATE_URL)) {
+            $redirect = $this->task->sessionStorage->redirectAfterLogin;
+	   if (strpos($redirect, 'Customizer') !== false) {
+            unset($this->task->sessionStorage->redirectAfterLogin);
+	   }
+}
 }
 ?>
