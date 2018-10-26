@@ -86,10 +86,10 @@ if (session_exists('redirectAfterLogin') && ! filter_var(session_get('redirectAf
            }
 }
 } else {
-if (isset($this->sessionStorage->redirectAfterLogin) && ! empty($this->sessionStorage->redirectAfterLogin) && ! filter_var($this->sessionStorage->redirectAfterLogin, FILTER_VALIDATE_URL)) {
-            $redirect = $this->sessionStorage->redirectAfterLogin;
+if (isset($this->task->sessionStorage->redirectAfterLogin) && ! empty($this->task->sessionStorage->redirectAfterLogin) && ! filter_var($this->task->sessionStorage->redirectAfterLogin, FILTER_VALIDATE_URL)) {
+            $redirect = $this->task->sessionStorage->redirectAfterLogin;
 	   if (strpos($redirect, 'Customizer') !== false) {
-            unset($this->sessionStorage->redirectAfterLogin);
+            unset($this->task->sessionStorage->redirectAfterLogin);
 	   }
 }
 }
