@@ -22,6 +22,10 @@ class CustomizerConfigController extends BaseController
     public function save()
     {
         $values =  $this->request->getValues();
+ /*
+  * is this really needed?
+  */
+ /*
         $redirect = $this->request->getStringParam('redirect', 'application');
 
         switch ($redirect) {
@@ -37,7 +41,7 @@ class CustomizerConfigController extends BaseController
                 );
                 break;
         }
-
+*/
         if ($this->configModel->save($values)) {
             $this->languageModel->loadCurrentLanguage();
             $this->flash->success(t('Settings saved successfully.'));
@@ -45,7 +49,7 @@ class CustomizerConfigController extends BaseController
             $this->flash->failure(t('Unable to save your settings.'));
         }
 
-          $this->response->redirect($this->configModel->get('application_url', '') . 'settings/customizer');
+          $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
 
 
