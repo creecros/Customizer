@@ -1400,11 +1400,11 @@ ul.dropdown-submenu-open {
 }
 
 td a.dropdown-menu strong {
-    color: #333
+    color: #cb2431
 }
 
 td a.dropdown-menu strong i {
-    color: #333
+    color: #cb2431
 }
 
 td a.dropdown-menu i {
@@ -2429,7 +2429,8 @@ div.draggable-item-selected {
     padding: 12px;
     border-radius: 3px;
     box-shadow: 0px 1px 1px 0 rgba(46, 61, 73, 0.30);
-    border: 2px solid;
+    border: 1px solid;
+    background-color: #f9f9f9!important;
 }
 
 div.task-board-recent {
@@ -2442,7 +2443,7 @@ div.task-board-status-closed {
 }
 
 .task-board a {
-    color: #23292d;
+    color: #0366d6;
     font-weight: 600;
     text-decoration: none
 }
