@@ -8,9 +8,20 @@ use Kanboard\Core\Security\Role;
 
 class Plugin extends Base
 {
+		
     public function initialize()
     {
 	global $customizer;
+	    
+	// Themes
+	 $customizer['themes'] = array(
+		'Default' => '',
+		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
+		'Moon' => 'https://raw.githubusercontent.com/kenlog/Moon/master/Assets/css/moon.css',
+		'Oxygen' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css',
+		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
+		);
+	    
         
         if (null !== $this->customizerFileModel->getByType(3)) { 
 		    $customizer['loginCheck'] = true;
