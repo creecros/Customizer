@@ -22,7 +22,7 @@ class Plugin extends Base
 		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
 	    
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this-configModel->get('themeSelection', ''), 'r'));
+        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
 
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
 	    
