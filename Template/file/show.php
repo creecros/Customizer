@@ -3,7 +3,7 @@ global $customizer;
 
 $themes = array();
 
-foreach ($customizer['themes'] as $key => $value) { array_push($themes, $key); }
+foreach ($customizer['themes'] as $key => $value) { array_push($themes, $value['name']); }
 
 ?>
 <section>
