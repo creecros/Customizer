@@ -25,4 +25,22 @@ class ThemeHelper extends Base
         return $html;
     }
     
+    private function errorClass(array $errors, $name)
+    {
+        return ! isset($errors[$name]) ? '' : ' form-error';
     }
+
+    private function errorList(array $errors, $name)
+    {
+        $html = '';
+        if (isset($errors[$name])) {
+            $html .= '<ul class="form-errors">';
+            foreach ($errors[$name] as $error) {
+                $html .= '<li>'.$this->helper->text->e($error).'</li>';
+            }
+            $html .= '</ul>';
+        }
+        return $html;
+    }
+    
+ }
