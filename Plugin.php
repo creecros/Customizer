@@ -17,7 +17,7 @@ class Plugin extends Base
 	$customizer['themes'] = array(
 		'Default' => '',
 		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
-		'Moon' => 'https://raw.githubusercontent.com/kenlog/Moon/master/Assets/css/moon.css',
+		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
 		'Oxygen' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css',
 		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
