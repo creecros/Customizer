@@ -1695,8 +1695,8 @@ header .menus-container {
 }
 
 header h1 {
-    font-size: 1.7em
-    color: #dddddd
+    font-size: 1.7em!important
+    color: #dddddd!important
 }
 
 header h1 .tooltip {
