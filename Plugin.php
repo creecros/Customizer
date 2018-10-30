@@ -14,7 +14,7 @@ class Plugin extends Base
 	global $customizer;
 	    
 	// Themes
-	 $customizer['themes'] = array(
+	$customizer['themes'] = array(
 		'Default' => '',
 		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
 		'Moon' => 'https://raw.githubusercontent.com/kenlog/Moon/master/Assets/css/moon.css',
@@ -22,9 +22,9 @@ class Plugin extends Base
 		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
 	    
-        file_put_contents("/var/www/app/plugins/Customizer/Assets/css/theme.css", fopen($this-configModel->get('themeSelection', ''), 'r'));
+        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this-configModel->get('themeSelection', ''), 'r'));
 
-        $this->hook->on("template:layout:css", array("template" => "plugins/Customizer/Assets/css/theme.css"));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
 	    
         //Helper
         $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
