@@ -1,4 +1,11 @@
-<?php global $customizer; ?>
+<?php 
+global $customizer; 
+
+$themes = array();
+
+foreach ($customizer['theme'] as $key => $value) { array_push($themes, $key); }
+
+?>
 <section>
     <div class="page-header">
         <h2><?= t('Assets') ?></h2>
@@ -112,7 +119,7 @@
         <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
-        <?= $this->form->select('themeSelection', $customizer['themes']['name'], $values, $errors) ?>  
+        <?= $this->form->select('themeSelection', $themes, $values, $errors) ?>  
     </fieldset>
 
     <div class="form-actions">
