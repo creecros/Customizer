@@ -15,7 +15,7 @@ class Plugin extends Base
 	    
 	// Themes
 	$customizer['themes'] = array(
-		'Default' => '',
+		'Default' => 'https://raw.githubusercontent.com/creecros/Customizer/Theme-Presets/Assets/css/theme.css',
 		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
 		'Moon' => 'https://raw.githubusercontent.com/kenlog/Moon/master/Assets/css/moon.css',
 		'Oxygen' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css',
@@ -75,7 +75,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '0.0.6';
+        return '0.0.7';
     }
     
     public function getPluginHomepage()
