@@ -2431,8 +2431,8 @@ div.draggable-item-selected {
     box-shadow: 0px 1px 1px 0 rgba(46, 61, 73, 0.30);
     border-bottom: none;
     border-left: none;
-    border-right: none;
-    border-top: 1px solid;
+    border-right: 2px solid;
+    border-top: none;
     background-color: #f9f9f9!important;
 }
 
