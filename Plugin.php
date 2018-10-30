@@ -21,7 +21,10 @@ class Plugin extends Base
 		'Oxygen' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css',
 		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
-        
+	    
+        //Helper
+        $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
+	    
         if (null !== $this->customizerFileModel->getByType(3)) { 
 		    $customizer['loginCheck'] = true;
 	    } else { 
