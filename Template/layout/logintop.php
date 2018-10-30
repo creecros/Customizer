@@ -78,7 +78,7 @@ input[type="password"], input[type="text"]:not(.input-addon-field) {
 
 </style>
 <?php
-if (version_compare(APP_VERSION, '1.2.0') >= 0) {
+if (function_exists('session_exists')) {
 if (session_exists('redirectAfterLogin') && ! filter_var(session_get('redirectAfterLogin'), FILTER_VALIDATE_URL)) {
             $redirect = session_get('redirectAfterLogin');
            if (strpos($redirect, 'Customizer') !== false) {
