@@ -15,23 +15,23 @@ class Plugin extends Base
 	    
 	// Themes
 	 $customizer['themes'] = array(
-		'Default' => array(
+		array(
 			'name' => 'Default',
 			'url' => ''
 			),
-		'Nebula' => array(
+		array(
 			'name' => 'Nebula',
 			'url' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css'
 			),
-		'Moon' => array(
+		array(
 			'name' => 'Moon',
 			'url' => 'https://raw.githubusercontent.com/kenlog/Moon/master/Assets/css/moon.css'
 			),
-		'Oxygen' => array(
+		array(
 			'name' => 'Oxygen',
 			'url' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css'
 			),
-		'KanboardCSS' => array(
+		array(
 			'name' => 'KanboardCSS',
 			'url' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 			)
