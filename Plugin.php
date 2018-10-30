@@ -23,7 +23,7 @@ class Plugin extends Base
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', '', 'r');
+        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', '');
 	} else {
         file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
 	}
