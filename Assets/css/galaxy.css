@@ -14,7 +14,7 @@ body {
 	padding-bottom:10px;
 	color:#ced4da;
 	background-color: #222;
-	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	text-rendering:optimizeLegibility
 }
 small {
