@@ -987,12 +987,12 @@ a.btn {
     font-weight: normal;
     cursor: pointer;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 5px!important;
     padding: 3px 10px;
     margin: 0;
     border: 0px solid #ddd;
-    background: #00bc8c;
-    color: #fbfbfb;
+    background: #00bc8c!important;
+    color: #fbfbfb!important;
 }
 .btn:hover,.btn:focus {
 	border-color:#bbb;
