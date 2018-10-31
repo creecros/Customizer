@@ -17,6 +17,7 @@ Customizer - it's like magic!
   * set login panel color
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
+* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md)
 
 
 **...to your site without any backend coding or config settings.**
@@ -56,7 +57,7 @@ Customizer - it's like magic!
 :lollipop: **Future Enhancements:**
 
 - [ ] Custom Theme Creator with Color Pickers
-- [ ] Preloaded Theme Selector
+- [x] Preloaded Theme Selector
 - [x] Sizing options
 - [x] Increasing Compatibility
 
