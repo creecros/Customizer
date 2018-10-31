@@ -58,7 +58,7 @@ class Plugin extends Base
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
 	    
 	//Permissions for login page to access logos    
-        $this->applicationAccessMap->add('CustomizerFileController', array('loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
+        $this->applicationAccessMap->add('CustomizerFileController', array('image', 'loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
 	    
     }
     
