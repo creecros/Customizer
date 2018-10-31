@@ -1,3 +1,6 @@
+<?php 
+global $customizer; 
+?>
 <section>
     <div class="page-header">
         <h2><?= t('Assets') ?></h2>
@@ -110,6 +113,8 @@
         <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
         <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
+        <?= $this->form->label(t('Theme'), 'themeSelection') ?>
+        <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
 
     <div class="form-actions">
