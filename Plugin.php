@@ -18,7 +18,7 @@ class Plugin extends Base
 		'Default' => '',
 		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
 		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Pulse' => 'https://bootswatch.com/4/pulse/bootstrap.css'
+		'Cayman' => '/var/www/app/plugins/Customizer/Assets/css/cayman.css'
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
