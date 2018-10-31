@@ -1327,7 +1327,7 @@ header {
 	box-shadow: 0px 1px 3px 0 rgba(46,61,73,.12);
 	padding: 15px 10px;
 	margin-bottom: 15px;
-	background: #252525;
+	background: #375a7f;
 }
 .header img {
   float: left;
@@ -1377,7 +1377,6 @@ header .menus-container {
 }
 header h1 {
 	font-size:1.33em!important;
-	background-color: #375a7f!important;
 }
 header h1 .tooltip {
 	opacity:0.3;
@@ -2569,70 +2568,4 @@ span.task-date-overdue {
 .bulk-change-inputs label {
 	margin-top:0;
 	margin-bottom:3px
-}
-#to-top {
-    margin: 0 0px 30px 0px;
-}
-
-#backToTop {
-    position: fixed;
-    left: 50%;
-    bottom: -25px;
-    display: block;
-    width: 50px;
-    height: 50px;
-    z-index: 10000;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-}
-
-#backToTop.topshow {
-    bottom: 0;
-}
-
-#backToTop span {
-    position: absolute;
-    left: -25px;
-    bottom: -25px;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: rgba(50, 50, 50, 0.15);
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-}
-
-#backToTop span:hover {
-    bottom: 5px;
-    background: rgba(70, 70, 70, 0.9);
-}
-
-#backToTop i:before {
-    position: relative;
-    left: 12px;
-    top: 0;
-    display: block;
-    margin: 0;
-    width: 50px;
-    color: #fff;
-    font-size: 27px;
-    -webkit-transition: all 0.6s ease;
-    -moz-transition: all 0.6s ease;
-    -ms-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-}
-
-#backToTop:hover i:before {
-    top: 9px;
 }
