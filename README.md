@@ -22,31 +22,38 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * set login panel color
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
-* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md)
+* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 3 preloaded themes
+  * Github :octocat:
+  * Galaxy :milky_way:
+  * Breathe :cyclone:
 
 
 **...to your site without any backend coding or config settings.**
 
-:boom:	**Favicon:**
+:beginner:	**Favicon:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
 
-
-:star:  **Header Logo:**
+:rainbow:  **Header Logo:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47369113-f9e62d80-d6b0-11e8-90e0-974c31b4b535.png)
 
-:star:  **Login Logo:**
+:peach:  **Login Logo:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47802063-e9176680-dd05-11e8-83c7-d18d563183ac.png)
 
-:star:  **Customizable Colors for Login Screen:**
+:gem:  **Customizable Colors for Login Screen:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47801759-3a732600-dd05-11e8-8192-b17cb4de8ce0.png)
 
-:star:  **Login Screen Background Image:**
+:dart:  **Login Screen Background Image:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47801677-0f88d200-dd05-11e8-90aa-13d175042f10.png)
+
+:mega:  **Themes:**
+
+![image](https://user-images.githubusercontent.com/26339368/47803243-6e037f80-dd08-11e8-94d5-caf7ed1c6015.png)
+
 
 :smirk:	**Considerations:**
 
