@@ -4,6 +4,8 @@
 Customizer - it's like magic!
 ----------
 
+This plugin has been brought to you by a collective and ongoing effort of: [creecros](https://github.com/creecros), [vistree](https://github.com/vistree), [aljawaid](https://github.com/aljawaid) & [kenlog](https://github.com/kenlog) 
+
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47381691-9b2fac80-d6ce-11e8-9cdd-c915f8686c35.png)
