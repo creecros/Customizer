@@ -1,21 +1,24 @@
 /*!
- * Oxygen - Theme for Kanboard
+ * Modified version of Oxygen - Theme for Kanboard
  * Licensed under the MIT license - Oxygen/LICENSE
  * https://github.com/kenlog/Oxygen
  * Copyright (c) 2018 Valentino Pesce - https://iltuobrand.it
  */
 
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 h1{
-	color:#336699;
+	color:#007BA8;
 }
 a{
-	color:#336699;
+	color:#007BA8;
 }
 .js-modal-medium{
-	color:#336699;
+	color:#007BA8;
 }
 .sidebar>ul a:hover{
-	color:#336699;
+	color:#007BA8;
 }
 div.task-board-recent {
 	box-shadow: none;
@@ -32,13 +35,14 @@ header {
 	box-shadow: 0px 1px 3px 0 rgba(46,61,73,.12);
 	padding: 15px 10px;
 	margin-bottom: 15px;
+	background-color: #e8fbff!important;
 }
 .header img {
   float: left;
 }
 .header h2 {
   position: relative;
-  color:#336699;
+  color:#007BA8;
   top: 13px;
   left: 10px;
   margin: 0;
@@ -147,7 +151,7 @@ table td {
 }
 .board-add-icon i {
     text-decoration: none;
-    color: #279f43;
+    color: #289E7B;
     font-size: 1.4em
 }
 .board-add-icon i:focus,
@@ -198,7 +202,7 @@ table td {
 	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
 }
 a i.web-notification-icon {
-	color: #fa3e3e;
+	color: #D45353;
 }
 .fa-play {
 	font-size:1.2em;
@@ -229,7 +233,7 @@ a i.web-notification-icon {
 }
 .comments .comment-highlighted {
 	background-color: #fff;
-	border: 2px solid #FFEB3B;
+	border: 2px solid #F5E982;
 	border-radius: 5px;
 }
 .comments .comment:hover {
@@ -253,13 +257,13 @@ a i.web-notification-icon {
 }
 input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
 	color: #000;
-	border-color: #336699;
+	border-color: #007BA8;
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(222,222,222,0.25);
 }
 textarea:focus {
 	color: #000;
-	border-color: #336699;
+	border-color: #007BA8;
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(222,222,222,0.25);
 }
@@ -277,44 +281,44 @@ select{
 	padding: 3px;
 }
 .btn-blue {
-	border-color: #336699;
-	background: #336699;
+	border-color: #007BA8;
+	background: #007BA8;
 	color: #fff;
-	background-image: linear-gradient(-180deg, #336699 0%, #003087 90%);
+	background-image: linear-gradient(-180deg, #007BA8 0%, #007387 90%);
 }
 .btn-blue:hover, .btn-blue:focus {
-	border-color: #336699;
+	border-color: #007BA8;
 	background: #ffffff;
-	color: #336699;
+	color: #007BA8;
 }
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-	border: solid #336699 1px;
+	border: solid #007BA8 1px;
 	outline: 0;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-	background-color: #336699;
+	background-color: #007BA8;
 	color: white;
 }
 .board-add-icon i:focus, .board-add-icon i:hover {
 	text-decoration: none;
-	color: #8BC34A;
+	color: #91C259;
 }
 .board-add-icon i {
 	text-decoration: none;
-	color: #336699;
+	color: #007BA8;
 	font-size: 1.4em;
 }
 .dropdown-submenu-open li:not(.no-hover):hover {
-	background: #336699;
+	background: #007BA8;
 	color: #fff;
 }
 .sidebar>ul li.active a {
-	color: #336699;
+	color: #007BA8;
 	font-weight: bold;
 }
 .table-list-row .table-list-title a:hover, .table-list-row .table-list-title a:focus {
 	text-decoration: underline;
-	color: #336699;
+	color: #007BA8;
 }
 .image-slideshow-overlay img {
     display: block;
