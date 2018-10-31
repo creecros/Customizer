@@ -8,7 +8,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/47381691-9b2fac80-d6ce-11e8-9cdd-c915f8686c35.png)
+![image](https://user-images.githubusercontent.com/26339368/47801945-a2c20780-dd05-11e8-8538-afd5333baa95.png)
 
 **GUI to add a...**
 
@@ -38,15 +38,15 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :star:  **Login Logo:**
 
-![image](https://user-images.githubusercontent.com/26339368/47368502-c0f98900-d6af-11e8-8b20-2116a37c66f5.png)
+![image](https://user-images.githubusercontent.com/26339368/47802063-e9176680-dd05-11e8-83c7-d18d563183ac.png)
 
 :star:  **Customizable Colors for Login Screen:**
 
-![image](https://user-images.githubusercontent.com/26339368/47381801-d631e000-d6ce-11e8-9953-6b2342525cac.png)
+![image](https://user-images.githubusercontent.com/26339368/47801759-3a732600-dd05-11e8-8192-b17cb4de8ce0.png)
 
 :star:  **Login Screen Background Image:**
 
-![image](https://user-images.githubusercontent.com/26339368/47368889-7e847c00-d6b0-11e8-8d9c-d10c2cbd00bd.png)
+![image](https://user-images.githubusercontent.com/26339368/47801677-0f88d200-dd05-11e8-90aa-13d175042f10.png)
 
 :smirk:	**Considerations:**
 
