@@ -18,7 +18,7 @@ class Plugin extends Base
 		'Default' => '',
 		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
 		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
-		'Oxygen' => 'https://raw.githubusercontent.com/kenlog/Oxygen/master/Assets/css/oxygen.css',
+		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
 		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
 	    
