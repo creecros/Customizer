@@ -1,3 +1,6 @@
+## :star: If you use it, you should star it on Github! 
+- It's the least you can do for all the work put into it!
+
 Customizer - it's like magic!
 ----------
 
