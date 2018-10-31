@@ -25,7 +25,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 * [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 3 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
-  * Breathe :cyclone:
+  * Breathe :partly_sunny:
 
 
 **...to your site without any backend coding or config settings.**
