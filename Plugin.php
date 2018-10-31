@@ -16,10 +16,8 @@ class Plugin extends Base
 	// Themes
 	$customizer['themes'] = array(
 		'Default' => '',
-		'Nebula' => 'https://raw.githubusercontent.com/kenlog/Nebula/master/Assets/css/nebula.css',
 		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
 		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'KanboardCSS' => 'https://raw.githubusercontent.com/aljawaid/KanboardCSS/master/kanboardcss.css'
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
