@@ -18,7 +18,7 @@ class Plugin extends Base
 		'Default' => '',
 		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
 		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Cayman' => '/var/www/app/plugins/Customizer/Assets/css/cayman.css'
+		'Breathe' => '/var/www/app/plugins/Customizer/Assets/css/breathe.css'
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
