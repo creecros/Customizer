@@ -1,0 +1,323 @@
+/*!
+ * Oxygen - Theme for Kanboard
+ * Licensed under the MIT license - Oxygen/LICENSE
+ * https://github.com/kenlog/Oxygen
+ * Copyright (c) 2018 Valentino Pesce - https://iltuobrand.it
+ */
+
+h1{
+	color:#336699;
+}
+a{
+	color:#336699;
+}
+.js-modal-medium{
+	color:#336699;
+}
+.sidebar>ul a:hover{
+	color:#336699;
+}
+div.task-board-recent {
+	box-shadow: none;
+	border-bottom: 6px solid rgba(0, 0, 0, 0.3);
+}
+div.ganttview-vtheader-series-name {
+	padding: 0 6px;
+}
+th,td {
+	padding: 10px;
+}
+header {
+	border-bottom: none;
+	box-shadow: 0px 1px 3px 0 rgba(46,61,73,.12);
+	padding: 15px 10px;
+	margin-bottom: 15px;
+}
+.header img {
+  float: left;
+}
+.header h2 {
+  position: relative;
+  color:#336699;
+  top: 13px;
+  left: 10px;
+  margin: 0;
+}
+label {
+	font-weight: bold;
+	margin-top: 18px;
+}
+.task-board {
+	margin-bottom: 8px;
+	padding: 12px;
+	border-radius: 6px;
+	box-shadow: 0px 5px 5px 0 rgba(46,61,73,.12);
+	border: none;
+}
+.task-board-title {
+	font-size: 1.25em;
+	font-weight: 600;
+}
+.task-show-details {
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.task-show-details h2 {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 20px;
+	border-radius: 8px 8px 0 0;
+	color: #fff;
+}
+.task-show-details ul {
+	padding: 20px;
+}
+.task-summary-container {
+	border: none;
+	border-radius: 7px;
+	border-bottom: 5px solid;
+	padding: 20px;
+}
+.table-small {
+	font-size: 1em;
+}
+table th {
+	text-align: left;
+	padding: 0.7em 3px;
+	border: 1px solid #eee;
+	background: #fbfbfb;
+}
+table td {
+    border: none;
+    padding: 0.5em 7px;
+    vertical-align: top;
+}
+.sidebar ul {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+.sidebar ul:last-of-type {
+	border-bottom: none;
+}
+.sidebar-collapse i,.sidebar-collapsed .sidebar {
+	background-color: #999;
+	border-radius: 24px;
+	padding: 5px 10px 5px 8px;
+}
+.sidebar-collapse i,.sidebar-collapsed .sidebar i {
+	color: #fff;
+}
+.sidebar-collapse i:hover,.sidebar-collapsed .sidebar:hover {
+	background-color: #ccc;
+}
+.page-header {
+	margin: 15px 0;
+	background-color: #eee;
+	padding: 6px 10px 10px 10px;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.page-header li {
+	font-size: 1.1em;
+}
+.page-header h2 {
+	border-bottom: none;
+}
+.listing {
+	border: none;
+}
+.fa-play {
+	font-size: 1.2em;
+	background-color: #ddd;
+	border-radius: 100%;
+	width: 25px;
+	height: 28px;
+	padding: 8px 0 0 15px;
+	margin-right: 8px;
+}
+.fa-play:hover {
+	background-color: #999;
+	color: #fff;
+}
+.fc-event .fc-content {
+	padding: 4px 8px;
+}
+.board-add-icon {
+    float: left;
+    padding: 0 5px
+}
+.board-add-icon i {
+    text-decoration: none;
+    color: #279f43;
+    font-size: 1.4em
+}
+.board-add-icon i:focus,
+.board-add-icon i:hover {
+    text-decoration: none;
+    color: #23292d
+}
+.form-column select {
+	font-size: 1.2em;
+	margin: 10px 0 2px 0;
+}
+.form-column:nth-of-type(2) {
+	padding: 10px 25px;
+	background-color: #f7f7f7;
+}
+.form-actions {
+	font-size: 1.2em;
+}
+.page-header ul.dropdown-submenu-open {
+	margin: 10px 0 0 -10px;
+	padding: 0;
+}
+.select-dropdown-input-container {
+    max-width: 300px;
+}
+.dropdown-submenu-open li:nth-child(even) {
+	background-color: #f7f7f7;
+}
+.dropdown-submenu-open li {
+	padding: 6px 10px;
+}
+.dropdown-submenu-open li:hover {
+	background-color: #eee;
+}
+.filters {
+	border: none;
+}
+.filters ul.dropdown-submenu-open {
+	margin: 6px 0 0 8px;
+}
+.markdown pre {
+	background: #242729;
+	max-height: 600px;
+	overflow: auto;
+	margin-bottom: 1em;
+	padding: 5px;
+	color: #242729;
+	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+}
+a i.web-notification-icon {
+	color: #fa3e3e;
+}
+.fa-play {
+	font-size:1.2em;
+	background-color: #ddd;
+	border-radius: 100%;
+	width: 25px;
+	height: 25px!important;
+	padding: 9px 3px 0 9px!important;
+	margin-right: 8px;
+}
+#modal-box {
+	padding: 10px;
+}
+.table-list-category {
+    padding: 2px 2px 2px 5px;
+}
+.table-list-row:hover {
+	background: #f5f5f5;
+	border-bottom: 1px solid #f7f7f7;
+	border-right: 1px solid #f7f7f7;
+}
+.page-header {
+	margin: 15px 0;
+	background-color: #ffffff;
+	padding: 6px 10px 10px 10px;
+	border-bottom: 1px solid #f7f7f7;
+	border-top: 1px solid #f7f7f7;
+}
+.comments .comment-highlighted {
+	background-color: #fff;
+	border: 2px solid #FFEB3B;
+	border-radius: 5px;
+}
+.comments .comment:hover {
+	background: #f5f5f5;
+	border-radius: 5px;
+}
+.comments .comment:nth-child(even):not(.comment-highlighted):hover {
+	border-radius: 5px;
+	background: #f5f5f5;
+}
+.comments .comment:nth-child(even):not(.comment-highlighted) {
+	background: #fbfbfb;
+	border-radius: 5px;
+}
+.sidebar {
+	background-color: #f7f7f7;
+	padding: 7px;
+	border-radius: 7px;
+	border-left: 2px solid #e9e9e9;
+	box-shadow: 1px 0px 7px 0 rgba(46,61,73,.12);
+}
+input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+	color: #000;
+	border-color: #336699;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(222,222,222,0.25);
+}
+textarea:focus {
+	color: #000;
+	border-color: #336699;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(222,222,222,0.25);
+}
+input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="text"]:not(.input-addon-field) {
+	padding:3px;
+	transition: box-shadow 1s;
+}
+.text-editor textarea{
+	padding:3px;
+	transition: box-shadow 1s;
+}
+select{
+	border: 1px solid #ccc;
+	background: #f9f9f9;
+	padding: 3px;
+}
+.btn-blue {
+	border-color: #336699;
+	background: #336699;
+	color: #fff;
+	background-image: linear-gradient(-180deg, #336699 0%, #003087 90%);
+}
+.btn-blue:hover, .btn-blue:focus {
+	border-color: #336699;
+	background: #ffffff;
+	color: #336699;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	border: solid #336699 1px;
+	outline: 0;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #336699;
+	color: white;
+}
+.board-add-icon i:focus, .board-add-icon i:hover {
+	text-decoration: none;
+	color: #8BC34A;
+}
+.board-add-icon i {
+	text-decoration: none;
+	color: #336699;
+	font-size: 1.4em;
+}
+.dropdown-submenu-open li:not(.no-hover):hover {
+	background: #336699;
+	color: #fff;
+}
+.sidebar>ul li.active a {
+	color: #336699;
+	font-weight: bold;
+}
+.table-list-row .table-list-title a:hover, .table-list-row .table-list-title a:focus {
+	text-decoration: underline;
+	color: #336699;
+}
+.image-slideshow-overlay img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
