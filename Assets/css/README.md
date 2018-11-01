@@ -18,7 +18,7 @@ https://github.com/creecros/Customizer/blob/master/Plugin.php
 ```
 3. Make a Pull Request
 
-Themes
+Preset Themes that come with Customizer
 --------
 
 Github:
