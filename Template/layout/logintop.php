@@ -9,7 +9,11 @@ body  {
     background-color: <?= $customizer['backColor'] ?>;
 }
 .form-login {
-    background-color: <?= $customizer['loginpanel_color'] ?>;
+	<?php if ($customizer['loginpanel_color'] != '#ffffff') : ?>
+		background-color: <?= $customizer['loginpanel_color'] ?>;
+	<?php else : ?>
+		background-color: rgba(255, 255, 255, 0.9);
+	<?php endif ?>
 }
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
