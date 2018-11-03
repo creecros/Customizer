@@ -16,15 +16,15 @@ class Plugin extends Base
 	// Themes
 	$customizer['themes'] = array(
 		'Default' => '',
-		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => '/var/www/app/plugins/Customizer/Assets/css/breathe.css'
+		'Github' => 'plugins/Customizer/Assets/css/github.css',
+		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
+		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css'
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', '');
+        file_put_contents('plugins/Customizer/Assets/css/theme.css', '');
 	} else {
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
+        file_put_contents('plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
 	}
 	    
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
@@ -52,9 +52,12 @@ class Plugin extends Base
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
         $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
+        $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Template/customizer.css'));
+
 	    
-        //Routes
+	//Routes
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
 	    
 	//Permissions for login page to access logos    
