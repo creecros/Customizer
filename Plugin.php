@@ -16,15 +16,15 @@ class Plugin extends Base
 	// Themes
 	$customizer['themes'] = array(
 		'Default' => '',
-		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => '/var/www/app/plugins/Customizer/Assets/css/breathe.css'
+		'Github' => 'plugins/Customizer/Assets/css/github.css',
+		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
+		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css'
 		);
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', '');
+        file_put_contents('plugins/Customizer/Assets/css/theme.css', '');
 	} else {
-        file_put_contents('/var/www/app/plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
+        file_put_contents('plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
 	}
 	    
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
