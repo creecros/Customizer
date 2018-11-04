@@ -44,7 +44,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ![image](https://user-images.githubusercontent.com/26339368/47802063-e9176680-dd05-11e8-83c7-d18d563183ac.png)
 
-:gem:  **Customizable Colors for Login Screen:**
+:gem:  **Customizable Colors for Login Screen(with opacity control):**
 
 ![image](https://user-images.githubusercontent.com/26339368/47959722-b3060b00-dfc1-11e8-9d1d-92c40db0fbff.png)
 
