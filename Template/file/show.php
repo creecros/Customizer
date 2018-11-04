@@ -100,10 +100,8 @@ global $customizer;
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
         <?= $this->form->label(t('Login Page Background Color'), 'loginbackground_color') ?>
         <input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>">
-        <p class="form-help background-img-link-desc"><?= e('Default is White') ?></p>
         <?= $this->form->label(t('Login Panel Color'), 'loginpanel_color') ?>
         <input class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>">
-        <p class="form-help background-img-link-desc"><?= e('Default is White') ?></p>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
