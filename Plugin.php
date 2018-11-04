@@ -44,6 +44,11 @@ class Plugin extends Base
 	$customizer['backColor'] = $this->configModel->get('loginbackground_color', '#ffffff');
 	$customizer['logoSize'] = $this->configModel->get('loginlogo_size', '50');
 	$customizer['loginpanel_color'] = $this->configModel->get('loginpanel_color', '#ffffff');
+	$customizer['login_shadow_color'] = $this->configModel->get('login_shadow_color', '#333');
+	$customizer['login_shadow'] = $this->configModel->get('login_shadow', '0');
+	$customizer['login_border_color'] = $this->configModel->get('login_border_color', '#ffffff');
+	$customizer['login_border'] = $this->configModel->get('login_border', '0');
+	    
 	    
 	    
         //Templates and Assets
@@ -52,9 +57,12 @@ class Plugin extends Base
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
         $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
+        $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Template/customizer.css'));
+
 	    
-        //Routes
+	//Routes
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
 	    
 	//Permissions for login page to access logos    
