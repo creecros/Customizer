@@ -101,16 +101,16 @@ global $customizer;
         <table style="width: 80%"><tr>
             <th><strong><?= t('Login Page Background Color') ?></strong></th>
             <td><input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>"></td>
-            <th><?= $this->form->label(t('Login Panel Shadow Color'), 'login_shadow_color') ?></th>
+            <th><strong><?= t('Login Panel Shadow Color') ?></strong></th>
             <td><input class="color" name="login_shadow_color" value="<?= $this->task->configModel->get('login_shadow_color','#333') ?>"></td>
-            <th><?= $this->form->label(t('Login Panel Border Color'), 'login_border_color') ?></th>
+            <th><strong><?= t('Login Panel Border Color') ?></strong></th>
             <td><input class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>"></td>
             </tr><tr>
-            <th><?= $this->form->label(t('Login Panel Color'), 'loginpanel_color') ?></th>
+            <th><strong><?= t('Login Panel Color') ?></strong></th>
             <td><input class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>"></td>
-            <th><?= $this->form->label(t('Login Panel Shadow Intensity'), 'login_shadow') ?></th>
+            <th><strong><?= t('Login Panel Shadow Intensity') ?></strong></th>
             <td><input type="range" name="login_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_shadow','0') ?>"></td>
-            <th><?= $this->form->label(t('Login Panel Border Thickness'), 'login_border') ?></th>
+            <th><strong><?= t('Login Panel Border Thickness') ?></strong></th>
             <td><input type="range" name="login_border" min="0" max="10" value="<?= $this->task->configModel->get('login_border','0') ?>"></td>
             </tr></table>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
