@@ -9,11 +9,13 @@ body  {
     background-color: <?= $customizer['backColor'] ?>;
 }
 .form-login {
-	<?php if ($customizer['loginpanel_color'] != '#ffffff') : ?>
 		background-color: <?= $customizer['loginpanel_color'] ?>;
-	<?php else : ?>
-		background-color: rgba(255, 255, 255, 0.9);
-	<?php endif ?>
+		-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+		-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+		box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+		padding: 10px;
+		border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
+	        border-radius: 5px;
 }
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
