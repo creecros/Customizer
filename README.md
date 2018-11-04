@@ -8,7 +8,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/47801945-a2c20780-dd05-11e8-8538-afd5333baa95.png)
+![image](https://user-images.githubusercontent.com/26339368/47959705-21969900-dfc1-11e8-94a9-501e9b14d905.png)
 
 **GUI to add a...**
 
@@ -20,6 +20,8 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * set login logo size
   * set login page background color
   * set login panel color
+  * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
+  * panel border adjustment (no border to thick border with color adjustment)
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
 * [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 3 preloaded themes
@@ -43,6 +45,8 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 ![image](https://user-images.githubusercontent.com/26339368/47802063-e9176680-dd05-11e8-83c7-d18d563183ac.png)
 
 :gem:  **Customizable Colors for Login Screen:**
+
+![image](https://user-images.githubusercontent.com/26339368/47959722-b3060b00-dfc1-11e8-9d1d-92c40db0fbff.png)
 
 ![image](https://user-images.githubusercontent.com/26339368/47801759-3a732600-dd05-11e8-8192-b17cb4de8ce0.png)
 
