@@ -98,11 +98,11 @@ global $customizer;
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
-        <table><tr>
-            <td><?= $this->form->label(t('Login Page Background Color'), 'loginbackground_color') ?></td>
+        <table style="width: 33%"><tr>
+            <td><strong><?= $this->form->label(t('Login Page Background Color'), 'loginbackground_color') ?></strong></td>
             <td><input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>"></td>
             </tr><tr>
-            <td><?= $this->form->label(t('Login Panel Color'), 'loginpanel_color') ?></td>
+            <td><strong><?= $this->form->label(t('Login Panel Color'), 'loginpanel_color') ?></strong></td>
             <td><input class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>"></td>
             </tr></table>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
