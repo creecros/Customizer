@@ -98,7 +98,7 @@ global $customizer;
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
-        <table style="width: 70%"><tr>
+        <table style="width: 80%"><tr>
             <th><?= $this->form->label(t('Login Page Background Color'), 'loginbackground_color') ?></th>
             <td><input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>"></td>
             <th><?= $this->form->label(t('Login Panel Shadow Color'), 'login_shadow_color') ?></th>
