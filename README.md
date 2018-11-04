@@ -52,7 +52,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :dart:  **Login Screen Background Image:**
 
-![image](https://user-images.githubusercontent.com/26339368/47801677-0f88d200-dd05-11e8-90aa-13d175042f10.png)
+![image](https://user-images.githubusercontent.com/26339368/47959793-573c8180-dfc3-11e8-84bc-ab654f8c50b5.png)
 
 :mega:  **Themes:**
 
