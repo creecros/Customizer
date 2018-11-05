@@ -10,10 +10,10 @@ https://github.com/creecros/Customizer/blob/master/Plugin.php
 ``` php
   $customizer['themes'] = array(
 		'Default' => '',
-		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => '/var/www/app/plugins/Customizer/Assets/css/breathe.css',
-		'YourTheme' => '/var/www/app/plugins/Customizer/Assets/css/yourtheme.css'
+		'Github' => 'plugins/Customizer/Assets/css/github.css',
+		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
+		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css',
+		'YourTheme' => 'plugins/Customizer/Assets/css/yourtheme.css'
 		);
 ```
 3. Make a Pull Request
