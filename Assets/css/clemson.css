@@ -59,7 +59,7 @@ label {
 	margin-top: 18px;
 }
 div.task-board-recent {
-    border: 3px solid;
+    border: 3px solid inherit;
 }
 .task-board {
     margin-bottom: 8px;
