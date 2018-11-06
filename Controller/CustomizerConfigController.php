@@ -39,7 +39,6 @@ class CustomizerConfigController extends BaseController
      */
     public function cssparse()
     {
-        global $customizer;
         $filename = $this->request->getStringParam('file');
         $model = $this->customizerFileModel->loadCSS($filename);
         define('CSS_PARSE_RESULTS', 'test_value');
