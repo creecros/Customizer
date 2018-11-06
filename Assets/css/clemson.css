@@ -43,10 +43,14 @@ header {
 }
 .header h2 {
   position: relative;
-  color:#FFF;
+  color:#FFFFFF;!important;
   top: 13px;
   left: 10px;
   margin: 0;
+}
+header h1 {
+    font-size: 1.4em!important;
+    color: #FFFFFF!important;
 }
 label {
 	font-weight: bold;
