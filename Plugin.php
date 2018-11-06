@@ -16,7 +16,7 @@ class Plugin extends Base
 	// Themes
 	$customizer['themes'] = array(
 		'Default' => '',
-		'Clemson' => 'plugins/Customizer/Assets/css/clemson.php',
+		'Clemson' => 'plugins/Customizer/Assets/css/clemson.css',
 		'Github' => 'plugins/Customizer/Assets/css/github.css',
 		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
 		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css'
