@@ -66,8 +66,8 @@ label {
 	margin-bottom: 8px;
 	padding: 12px;
 	border-radius: 3px!important;
-	border: 2px solid;
-	background-color: #FFEFEB!important;
+	border: 2px solid!important;
+	background-color: #FFFFFF!important;
 }
 .task-board-title {
 	font-size: 1.25em;
