@@ -23,9 +23,6 @@ a{
 .sidebar>ul a:hover{
 	color:#FF6200;
 }
-div.task-board-recent {
-	box-shadow: none;
-}
 div.ganttview-vtheader-series-name {
 	padding: 0 6px;
 }
@@ -65,7 +62,7 @@ label {
     margin-bottom: 8px;
     padding: 9px;
     border-radius: 3px;
-    box-shadow: 0px 1px 1px 0 rgba(157,0,255,0.6);
+    box-shadow: 0px 1px 3px 0.1px rgba(157,0,255,0.6);
     border: 2px solid;
     background-color: #ffffff!important;
 }
