@@ -58,6 +58,9 @@ label {
 	font-weight: bold;
 	margin-top: 18px;
 }
+div.task-board-recent {
+    border: 3px solid!important;
+}
 .task-board {
     margin-bottom: 8px;
     padding: 9px;
