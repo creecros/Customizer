@@ -65,9 +65,9 @@ label {
 .task-board {
 	margin-bottom: 8px;
 	padding: 12px;
-	border-radius: 6px;
-	box-shadow: 0px 5px 5px 0 rgba(46,61,73,.12);
-	border: none;
+	border-radius: 3px!important;
+	border: 2px solid;
+	background-color: #FFEFEB!important;
 }
 .task-board-title {
 	font-size: 1.25em;
