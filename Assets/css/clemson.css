@@ -32,7 +32,11 @@ header {
 	box-shadow: 0px 1px 3px 0 rgba(46,61,73,.12);
 	padding: 15px 10px;
 	margin-bottom: 15px;
-	background-color: #FF6200!important;
+	background-color: #ff6200; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ff6200 36%, #9d00ff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ff6200 36%,#9d00ff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ff6200 36%,#9d00ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6200', endColorstr='#9d00ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .header img {
   float: left;
