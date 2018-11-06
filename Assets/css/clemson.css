@@ -5,6 +5,10 @@
  * Copyright (c) 2018 Valentino Pesce - https://iltuobrand.it
  */
 
+body {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 h1{
 	color:#FF6200;
 }
