@@ -311,5 +311,39 @@ class CustomizerFileModel extends Base
             ->toString();
         $this->objectStorage->put($this->getThumbnailPath($destination_filename), $blob);
     }
-    
+    public function loadCSS($option)
+    {
+        $file = file_get_contents($option);
+        preg_match_all( '/(?ims)([a-z0-9\s\,\.\:#_\-@]+)\{([^\}]*)\}/', $file, $arr);
+
+        $result = array();
+        foreach ($arr[0] as $i => $x)
+        {
+            $selector = trim($arr[1][$i]);
+            $rules = explode(';', trim($arr[2][$i]));
+            $result[$selector] = array();
+
+            foreach ($rules as $strRule)
+            {
+                if (!empty($strRule))
+                {
+                    $rule = explode(":", $strRule);
+                    if (trim($rule[0] == 'color' || $rule[0] == 'background' || $rule[0] == 'background-color')) {
+                        $result[$selector][trim($rule[0])] = trim($rule[1]);
+                    }
+                }
+            }
+        }
+
+        return $result;
+
+/*
+        if ($this->db->table('settings')->eq('option', 'css_parse_results')->exists()) {
+            return $this->db->table('settings')->eq('option', 'css_parse_results')->update(array('value' => $result));
+
+        }
+
+        return $this->db->table('settings')->insert(array('option' => 'css_parse_results', 'value' => $result));
+*/
+    }
 }

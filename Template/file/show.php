@@ -123,7 +123,17 @@ global $customizer;
         <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
-        <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
+        <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>
+        <?= $this->url->icon('folder-open-o', t('Load CSS from file'), 'CustomizerConfigController', 'cssparse', array('plugin' => 'Customizer', 'file' => $values['themeSelection']), true, 'btn btn-red') ?>
+
+        <?php if(defined('CSS_PARSE_RESULTS')) {
+            print CSS_PARSE_RESULTS;
+        } ?>
+        <?php if(isset($customizer['cssparser'])) {
+            foreach ($customizer['cssparser'] AS $cssval) {
+                print $cssval;
+            }
+        } ?>
     </fieldset>
 
     <div class="form-actions">
