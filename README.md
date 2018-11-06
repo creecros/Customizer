@@ -24,7 +24,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * panel border adjustment (no border to thick border with color adjustment)
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
-* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 3 preloaded themes
+* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 4 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
