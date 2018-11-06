@@ -66,10 +66,7 @@ label {
 	margin-bottom: 8px;
 	padding: 12px;
 	border-radius: 3px!important;
-	border-top: 1px solid inherit!important;
-	border-bottom: 1px solid inherit!important;
-	border-left: 1px solid inherit!important;
-	border-right: 3px solid inherit!important;
+	border: 2px solid inherit!important;
 	background-color: #FFFFFF!important;
 }
 .task-board-title {
