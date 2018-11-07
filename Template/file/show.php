@@ -126,9 +126,7 @@ global $customizer;
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>
         <?= $this->url->icon('folder-open-o', t('Load CSS from file'), 'CustomizerConfigController', 'cssparse', array('plugin' => 'Customizer', 'file' => $values['themeSelection']), true, 'btn btn-red') ?>
 
-        <?php if(defined('CSS_PARSE_RESULTS')) {
-            print CSS_PARSE_RESULTS;
-        } ?>
+
         <?php if(isset($customizer['cssparser'])) {
             foreach ($customizer['cssparser'] AS $cssval) {
                 print $cssval;

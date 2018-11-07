@@ -64,12 +64,14 @@ class CustomizerFileController extends BaseController
     
     public function show()
     {
-        $logo = $this->customizerFileModel->getByType(1);
-        $flavicon = $this->customizerFileModel->getByType(2);
+	$file_for_model = $this->request->getStringParam('file_for_model');
+	if (!empty($file_for_model)) { $customizer['cssparser'] = $this->customizerFileModel->loadCSS($file_for_model); }
+	$logo = $this->customizerFileModel->getByType(1);
+	$flavicon = $this->customizerFileModel->getByType(2);
 	$loginlogo = $this->customizerFileModel->getByType(3);
-        $logopath = $logo['path'];
-        $flaviconpath = $flavicon['path'];
-        $this->response->html($this->helper->layout->config('customizer:file/show', array(
+	$logopath = $logo['path'];
+	$flaviconpath = $flavicon['path'];
+	$this->response->html($this->helper->layout->config('customizer:file/show', array(
             'logo' => $logo,
             'title' => t('Settings').' &gt; '.t('Customizer'),
             'flavicon' => $flavicon,
