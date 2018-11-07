@@ -127,11 +127,11 @@ global $customizer;
         <?= $this->url->icon('folder-open-o', t('Load CSS from file'), 'CustomizerConfigController', 'cssparse', array('plugin' => 'Customizer', 'file' => $values['themeSelection']), true, 'btn btn-red') ?>
 
 
-        <?php 
+        <?php if(isset($customizer['cssparser'])) {
             foreach ($customizer['cssparser'] AS $cssval) {
-                echo $cssval;
+                print $cssval;
             }
-         ?>
+        } ?>
     </fieldset>
 
     <div class="form-actions">
