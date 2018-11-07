@@ -37,14 +37,12 @@ class CustomizerConfigController extends BaseController
      *
      * @access public
      */
-        public function cssparse()
+
+    public function cssparse()
     {
         $filename = $this->request->getStringParam('file');
-        $model = $this->customizerFileModel->loadCSS($filename);
-        define('CSS_PARSE_RESULTS', 'test_value');
-        $customizer['cssparser'] = $model;
         // $this->flash->success(t('CSS file loaded.'));
-        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer', 'file_for_model' => $filename)));
     }
 
 }
