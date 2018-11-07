@@ -128,9 +128,11 @@ global $customizer;
 
 
         <?php 
+    if (isset($customizer['cssparser'])) {
             foreach ($customizer['cssparser'] AS $cssval) {
                 print $cssval;
             }
+    }
          ?>
     </fieldset>
 
