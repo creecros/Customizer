@@ -43,6 +43,7 @@ class CustomizerConfigController extends BaseController
         $model = $this->customizerFileModel->loadCSS($filename);
         define('CSS_PARSE_RESULTS', 'test_value');
         $customizer['cssparser'] = $model;
+        foreach ($customizer['cssparser'] as $k) { error_log($k,0); }
 
        // $this->flash->success(t('CSS file loaded.'));
         $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
