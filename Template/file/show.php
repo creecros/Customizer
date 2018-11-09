@@ -106,11 +106,11 @@ global $customizer;
             <th><strong><?= t('Login Panel Border Color') ?></strong></th>
             <td><input class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>"></td>
             <th><strong><?= t('Login Button Background Color') ?></strong></th>
-            <td><input class="color" name="login_btn_color" value="<?= $this->task->configModel->get('login_btn_color','#ffffff') ?>"></td>
+            <td><input class="color" name="login_btn_color" value="<?= $this->task->configModel->get('login_btn_color','#3079ed') ?>"></td>
             <th><strong><?= t('Login Button Shadow Color') ?></strong></th>
-            <td><input class="color" name="login_btn_shadow_color" value="<?= $this->task->configModel->get('login_btn_shadow_color','#ffffff') ?>"></td>
+            <td><input class="color" name="login_btn_shadow_color" value="<?= $this->task->configModel->get('login_btn_shadow_color','#333') ?>"></td>
             <th><strong><?= t('Login Button Border Color') ?></strong></th>
-            <td><input class="color" name="login_btn_border_color" value="<?= $this->task->configModel->get('login_btn_border_color','#ffffff') ?>"></td>
+            <td><input class="color" name="login_btn_border_color" value="<?= $this->task->configModel->get('login_btn_border_color','transparent') ?>"></td>
             <th><strong><?= t('Login Button Shade Color') ?></strong></th>
             <td><input class="color" name="login_btn_shade_color" value="<?= $this->task->configModel->get('login_btn_shade_color','transparent') ?>"></td>
             </tr><tr>
@@ -123,11 +123,11 @@ global $customizer;
             <th><strong><?= t('Login Button Font Color') ?></strong></th>
             <td><input class="color" name="login_btn_font_color" value="<?= $this->task->configModel->get('login_btn_font_color','#ffffff') ?>"></td>
             <th><strong><?= t('Login Button Shadow Intensity') ?></strong></th>
-            <td><input type="range" name="login_btn_shade" min="0" max="20" value="<?= $this->task->configModel->get('login_btn_shade','0') ?>"></td>
+            <td><input type="range" name="login_btn_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_btn_shadow','0') ?>"></td>
             <th><strong><?= t('Login Button Border Thickness') ?></strong></th>
             <td><input type="range" name="login_btn_border" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_border','0') ?>"></td>
             <th><strong><?= t('Login Button Width') ?></strong></th>
-            <td><input type="range" name="login_btn_width" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_width','0') ?>"></td>
+            <td><input type="range" name="login_btn_width" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_width','95') ?>"></td>
             </tr></table>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
