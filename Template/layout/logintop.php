@@ -17,6 +17,21 @@ body  {
 		border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
 	        border-radius: 5px;
 }
+.login-btn {
+	width: <?= $customizer['login_btn_width'] ?>px;
+	-webkit-box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
+	-moz-box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
+	box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
+	border: <?= $customizer['login_btn_border'] ?>px solid <?= $customizer['login_btn_border_color'] ?>;
+	background: <?= $customizer['login_btn_color'] ?>;
+	color: <?= $customizer['login_btn_font_color'] ?>;
+	background-image: linear-gradient(-180deg, tranparent 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
+}
+.login-btn:hover, .login-btn:focus {
+	border-color: <?= $customizer['login_btn_border_color'] ?>;
+	background: <?= $customizer['login_btn_font_color'] ?>;
+	color: <?= $customizer['login_btn_color'] ?>;
+}
 /*------ MOVED FROM PLUGIN CSS FILE TO AVOID AFFECTING OTHER PARTS OF KANBOARD.  STYLES SET HERE APPLY ONLY TO THE LOGIN PAGE. ------*/
 .form-actions {
 	text-align: center;
