@@ -127,7 +127,7 @@ global $customizer;
             <th><strong><?= t('Login Button Border Thickness') ?></strong></th>
             <td><input type="range" name="login_btn_border" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_border','0') ?>"></td>
             <th><strong><?= t('Login Button Width') ?></strong></th>
-            <td><input type="range" name="login_btn_width" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_width','95') ?>"></td>
+            <td><input type="range" name="login_btn_width" min="95" max="300" value="<?= $this->task->configModel->get('login_btn_width','95') ?>"></td>
             </tr></table>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
