@@ -49,8 +49,14 @@ class Plugin extends Base
 	$customizer['login_shadow'] = $this->configModel->get('login_shadow', '0');
 	$customizer['login_border_color'] = $this->configModel->get('login_border_color', '#ffffff');
 	$customizer['login_border'] = $this->configModel->get('login_border', '0');
-	    
-	    
+	$customizer['login_btn_color'] = $this->configModel->get('loginpanel_color', '#3079ed');
+	$customizer['login_btn_shadow_color'] = $this->configModel->get('login_shadow_color', '#333');
+	$customizer['login_btn_border_color'] = $this->configModel->get('login_shadow', 'transparent');
+	$customizer['login_btn_shade_color'] = $this->configModel->get('login_border', 'transparent');
+	$customizer['login_btn_font_color'] = $this->configModel->get('loginpanel_color', '#ffffff');
+	$customizer['login_btn_shadow'] = $this->configModel->get('login_shadow_color', '0');
+	$customizer['login_btn_border'] = $this->configModel->get('login_shadow', '0');
+	$customizer['login_btn_width'] = $this->configModel->get('login_border', '95');
 	    
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
