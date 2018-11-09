@@ -8,6 +8,12 @@ body  {
     background-size:     cover;
     background-color: <?= $customizer['backColor'] ?>;
 }
+.mb-10 {
+	margin-bottom: 10px !important;
+}
+.mb-15 {
+	margin-bottom: 15px !important;
+}
 .form-login {
 		background-color: <?= $customizer['loginpanel_color'] ?>;
 		-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
