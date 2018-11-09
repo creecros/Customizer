@@ -23,8 +23,11 @@
             <?= $this->form->text('captcha', array(), $errors, array('required')) ?>
         <?php endif ?>
 
-        <?php if (REMEMBER_ME_AUTH): ?>
-            <?= $this->form->checkbox('remember_me', t('Remember Me'), 1, true) ?><br>
+        <?php if (REMEMBER_ME_AUTH == true): ?>
+            <?= $this->form->checkbox('remember_me', t('Remember Me'), 1, true) ?>
+            <div class="mb-10"></div>
+        <?php else: ?>
+            <div class="mb-15"></div>
         <?php endif ?>
 
         <div class="form-actions">
