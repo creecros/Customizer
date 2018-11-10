@@ -236,12 +236,12 @@ global $customizer;
                     <?php endif ?>
     
                     <label for="form-username"></label>        
-                    <input type="text" name="username" placeholder="Enter your username" >
+                    <input type="text" name="username" placeholder="<?= t('Username') ?>" >
                     <span class="form-required"></span>
                     <label for="form-password"></label>        
-                    <input type="password" name="password" placeholder="Enter your password" >
+                    <input type="password" name="password" placeholder="<?= t('Password') ?>" >
                     <span class="form-required"></span>
-                    <label><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp;Ricordami</label> 
+                    <label><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
                     <div style="margin-bottom: 10px !important;"></div>
                     <div class="form-actions" style="text-align: center;padding-top: unset;padding-bottom: 10px;">
                         <button type="button" class="btn login-btn" style="
@@ -254,7 +254,7 @@ global $customizer;
                         color: <?= $customizer['login_btn_font_color'] ?>;
                         background-image: linear-gradient(-180deg, <?= $customizer['login_btn_color'] ?> 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
                         border-radius: 5px;
-                        ">Accedi</button>
+                        "><?= t('Sign in') ?></button>
                     </div>
             </div> 
         </div>
