@@ -2572,3 +2572,142 @@ span.task-date-overdue {
 	margin-top:0;
 	margin-bottom:3px
 }
+/* style plugin-gantt */
+div.ganttview-hzheader-month, div.ganttview-hzheader-day, div.ganttview-vtheader, div.ganttview-vtheader-item-name, div.ganttview-vtheader-series, div.ganttview-grid, div.ganttview-grid-row-cell {
+    float: left;
+}
+
+div.ganttview-hzheader-month, div.ganttview-hzheader-day {
+    text-align: center;
+}
+
+div.ganttview-grid-row-cell.last, div.ganttview-hzheader-day.last, div.ganttview-hzheader-month.last {
+    border-right: none;
+}
+
+div.ganttview {
+    border: 1px solid #999;
+}
+
+div.ganttview-hzheader-month {
+    width: 60px;
+    height: 20px;
+    border-right: 1px solid #d0d0d0;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+div.ganttview-hzheader-day {
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #f0f0f0;
+    border-top: 1px solid #d0d0d0;
+    line-height: 20px;
+    color: #f5f5f5!important;
+}
+
+div.ganttview-vtheader {
+    margin-top: 41px;
+    width: 400px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+div.ganttview-vtheader-item {
+    color: #555;
+}
+
+div.ganttview-vtheader-series-name {
+    width: 400px;
+    height: 31px;
+    line-height: 31px;
+	padding-left: 3px;
+	color: #eee!important;
+	background: #2f3948!important;
+    border-top: 1px solid #d0d0d0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.ganttview-vtheader-series-name a {
+    color: #f5f5f5!important;
+    text-decoration: none;
+}
+
+div.ganttview-vtheader-series-name a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+div.ganttview-vtheader-series-name a i {
+    color: #f5f5f5!important;
+}
+
+div.ganttview-vtheader-series-name a:hover i {
+    color: #eee!important;
+}
+
+div.ganttview-slide-container {
+    overflow: auto;
+    border-left: 1px solid #999;
+}
+
+div.ganttview-grid-row-cell {
+    width: 20px;
+    height: 31px;
+    border-right: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+}
+
+div.ganttview-grid-row-cell.ganttview-weekend {
+    background-color: #2f3948!important;
+}
+
+div.ganttview-grid-row-cell.ganttview-today {
+    background-color: #0979b6!important;
+}
+
+div.ganttview-blocks {
+    margin-top: 40px;
+}
+
+div.ganttview-block-container {
+    height: 28px;
+    padding-top: 4px;
+}
+
+div.ganttview-block {
+    position: relative;
+    height: 25px;
+    background-color: #E5ECF9;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+}
+
+.ganttview-block-movable {
+    cursor: move;
+}
+
+div.ganttview-block-text {
+    position: absolute;
+    height: 12px;
+    font-size: 0.7em;
+    color: #666;
+    padding: 2px 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.ganttview-block div.ui-resizable-handle.ui-resizable-s {
+    bottom: 0;
+}
+
+div.ganttview-progress-bar {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0.4;
+}
