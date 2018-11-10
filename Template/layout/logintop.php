@@ -52,11 +52,11 @@ label:nth-of-type(3n) {
 	text-align: center;
 } /* This makes the 'remember me' smaller and centralised*/
 
-.form-actions > .btn-blue {
+.form-actions > .login-btn {
 	font-variant-caps: all-small-caps;
 	text-align: center;
-	transition: ease-in-out 0.4s;
-	-webkit-transition: ease-in-out 0.4s;
+	transition: cubic-bezier(0.1, 0.75, 0.57, 1) 0.4s;
+	-webkit-transition: cubic-bezier(0.1, 0.75, 0.57, 1) 0.4s;
 } /* This makes the title text of the login button all capitals.  Also adds smoothing when hover on the login button */
 
 label:nth-of-type(1) {
