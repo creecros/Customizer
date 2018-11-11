@@ -258,6 +258,7 @@ global $customizer;
                     </div>
             </div> 
         </div>
+
         </div>
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
@@ -268,9 +269,52 @@ global $customizer;
         <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
         <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
-        <?= $this->form->label(t('Theme'), 'themeSelection') ?>
-        <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
+        
     </fieldset>
+
+        <div class="column-100" >
+            <div class="panel" style="min-height: 600px;">
+            <div style="margin-bottom: 20px;">
+                <p><?= t('Customize appearance') ?></p>
+                <?= $this->form->label(t('Theme'), 'themeSelection') ?>
+                <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
+            </div>
+                <table>
+                        <tr>
+                            <th>
+                                <strong><?= t('Header Color') ?></strong>
+                            </th>
+                            <th>
+                                <input class="color" name="header_color" value="<?= $this->task->configModel->get('header_color','') ?>">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <strong><?= t('Title Color') ?></strong>
+                            </th>
+                            <th>
+                                <input class="color" name="title_color" value="<?= $this->task->configModel->get('title_color','') ?>">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <strong><?= t('Background Color') ?></strong>
+                            </th>
+                            <th>
+                                <input class="color" name="background_color" value="<?= $this->task->configModel->get('background_color','') ?>">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <strong><?= t('Notification Icon') ?></strong>
+                            </th>
+                            <th>
+                                <input class="color" name="notification_icon" value="<?= $this->task->configModel->get('notification_icon','') ?>">
+                            </th>
+                        </tr>
+                </table>
+            </div>
+        </div>
 
     <div class="form-actions" style="margin-bottom: 50px">
         <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
