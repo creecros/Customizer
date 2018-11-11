@@ -20,6 +20,32 @@
         <?php endif ?>
         <?= $this->asset->customCss() ?>
 
+        <!-- Customizer personalized style -->
+        <?php global $customizer; ?>
+        <style>
+            <?php if($customizer['background_color']) : ?>
+                body {
+                    background-color: <?= $customizer['background_color'] ?>!important;
+                }
+            <?php endif ?>
+            <?php if($customizer['header_color']) : ?>
+                header {
+                    background-color: <?= $customizer['header_color'] ?>!important;
+                }
+            <?php endif ?>
+            <?php if($customizer['title_color']) : ?>
+                header h1 {
+                    color: <?= $customizer['title_color'] ?>!important;
+                }
+            <?php endif ?>
+            <?php if($customizer['notification_icon']) : ?>
+                a i.web-notification-icon {
+                    color: <?= $customizer['notification_icon'] ?>!important;
+                }
+            <?php endif ?>
+        </style>
+        <!-- End Customizer personalized style -->
+
         <?php if (! isset($not_editable)): ?>
             <?= $this->asset->js('assets/js/vendor.min.js') ?>
             <?= $this->asset->js('assets/js/app.min.js') ?>
