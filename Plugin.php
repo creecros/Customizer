@@ -57,7 +57,12 @@ class Plugin extends Base
 	$customizer['login_btn_shadow'] = $this->configModel->get('login_btn_shadow', '0');
 	$customizer['login_btn_border'] = $this->configModel->get('login_btn_border', '0');
 	$customizer['login_btn_width'] = $this->configModel->get('login_btn_width', '95');
-	    
+	//Personalized style 
+    $customizer['background_color'] = $this->configModel->get('background_color', '');
+    $customizer['header_color'] = $this->configModel->get('header_color', '');
+    $customizer['title_color'] = $this->configModel->get('title_color', '');
+    $customizer['notification_icon'] = $this->configModel->get('notification_icon', '');
+    
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
