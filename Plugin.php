@@ -16,6 +16,7 @@ class Plugin extends Base
 	// Themes
 	$customizer['themes'] = array(
 		'Default' => '',
+		'Clemson' => 'plugins/Customizer/Assets/css/clemson.css',
 		'Github' => 'plugins/Customizer/Assets/css/github.css',
 		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
 		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css'
@@ -48,8 +49,14 @@ class Plugin extends Base
 	$customizer['login_shadow'] = $this->configModel->get('login_shadow', '0');
 	$customizer['login_border_color'] = $this->configModel->get('login_border_color', '#ffffff');
 	$customizer['login_border'] = $this->configModel->get('login_border', '0');
-	    
-	    
+	$customizer['login_btn_color'] = $this->configModel->get('login_btn_color', '#3079ed');
+	$customizer['login_btn_shadow_color'] = $this->configModel->get('login_btn_shadow_color', '#333');
+	$customizer['login_btn_border_color'] = $this->configModel->get('login_btn_border_color', 'transparent');
+	$customizer['login_btn_shade_color'] = $this->configModel->get('login_btn_shade_color', 'transparent');
+	$customizer['login_btn_font_color'] = $this->configModel->get('login_btn_font_color', '#ffffff');
+	$customizer['login_btn_shadow'] = $this->configModel->get('login_btn_shadow', '0');
+	$customizer['login_btn_border'] = $this->configModel->get('login_btn_border', '0');
+	$customizer['login_btn_width'] = $this->configModel->get('login_btn_width', '95');
 	    
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
@@ -68,6 +75,11 @@ class Plugin extends Base
 	//Permissions for login page to access logos    
         $this->applicationAccessMap->add('CustomizerFileController', array('image', 'loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
 	    
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
     
     public function getClasses() {
@@ -95,7 +107,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '0.0.8';
+        return '0.0.9';
     }
     
     public function getPluginHomepage()

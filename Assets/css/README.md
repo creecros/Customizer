@@ -3,17 +3,17 @@
    * You actually don't need to do this, if you host on your own github repo, you can simply use a URL for the css in the array.
      * `'YourTheme' => 'https://myrepo.com/yourtheme.css'`
 2. Add your Theme to the array in Plugin.php in the main folder, starting on L#17
-   * `'YourTheme' => '/var/www/app/plugins/Customizer/Assets/css/yourtheme.css'`
+   * `'YourTheme' => 'plugins/Customizer/Assets/css/yourtheme.css'`
   
 https://github.com/creecros/Customizer/blob/master/Plugin.php
 
 ``` php
   $customizer['themes'] = array(
 		'Default' => '',
-		'Github' => '/var/www/app/plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => '/var/www/app/plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => '/var/www/app/plugins/Customizer/Assets/css/breathe.css',
-		'YourTheme' => '/var/www/app/plugins/Customizer/Assets/css/yourtheme.css'
+		'Github' => 'plugins/Customizer/Assets/css/github.css',
+		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
+		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css',
+		'YourTheme' => 'plugins/Customizer/Assets/css/yourtheme.css'
 		);
 ```
 3. Make a Pull Request

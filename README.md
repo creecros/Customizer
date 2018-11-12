@@ -24,10 +24,11 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * panel border adjustment (no border to thick border with color adjustment)
 * favicon (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
-* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 3 preloaded themes
+* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 4 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
+  * Clemson <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20">
 
 
 **...to your site without any backend coding or config settings.**
@@ -54,7 +55,14 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ![image](https://user-images.githubusercontent.com/26339368/47959793-573c8180-dfc3-11e8-84bc-ab654f8c50b5.png)
 
-:mega:  **Themes:**
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20"> **Clemson Theme (Go Tigers!):**
+
+![image](https://user-images.githubusercontent.com/26339368/48094361-fccc3c80-e1df-11e8-9695-6b9c510aa522.png)
+
+![image](https://user-images.githubusercontent.com/26339368/48094399-15d4ed80-e1e0-11e8-9d31-d14bad0269f2.png)
+
+:mega:  **Other Themes:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47803243-6e037f80-dd08-11e8-94d5-caf7ed1c6015.png)
 
