@@ -23,26 +23,23 @@ class CustomizerConfigController extends BaseController
     {
         $values =  $this->request->getValues();
 
-        if ($this->configModel->save($values)) {
-            $this->languageModel->loadCurrentLanguage();
-            $this->flash->success(t('Settings saved successfully.'));
+        if (isset($_POST["submit"]) && $_POST["submit"] == 'loadtheme') {
+            if (isset($_POST["themeSelection"]) && $_POST["themeSelection"] != '') {
+                $filename = $_POST["themeSelection"];
+            } else {
+                $filename = 'default';
+            }
+            // $this->flash->success(t('CSS file loaded.'));
+            $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer', 'file_for_model' => $filename)));
         } else {
-            $this->flash->failure(t('Unable to save your settings.'));
+            if ($this->configModel->save($values)) {
+                $this->languageModel->loadCurrentLanguage();
+                $this->flash->success(t('Settings saved successfully.'));
+            } else {
+                $this->flash->failure(t('Unable to save your settings.'));
+            }
+
+            $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
         }
-
-          $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
-    /**
-     * Load css file
-     *
-     * @access public
-     */
-
-    public function cssparse()
-    {
-        $filename = $this->request->getStringParam('file');
-        // $this->flash->success(t('CSS file loaded.'));
-        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer', 'file_for_model' => $filename)));
-    }
-
 }

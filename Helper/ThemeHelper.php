@@ -9,6 +9,9 @@ class ThemeHelper extends Base
 
     public function reverseSelect($name, array $options, array $values = array(), array $errors = array(), array $attributes = array(), $class = '')
     {
+        if (isset($values["themeSelection"]) && isset($GLOBALS["customizer"]["themeSelection"])) {
+            $values["themeSelection"] = $GLOBALS["customizer"]["themeSelection"];
+        }
         $html = '<select name="'.$name.'" id="form-'.$name.'" class="'.$class.'" '.implode(' ', $attributes).'>';
         foreach ($options as $id => $value) {
             $html .= '<option value="'.$this->helper->text->e($value).'"';

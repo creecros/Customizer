@@ -328,7 +328,7 @@ class CustomizerFileModel extends Base
                 if (!empty($strRule))
                 {
                     $rule = explode(":", $strRule);
-                    if (trim($rule[0] == 'color' || $rule[0] == 'background' || $rule[0] == 'background-color')) {
+                    if (trim($rule[0]) == 'color' || trim($rule[0]) == 'background' || trim($rule[0]) == 'background-color') {
                         $result[$selector][trim($rule[0])] = trim($rule[1]);
                     }
                 }
@@ -336,14 +336,5 @@ class CustomizerFileModel extends Base
         }
 
         return $result;
-
-/*
-        if ($this->db->table('settings')->eq('option', 'css_parse_results')->exists()) {
-            return $this->db->table('settings')->eq('option', 'css_parse_results')->update(array('value' => $result));
-
-        }
-
-        return $this->db->table('settings')->insert(array('option' => 'css_parse_results', 'value' => $result));
-*/
     }
 }

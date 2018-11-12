@@ -66,7 +66,10 @@ class CustomizerFileController extends BaseController
     {
 	global $customizer;
 	$file_for_model = $this->request->getStringParam('file_for_model');
-	if (!empty($file_for_model)) { $customizer['cssparser'] = $this->customizerFileModel->loadCSS($file_for_model); }
+	if (!empty($file_for_model)) {
+	    $customizer['cssparser'] = $this->customizerFileModel->loadCSS($file_for_model);
+	    $customizer['themeSelection'] = $file_for_model;
+	}
 	$logo = $this->customizerFileModel->getByType(1);
 	$flavicon = $this->customizerFileModel->getByType(2);
 	$loginlogo = $this->customizerFileModel->getByType(3);

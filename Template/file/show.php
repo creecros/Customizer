@@ -100,7 +100,7 @@ global $customizer;
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
         <table style="width: 80%"><tr>
             <th><strong><?= t('Login Page Background Color') ?></strong></th>
-            <td><input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>"></td>
+            <td><input class="color" name="loginbackground_color" value="<?= (isset($customizer['cssparser']['body']['background-color'])) ? $customizer['cssparser']['body']['background-color'] : $this->task->configModel->get('loginbackground_color','#ffffff') ?>"></td>
             <th><strong><?= t('Login Panel Shadow Color') ?></strong></th>
             <td><input class="color" name="login_shadow_color" value="<?= $this->task->configModel->get('login_shadow_color','#333') ?>"></td>
             <th><strong><?= t('Login Panel Border Color') ?></strong></th>
@@ -124,20 +124,11 @@ global $customizer;
         <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>
-        <?= $this->url->icon('folder-open-o', t('Load CSS from file'), 'CustomizerConfigController', 'cssparse', array('plugin' => 'Customizer', 'file' => $values['themeSelection']), true, 'btn btn-red') ?>
-
-
-        <?php 
-    if (isset($customizer['cssparser'])) {
-            foreach ($customizer['cssparser'] AS $cssval) {
-                print $cssval;
-            }
-    }
-         ?>
+        <button type="submit" name="submit" class="btn btn-red cssparser-btn" value="loadtheme"><i class="fa fa-fw fa-folder-open-o" aria-hidden="true"></i> <?= t('Load CSS from file') ?></button>
     </fieldset>
 
     <div class="form-actions">
-        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+        <button type="submit" name="submit" class="btn btn-blue" value="save"><?= t('Save') ?></button>
     </div>
 </form>     
 <br>
