@@ -91,7 +91,7 @@ global $customizer;
     </div>
     <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
-    <fieldset class="login-link-block">
+    <fieldset class="login-link-block panel">
     	<div class="panel-heading">
     		<h3 class="panel-title links-title"><?= t('Links & Settings') ?></h3>
     	</div>
