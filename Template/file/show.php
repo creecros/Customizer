@@ -262,12 +262,22 @@ global $customizer;
             </div> 
         </div>
         </div>
-        <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
-        <input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-        <br><header_logo_output><?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output>
-        <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
-        <input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-        <br><login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output>
+        <table>
+            <tr>
+                <td>
+                    <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
+                    <input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
+                    <br><span><header_logo_output><?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
+                    <input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                    <br><span><login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output></span>
+                </td>
+            </tr>
+        </table>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
