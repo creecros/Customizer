@@ -266,13 +266,13 @@ global $customizer;
             <tr>
                 <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
                 <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output> px in width
+                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
                 </td>
             </tr>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
                 <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output> px in width
+                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t(' pixels high') ?>
                 </td>
             </tr>
         </table>
