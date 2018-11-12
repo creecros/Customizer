@@ -102,6 +102,10 @@ global $customizer;
                     <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
                 </td>
             </tr>
+        </table>
+        <button class="login-accordion">Login Page Settings</button>
+        <div class="login-accordian-panel">
+        <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
                 <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
@@ -274,6 +278,7 @@ global $customizer;
                         "><?= t('Sign in') ?></button>
                     </div>
             </div> 
+        </div>
         </div>
         </div>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
