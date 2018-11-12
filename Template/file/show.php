@@ -95,9 +95,31 @@ global $customizer;
     	<div class="panel-heading">
     		<h3 class="panel-title links-title"><?= t('Links & Settings') ?></h3>
     	</div>
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
+                <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
+                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="login-accordion">Login Page Settings</button>
+        <div class="login-accordian-panel">
+        <br>
+        <table>
+            <tr> 
+                <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
+                <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t(' pixels high') ?>
+                </td>
+            </tr>
+        </table>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
+        <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
+        <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
+        <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
         <div class="column-100">
                 <table>
                     <tr>
@@ -259,15 +281,7 @@ global $customizer;
             </div> 
         </div>
         </div>
-        <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
-        <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
-        <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
-        <?= $this->form->text('headerlogo_size', $values, $errors, array('placeholder="30"', 'pattern="[0-9]{1,3}"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>30</code> (Default is 30px in height, intgers only, max 999)') ?></p>
-        <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
-        <?= $this->form->text('loginlogo_size', $values, $errors, array('placeholder="50"', 'pattern="[0-9]{1,3}"')) ?>
-        <p class="form-help background-img-link-desc"><?= e('Example: <code>50</code> (Default is 50px in height, intgers only, max 999)') ?></p>
+        </div>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
