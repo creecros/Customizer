@@ -264,10 +264,10 @@ global $customizer;
         </div>
         <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
         <input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-        <br><slider_output><?= $this->task->configModel->get('headerlogo_size','30') ?></slider_output>
+        <br><header_logo_output><?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output>
         <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
         <input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-        <br><slider_output><?= $this->task->configModel->get('loginlogo_size','50') ?></slider_output>
+        <br><login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
