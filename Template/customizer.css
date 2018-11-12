@@ -84,7 +84,7 @@ code {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.login-accordion:hover {
+.active, .login-accordion:hover {
     background-color: rgba(136,136,136,0.2);
 }
 
