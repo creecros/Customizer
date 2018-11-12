@@ -73,6 +73,7 @@ code {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .login-accordion {
+    font-weight: bold;
     background-color: rgba(136,136,136,0.4);
     cursor: pointer;
     padding: 18px;
