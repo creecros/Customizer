@@ -105,6 +105,7 @@ global $customizer;
         </table>
         <button type="button" class="login-accordion">Login Page Settings</button>
         <div class="login-accordian-panel">
+        <br>
         <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
