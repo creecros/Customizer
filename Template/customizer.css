@@ -70,3 +70,27 @@ code {
 .remove-link > a > i {
 	color: red;
 } /* This colours the upload icon to red */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.login-accordion {
+    background-color: rgba(136,136,136,0.4);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .login-accordion:hover {
+    background-color: rgba(136,136,136,0.2);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.login-accordian-panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
