@@ -1,7 +1,13 @@
 //Functionality for a slider value feedback
 
-var slider_output = $('slider_output')[0];
+var header_logo_output = $('header_logo_output')[0];
 
 $(document).on('input', 'input[type="range"]', function(e) {
-  slider_output.innerHTML = e.currentTarget.value;
+  header_logo_output.innerHTML = e.currentTarget.value;
+});
+
+var login_logo_output = $('login_logo_output')[0];
+
+$(document).on('input', 'input[type="range"]', function(e) {
+  login_logo_output.innerHTML = e.currentTarget.value;
 });
