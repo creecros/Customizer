@@ -270,7 +270,7 @@ global $customizer;
                 </td>
             </tr>
             <tr> 
-                <th width="25%"><strong><?= (t('Login Logo Size') ?></strong></th>
+                <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
                 <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
                     <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output> px in width
                 </td>
