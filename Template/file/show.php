@@ -264,17 +264,15 @@ global $customizer;
         </div>
         <table>
             <tr>
-                <td>
-                    <?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?>
-                    <input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-                    <br><span><header_logo_output><?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output></span>
+                <th><strong><?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?></strong></th>
+                <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
+                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?> px in width</header_logo_output>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?>
-                    <input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-                    <br><span><login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output></span>
+                <th><strong><?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?></strong></th>
+                <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?> px in width</login_logo_output>
                 </td>
             </tr>
         </table>
