@@ -66,7 +66,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
-        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Template/customizer.css'));
+        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
 	    
 	//Routes
