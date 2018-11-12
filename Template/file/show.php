@@ -264,15 +264,15 @@ global $customizer;
         </div>
         <table>
             <tr>
-                <th><strong><?= $this->form->label(t('Header Logo Size'), 'headerlogo_size') ?></strong></th>
+                <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
                 <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?> px in width</header_logo_output>
+                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output> px in width
                 </td>
             </tr>
-            <tr>
-                <th><strong><?= $this->form->label(t('Login Logo Size'), 'loginlogo_size') ?></strong></th>
+            <tr> 
+                <th width="25%"><strong><?= (t('Login Logo Size') ?></strong></th>
                 <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?> px in width</login_logo_output>
+                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output> px in width
                 </td>
             </tr>
         </table>
