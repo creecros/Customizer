@@ -213,7 +213,7 @@ global $customizer;
                         </th>
                     </tr>
                 </table>  
-        <p class="alert"><?= t('You can see a preview only after saving') ?> <button type="submit" class="btn btn-blue" style="float: right;margin-top: -6px;"><?= t('Save') ?></button></p>
+        <p class="alert" style="max-width: 1000px;"><?= t('You can see a preview only after saving') ?> <button type="submit" class="btn btn-blue" style="float: right;margin-top: -6px;"><?= t('Save') ?></button></p>
         <div class="panel" id="preview" style="background: url('<?= $customizer['backURL'] ?>') no-repeat center center;height: 700px;max-width: 1000px;background-color: <?= $customizer['backColor'] ?>;">
             <div>
                 <p style="color: #f5f5f5;"><?= t('Preview') ?></p>
