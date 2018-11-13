@@ -97,7 +97,7 @@ class Plugin extends Base
     
     public function getPluginDescription()
     {
-        return t('Add Logo and Flavicon');
+        return t('Completely customize your Kanboard experience with logos, favicons & themes.');
     }
     
     public function getPluginAuthor()
