@@ -35,7 +35,7 @@ global $customizer;
     <?= $this->modal->medium('remove', t('Remove Header Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
     </ul>
     <?php endif ?>
-    <br>
+    <br><br>
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
@@ -75,7 +75,7 @@ global $customizer;
     <?= $this->modal->medium('remove', t('Remove Login Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 3, 'file_id' => $loginlogo['id']))?>
     </ul>
     <?php endif ?>
-    <br>
+    <br><br>
         <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
