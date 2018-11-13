@@ -1,25 +1,10 @@
-## How to add a preset theme to Customizer.
-1. Add your css to this folder, named `yourtheme.css`, figuratively
-   * You actually don't need to do this, if you host on your own github repo, you can simply use a URL for the css in the array.
-     * `'YourTheme' => 'https://myrepo.com/yourtheme.css'`
-2. Add your Theme to the array in Plugin.php in the main folder, starting on L#17
-   * `'YourTheme' => 'plugins/Customizer/Assets/css/yourtheme.css'`
-  
-https://github.com/creecros/Customizer/blob/master/Plugin.php
-
-``` php
-  $customizer['themes'] = array(
-		'Default' => '',
-		'Github' => 'plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css',
-		'YourTheme' => 'plugins/Customizer/Assets/css/yourtheme.css'
-		);
-```
-3. Make a Pull Request
 
 Preset Themes that come with Customizer
 --------
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20"> **Clemson Theme (Go Tigers!):**
+
+![image](https://user-images.githubusercontent.com/26339368/48094361-fccc3c80-e1df-11e8-9695-6b9c510aa522.png)
 
 :octocat: Github:
 
