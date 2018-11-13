@@ -2,10 +2,15 @@
 global $customizer; 
 ?>
 <div class="sidebar-content">
-    <div class="page-header">
-        <h2><?= t('Assets') ?></h2>
-    </div>
-    <div class="panel header-logo-panel">
+    <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
+    <?= $this->form->csrf() ?>
+    <fieldset class="login-link-block panel">
+    	<div class="panel-heading">
+    		<h3 class="panel-title links-title"><?= t('Settings') ?></h3>
+    	</div>
+    	<button type="button" class="login-accordion"><?= t('Asset Settings') ?></button>
+        <div class="login-accordian-panel mt-20">
+        <div class="panel header-logo-panel">
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header') ?></h3>
     	</div>
@@ -37,6 +42,16 @@ global $customizer;
         	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Login') ?></h3>
     	</div>
+
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
+                <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
+                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
+                </td>
+            </tr>
+        </table>
+            
         <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
     <br>
     <br>
@@ -65,6 +80,16 @@ global $customizer;
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Favicon') ?></h3>
     	</div>
+        
+        <table>
+            <tr> 
+                <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
+                <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t(' pixels high') ?>
+                </td>
+            </tr>
+        </table>
+        
         <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
     <br>
     <br>
@@ -89,30 +114,11 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>
-    <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
-    <?= $this->form->csrf() ?>
-    <fieldset class="login-link-block panel">
-    	<div class="panel-heading">
-    		<h3 class="panel-title links-title"><?= t('Links & Settings') ?></h3>
-    	</div>
-        <table>
-            <tr>
-                <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
-                <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
-                    <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
-                </td>
-            </tr>
-        </table>
+        </div>
+        
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
         <div class="login-accordian-panel mt-20">
-        <table>
-            <tr> 
-                <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
-                <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
-                    <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t(' pixels high') ?>
-                </td>
-            </tr>
-        </table>
+
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
