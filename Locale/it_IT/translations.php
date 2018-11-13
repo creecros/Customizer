@@ -42,5 +42,6 @@ return [
     'Example: <code>50</code> (Default is 50px in height, intgers only, max 999)' => 'Esempio: <code> 50 </code> (l\'impostazione predefinita è 50px in altezza, solo numeri interi, max 999)',
     'Theme' => 'Tema',
     'You can see a preview only after saving' => 'Puoi vedere l\'anteprima solo dopo aver salvato',
-    'Login Page Settings' => 'Impostazioni della pagina di accesso'
+    'Login Page Settings' => 'Impostazioni della pagina di accesso',
+    '&nbsp;pixels high' => '&nbsp;altezza pixel'
 ];
