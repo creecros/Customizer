@@ -14,6 +14,13 @@ body  {
 .mb-15 {
 	margin-bottom: 15px !important;
 }
+
+.form-login > a > img {
+	display: block;
+	margin: auto;
+	padding-top: 10px
+} /* This aligns the logo to the text.  Adds padding to top of logo. */
+	
 .form-login {
 		background-color: <?= $customizer['loginpanel_color'] ?>;
 		-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
