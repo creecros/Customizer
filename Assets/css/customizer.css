@@ -3,12 +3,6 @@
 /*------ PAGE HEADER ------*/
 .logo > a > img {vertical-align:middle;} /* This aligns the logo certically to the text */
 
-/*------ LOGIN FORM ------*/
-.form-login > a > img {
-	display: block;
-	margin: auto;
-	padding-top: 10px
-} /* This aligns the logo to the text.  Adds padding to top of logo. */
 
 /*------ LOGIN PAGE-SPECIFIC STYLES MOVED TO logintop.php SO THEY WON'T AFFECT OTHER PARTS OF KANBOARD ------*/
 
