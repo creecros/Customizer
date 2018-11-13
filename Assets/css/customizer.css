@@ -74,7 +74,7 @@ code {
 /* Style the buttons that are used to open and close the accordion panel */
 .login-accordion {
     font-weight: bold;
-    background-color: rgba(136,136,136,0.4);
+    background-color: rgba(136,136,136,0.7);
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -82,11 +82,17 @@ code {
     border: none;
     outline: none;
     transition: 0.4s;
+    color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 3px 0px rgba(70, 70, 70, 0.10);
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .login-accordion:hover {
-    background-color: rgba(136,136,136,0.2);
+    background-color: #f5f5f5;
+    color: #777777;
+    transition: 0.4s;
 }
 
 /* Style the accordion panel. Note: hidden by default */
