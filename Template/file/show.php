@@ -6,11 +6,11 @@ global $customizer;
     <?= $this->form->csrf() ?>
     <fieldset class="login-link-block panel">
 
-    	<button type="button" class="login-accordion"><?= t('Asset Settings') ?></button>
+    	<button type="button" class="login-accordion"><?= t('Image Assets & Settings') ?></button>
         <div class="login-accordian-panel-active mt-20">
         <div class="panel header-logo-panel">
     	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Header') ?></h3>
+    		<h3 class="panel-title"><?= t('Header Image') ?></h3>
     	</div>
         <img src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="<?= $this->task->configModel->get('headerlogo_size', '30') ?>">
     <br>
@@ -35,20 +35,21 @@ global $customizer;
     <?= $this->modal->medium('remove', t('Remove Header Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 1, 'file_id' => $logo['id']))?>
     </ul>
     <?php endif ?>
-    </div>    
             
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
-                <td><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
+                <th><input type="range" name="headerlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('headerlogo_size','30') ?>">
                     <header_logo_output> <?= $this->task->configModel->get('headerlogo_size','30') ?></header_logo_output><?= t(' pixels high') ?>
-                </td>
+                </th>
             </tr>
         </table>
             
+    </div>    
+
         <div class="panel login-logo-panel">
         	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Login') ?></h3>
+    		<h3 class="panel-title"><?= t('Login Image') ?></h3>
     	</div>
      
         <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
@@ -74,20 +75,21 @@ global $customizer;
     <?= $this->modal->medium('remove', t('Remove Login Logo'), 'CustomizerFileController', 'confirm', array('plugin' => 'customizer', 'custom_id' => 3, 'file_id' => $loginlogo['id']))?>
     </ul>
     <?php endif ?>
-    </div>    
             
         <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
-                <td><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                <th><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
                     <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t(' pixels high') ?>
-                </td>
+                </th>
             </tr>
         </table>
-            
+           
+    </div>    
+ 
     <div class="panel favicon-panel">
     	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Favicon') ?></h3>
+    		<h3 class="panel-title"><?= t('Favicon Image') ?></h3>
     	</div>
       
         <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
