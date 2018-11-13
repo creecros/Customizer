@@ -120,6 +120,19 @@ global $customizer;
         
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
         <div class="login-accordian-panel mt-20">
+            
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Use Custom Login Settings') ?></strong></th>
+                <th>
+                    <label class="switch">
+                    <input name="use_custom_login" type="checkbox">
+                    <span class="slider round"></span>
+                    </label>
+                </th>
+            </tr>
+        </table>
+            
 
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
