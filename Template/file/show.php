@@ -7,7 +7,7 @@ global $customizer;
     <fieldset class="login-link-block panel">
 
     	<button type="button" class="login-accordion"><?= t('Asset Settings') ?></button>
-        <div class="login-accordian-panel mt-20">
+        <div class="login-accordian-panel-active mt-20">
         <div class="panel header-logo-panel">
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header') ?></h3>
