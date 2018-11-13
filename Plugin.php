@@ -19,7 +19,7 @@ class Plugin extends Base
 		);
 	    
 	foreach (scandir('plugins/Customizer/Assets/css/themes') as $theme) {
-		if ($theme !== '') {
+		if ($theme !== '..') {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
 		}
 	}
