@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'Assets' => 'Risorse',
-    'Header' => 'Intestazione',
-    'Login' => 'Accesso',
+    'Image Assets & Settings' => 'Risorse e impostazioni dell\'immagini',
+    'Header Image' => 'Logo dell\'intestazione',
+    'Login Image' => 'Logo di accesso',
     'Upload Header Logo' => 'Carica il logo dell\'intestazione',
     'Header Logo' => 'Logo intestazione',
     'Recommend 100 pixels in width, *.png, *.jpg, *.gif, max size 500kb.' => 'Dimensione consigliata in larghezza 100 pixel, formati: * .png, * .jpg, * .gif, dimensione massima 500kb.',
