@@ -103,7 +103,7 @@ global $customizer;
                 </td>
             </tr>
         </table>
-        <button type="button" class="login-accordion">Login Page Settings</button>
+        <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
         <div class="login-accordian-panel">
         <br>
         <table>
