@@ -15,12 +15,12 @@ class Plugin extends Base
 	    
 	// Themes
 	$customizer['themes'] = array(
-		'Default' => '',
-		'Clemson' => 'plugins/Customizer/Assets/css/clemson.css',
-		'Github' => 'plugins/Customizer/Assets/css/github.css',
-		'Galaxy' => 'plugins/Customizer/Assets/css/galaxy.css',
-		'Breathe' => 'plugins/Customizer/Assets/css/breathe.css'
+		'Default' => ''
 		);
+	    
+	foreach (scandir('plugins/Customizer/Assets/css/themes') as $theme {
+		$customizer['themes'][rtrim($theme,".css")] = 'plugins/Customizer/Assets/css/themes/' .$theme;
+	}
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
         file_put_contents('plugins/Customizer/Assets/css/theme.css', '');
