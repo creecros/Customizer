@@ -14,6 +14,7 @@ return [
     'Remove Header Logo' => 'Rimuovi il logo dell\'intestazione',
     'Upload Login Logo' => 'Carica il logo di accesso',
     'Remove Login Logo' => 'Rimuovi il logo di accesso',
+    'Favicon Image' => 'Immagine favicon',
     'Upload Favicon' => 'Carica favicon',
     'Remove Favicon' => 'Rimuovi favicon',
     'Links & Settings' => 'Collegamenti e impostazioni',
