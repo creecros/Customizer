@@ -17,8 +17,10 @@ class Plugin extends Base
 	$customizer['themes'] = array(
 		'Default' => ''
 		);
+	
+	$scanned_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
 	    
-	foreach (scandir('plugins/Customizer/Assets/css/themes') as $theme) {
+	foreach ($scanned_themes as $theme) {
 		if ($theme !== '..') {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
 		}
