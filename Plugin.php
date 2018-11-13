@@ -18,8 +18,8 @@ class Plugin extends Base
 		'Default' => ''
 		);
 	    
-	foreach (scandir('plugins/Customizer/Assets/css/themes') as $theme {
-		$customizer['themes'][rtrim($theme,".css")] = 'plugins/Customizer/Assets/css/themes/' .$theme;
+	foreach (scandir('plugins/Customizer/Assets/css/themes') as $theme) {
+		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
 	}
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
