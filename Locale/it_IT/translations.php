@@ -6,7 +6,7 @@ return [
     'Login' => 'Accesso',
     'Upload Header Logo' => 'Carica il logo dell\'intestazione',
     'Header Logo' => 'Logo intestazione',
-    'Recommend 100 pixels in height, *.png, *.jpg, *.gif, max size 500kb.' => 'Dimensione consigliata in altezza 100 pixel, formati: * .png, * .jpg, * .gif, dimensione massima 500kb.',
+    'Recommend 100 pixels in width, *.png, *.jpg, *.gif, max size 500kb.' => 'Dimensione consigliata in larghezza 100 pixel, formati: * .png, * .jpg, * .gif, dimensione massima 500kb.',
     'Drag and drop your file here' => 'Trascina e rilascia il tuo file qui',
     'or' => 'o',
     'choose file' => 'scegli il file',
