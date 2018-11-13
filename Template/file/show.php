@@ -126,7 +126,11 @@ global $customizer;
                 <th width="25%"><strong><?= t('Use Custom Login Settings') ?></strong></th>
                 <th>
                     <label class="switch">
-                    <input name="use_custom_login" type="checkbox">
+                    <?php if ($this->task->configModel->get('use_custom_login', 'false')) : ?>
+                        <input name="use_custom_login" type="checkbox" value="true" checked>
+                    <?php else : ?>
+                        <input name="use_custom_login" type="checkbox" value="true">
+                    <?php endif ?>
                     <span class="slider round"></span>
                     </label>
                 </th>
