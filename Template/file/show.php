@@ -38,11 +38,7 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>    
-        <div class="panel login-logo-panel">
-        	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Login') ?></h3>
-    	</div>
-
+            
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Header Logo Size') ?></strong></th>
@@ -52,6 +48,11 @@ global $customizer;
             </tr>
         </table>
             
+        <div class="panel login-logo-panel">
+        	<div class="panel-heading">
+    		<h3 class="panel-title"><?= t('Login') ?></h3>
+    	</div>
+     
         <img src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
     <br>
     <br>
@@ -76,11 +77,7 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>    
-    <div class="panel favicon-panel">
-    	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Favicon') ?></h3>
-    	</div>
-        
+            
         <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
@@ -89,7 +86,12 @@ global $customizer;
                 </td>
             </tr>
         </table>
-        
+            
+    <div class="panel favicon-panel">
+    	<div class="panel-heading">
+    		<h3 class="panel-title"><?= t('Favicon') ?></h3>
+    	</div>
+      
         <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
     <br>
     <br>
