@@ -21,9 +21,7 @@ class Plugin extends Base
 	$scanned_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
 	    
 	foreach ($scanned_themes as $theme) {
-		if ($theme !== '..') {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
-		}
 	}
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
