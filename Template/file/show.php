@@ -5,9 +5,7 @@ global $customizer;
     <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
     <fieldset class="login-link-block panel">
-    	<div class="panel-heading">
-    		<h3 class="panel-title links-title"><?= t('Settings') ?></h3>
-    	</div>
+
     	<button type="button" class="login-accordion"><?= t('Asset Settings') ?></button>
         <div class="login-accordian-panel mt-20">
         <div class="panel header-logo-panel">
