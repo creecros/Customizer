@@ -115,6 +115,10 @@ code {
 	margin-top: 10px;
 }
 
+.mt-15 {
+	margin-top: 15px;
+}
+
 .mt-20 {
 	margin-top: 20px;
 }
@@ -125,6 +129,10 @@ code {
 
 .mb-10 {
 	margin-bottom: 10px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
 }
 
 .mb-20 {
@@ -139,6 +147,10 @@ code {
 	margin-left: 10px;
 }
 
+.ml-15 {
+	margin-left: 15px;
+}
+
 .ml-20 {
 	margin-left: 20px;
 }
@@ -149,6 +161,10 @@ code {
 
 .mr-10 {
 	margin-right: 10px;
+}
+
+.mr-15 {
+	margin-right: 15px;
 }
 
 .mr-20 {
@@ -163,6 +179,10 @@ code {
 	padding-top: 10px;
 }
 
+.pt-15 {
+	padding-top: 15px;
+}
+
 .pt-20 {
 	padding-top: 20px;
 }
@@ -173,6 +193,10 @@ code {
 
 .pb-10 {
 	padding-bottom: 10px;
+}
+
+.pb-15 {
+	padding-bottom: 15px;
 }
 
 .pb-20 {
@@ -187,6 +211,10 @@ code {
 	padding-left: 10px;
 }
 
+.pl-15 {
+	padding-left: 15px;
+}
+
 .pl-20 {
 	padding-left: 20px;
 }
@@ -197,6 +225,10 @@ code {
 
 .pr-10 {
 	padding-right: 10px;
+}
+
+.pr-15 {
+	padding-right: 15px;
 }
 
 .pr-20 {
