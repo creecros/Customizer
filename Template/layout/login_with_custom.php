@@ -54,7 +54,6 @@ body  {
 } /* This moves the login button to the centre of the box and removes the useless padding above the login button.  Adds padding to bottom of login button. */
 
 label:nth-of-type(3n) {
-	font-size: smaller;
 	color: grey;
 	text-align: center;
 } /* This makes the 'remember me' smaller and centralised*/
