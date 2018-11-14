@@ -1,6 +1,9 @@
 <?php 
 global $customizer; 
 ?>
+
+<?= $this->hook->render('customizer:config:style') ?>
+
 <div class="sidebar-content">
     <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
@@ -263,17 +266,7 @@ global $customizer;
             <div>
                 <p style="color: #f5f5f5;"><?= t('Preview') ?></p>
             </div>
-            <div class="form-login" style="
-            margin-bottom:20px;
-            background-color: <?= $customizer['loginpanel_color'] ?>;
-            -webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-            -moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-            box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-            padding: 10px;
-            border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
-            border-radius: 5px;
-            text-align: center;
-            ">
+            <div class="preview-form-login">
                     <?php if ($customizer['loginCheck']): ?>
                     <?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="' . $customizer['logoSize'] . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
                     <?php else: ?>
@@ -284,26 +277,16 @@ global $customizer;
                     <input type="text" name="username" placeholder="<?= t('Enter your username') ?>" style="
                         border-radius: 5px;
                     ">
-                    <span class="form-required" style="padding-left:0px"></span>
+                    <span class="preview-form-required"></span>
                     <label for="form-password"></label>        
                     <input type="password" name="password" placeholder="<?= t('Enter your password') ?>" style="
                         border-radius: 5px;
                     ">
-                    <span class="form-required" style="padding-left:0px"></span>
+                    <span class="preview-form-required"></span>
                     <label style="color:grey"><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
                     <div style="margin-bottom: 10px !important;"></div>
-                    <div class="form-actions" style="text-align: center;padding-top: unset;padding-bottom: 10px;">
-                        <button type="button" class="btn login-btn" style="
-                        width: <?= $customizer['login_btn_width'] ?>px;
-                        -webkit-box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
-                        -moz-box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
-                        box-shadow: 0px 0px <?= $customizer['login_btn_shadow'] ?>px <?= $customizer['login_btn_shadow'] * .1 ?>px <?= $customizer['login_btn_shadow_color'] ?>;
-                        border: <?= $customizer['login_btn_border'] ?>px solid <?= $customizer['login_btn_border_color'] ?>;
-                        background: <?= $customizer['login_btn_color'] ?>;
-                        color: <?= $customizer['login_btn_font_color'] ?>;
-                        background-image: linear-gradient(-180deg, <?= $customizer['login_btn_color'] ?> 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
-                        border-radius: 5px;
-                        "><?= t('Sign in') ?></button>
+                    <div class="preview-form-actions">
+                        <button type="button" class="btn preview-login-btn"><?= t('Sign in') ?></button>
                     </div>
             </div> 
         </div>
