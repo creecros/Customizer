@@ -22,7 +22,9 @@ class CustomizerConfigController extends BaseController
     public function save()
     {
         $values =  $this->request->getValues();
-
+        
+        if (array_key_exists('use_custom_login', $values) === false) { $this->configModel->save(['use_custom_login' => '']); }
+        
         if ($this->configModel->save($values)) {
             $this->languageModel->loadCurrentLanguage();
             $this->flash->success(t('Settings saved successfully.'));

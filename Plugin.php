@@ -65,11 +65,15 @@ class Plugin extends Base
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
-        $this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
+	 
+	if ($this->configModel->get('use_custom_login', '') == 'checked') {
+        	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
+	}
+
 	    
 	//Routes
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');

@@ -119,8 +119,24 @@ global $customizer;
         </div>
         
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
-        <div class="login-accordian-panel mt-20">
-
+        <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
+                <div class="login-accordian-panel-active mt-20">
+        <?php else :?>
+                <div class="login-accordian-panel mt-20">
+        <?php endif ?>
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Use Custom Login Settings') ?></strong></th>
+                <th>
+                    <label class="switch">
+                    <input name="use_custom_login" type="checkbox" value="checked" <?= $this->task->configModel->get('use_custom_login','') ?>>
+                    <span class="slider round"></span>
+                    </label>
+                </th>
+            </tr>
+        </table>
+            
+        <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
@@ -288,6 +304,7 @@ global $customizer;
             </div> 
         </div>
         </div>
+        <?php endif ?>
         </div>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
