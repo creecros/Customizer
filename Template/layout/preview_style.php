@@ -1,3 +1,4 @@
+<?php global $customizer; ?>
 <style>
 .preview-form-login > a > img {
 	display: block;
