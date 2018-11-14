@@ -12,10 +12,11 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 **GUI to add a...**
 
-* header logo (Best size 100px in height, 500kb limit, *.jpg, .gif, .png*)
-* customizable login screen
-  * login logo
-  * login page background image url (will display centered on login page with auto scale)
+* [header logo](#header-logo-rainbow)
+  * set header logo size
+* [customizable login screen](#customizable-login-screen-gem)
+  * [login logo](#login-logo-peach)
+  * [login page background image url](#login-screen-background-image-dart)
   * login logo link
   * set login logo size
   * set login page background color
@@ -23,8 +24,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
 * [favicon](#favicon-beginner) (Best size 50x50px, 20kb limit, *.png*)
-* set header logo size
-* [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 4 preloaded themes
+* [theme selector](#includes-preset-themes-mega) with 4 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
@@ -37,28 +37,28 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
 
-:rainbow:  **Header Logo:**
+## Header Logo :rainbow:
 
 ![image](https://user-images.githubusercontent.com/26339368/47369113-f9e62d80-d6b0-11e8-90e0-974c31b4b535.png)
 
-:peach:  **Login Logo:**
+## Login Logo :peach:
 
 ![image](https://user-images.githubusercontent.com/26339368/48488290-622ab980-e7ee-11e8-8efd-58d7b834a02f.png)
 
-:gem:  **Customizable Colors, Shadow & Border for Login Screen with opacity control:**
+## Customizable Login Screen :gem:
 
 ![image](https://user-images.githubusercontent.com/26339368/48487900-820dad80-e7ed-11e8-9887-b80077008b39.png)
 
-:dart:  **Login Screen Background Image:**
+## Login Screen Background Image :dart:
 
 ![image](https://user-images.githubusercontent.com/26339368/47959793-573c8180-dfc3-11e8-84bc-ab654f8c50b5.png)
 
-:mega:  **Includes Preset Themes:**
+## Includes Preset Themes :mega:
 
 ![image](https://user-images.githubusercontent.com/26339368/48488078-f2b4ca00-e7ed-11e8-8d4b-37d5b51f374b.png)
 ![image](https://user-images.githubusercontent.com/26339368/48488101-ffd1b900-e7ed-11e8-8438-9ec7b91c98d9.png)
 
-:smirk:	**Considerations:**
+## Considerations :smirk:
 
 **Will probably not function fully with other CSS plugins that override templates related to layout or headers**
 
@@ -69,7 +69,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 *Make pull request to add other theme support, must come from theme maintainer.*
 
-:lollipop: **Future Enhancements:**
+## Future Enhancements :lollipop:
 
 - [ ] Custom Theme Creator with Color Pickers
 - [x] Preloaded Theme Selector
