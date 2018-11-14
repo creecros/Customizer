@@ -23,7 +23,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * set login panel color
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
-* [favicon](#favicon-beginner) (Best size 50x50px, 20kb limit, *.png*)
+* [favicon](#favicon-beginner)
 * [theme selector](#includes-preset-themes-mega) with 4 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
