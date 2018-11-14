@@ -22,7 +22,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * set login panel color
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
-* favicon (Best size 50x50px, 20kb limit, *.png*)
+* [favicon](#favicon-beginner) (Best size 50x50px, 20kb limit, *.png*)
 * set header logo size
 * [theme selector](https://github.com/creecros/Customizer/blob/master/Assets/css/README.md) with 4 preloaded themes
   * Github :octocat:
@@ -33,7 +33,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 **...to your site without any backend coding or config settings.**
 
-:beginner:	**Favicon:**
+## Favicon :beginner:	
 
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
 
