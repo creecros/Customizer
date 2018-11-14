@@ -281,12 +281,12 @@ global $customizer;
                     <?php endif ?>
     
                     <label for="form-username"></label>        
-                    <input type="text" name="username" placeholder="<?= t('Username') ?>" style="
+                    <input type="text" name="username" placeholder="<?= t('Enter your username') ?>" style="
                         border-radius: 5px;
                     ">
                     <span class="form-required" style="padding-left:0px"></span>
                     <label for="form-password"></label>        
-                    <input type="password" name="password" placeholder="<?= t('Password') ?>" style="
+                    <input type="password" name="password" placeholder="<?= t('Enter your password') ?>" style="
                         border-radius: 5px;
                     ">
                     <span class="form-required" style="padding-left:0px"></span>
