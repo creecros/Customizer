@@ -1,3 +1,4 @@
+<style>
 .preview-form-login > a > img {
 	display: block;
 	margin: auto;
@@ -40,3 +41,5 @@
 
 
 .preview-form-required { display: none;} /* This removes the standard required asterisk */
+	
+</style>
