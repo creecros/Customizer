@@ -284,13 +284,13 @@ global $customizer;
                     <input type="text" name="username" placeholder="<?= t('Username') ?>" style="
                         border-radius: 5px;
                     ">
-                    <span class="form-required"></span>
+                    <span class="form-required" style="padding-left:0px"></span>
                     <label for="form-password"></label>        
                     <input type="password" name="password" placeholder="<?= t('Password') ?>" style="
                         border-radius: 5px;
                     ">
-                    <span class="form-required"></span>
-                    <label><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
+                    <span class="form-required" style="padding-left:0px"></span>
+                    <label style="color:grey"><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
                     <div style="margin-bottom: 10px !important;"></div>
                     <div class="form-actions" style="text-align: center;padding-top: unset;padding-bottom: 10px;">
                         <button type="button" class="btn login-btn" style="
