@@ -43,7 +43,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :peach:  **Login Logo:**
 
-![image](https://user-images.githubusercontent.com/26339368/47802063-e9176680-dd05-11e8-83c7-d18d563183ac.png)
+![image](https://user-images.githubusercontent.com/26339368/48488232-445d5480-e7ee-11e8-98c8-10d29b95c108.png)
 
 :gem:  **Customizable Colors, Shadow & Border for Login Screen with opacity control:**
 
