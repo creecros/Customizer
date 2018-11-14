@@ -119,8 +119,11 @@ global $customizer;
         </div>
         
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
-        <div class="login-accordian-panel mt-20">
-            
+        <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
+                <div class="login-accordian-panel-active mt-20">
+        <?php else :?>
+                <div class="login-accordian-panel mt-20">
+        <?php endif ?>
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Use Custom Login Settings') ?></strong></th>
