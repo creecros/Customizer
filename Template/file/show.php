@@ -1,6 +1,9 @@
 <?php 
 global $customizer; 
 ?>
+
+<?= $this->hook->render('customizer:config:style') ?>
+
 <div class="sidebar-content">
     <form class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'save', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
