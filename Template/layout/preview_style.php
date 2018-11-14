@@ -7,14 +7,16 @@
 } /* This aligns the logo to the text.  Adds padding to top of logo. */
 	
 .preview-form-login {
-		background-color: <?= $customizer['loginpanel_color'] ?>;
-		-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-		-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-		box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-		padding: 10px;
-		border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
-	        border-radius: 5px;
-	        text-align: center;
+	background-color: <?= $customizer['loginpanel_color'] ?>;
+	-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+	-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+	box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+	padding: 10px;
+	border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
+	border-radius: 5px;
+	text-align: center;
+	max-width: 350px;
+	margin: 5% auto 0;
 }
 .preview-login-btn {
 	width: <?= $customizer['login_btn_width'] ?>px;
