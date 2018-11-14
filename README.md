@@ -8,7 +8,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/47959705-21969900-dfc1-11e8-94a9-501e9b14d905.png)
+![image](https://user-images.githubusercontent.com/26339368/48487642-cfd5e600-e7ec-11e8-9b23-a97c50da43f7.png)
 
 **GUI to add a...**
 
@@ -47,25 +47,16 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :gem:  **Customizable Colors, Shadow & Border for Login Screen with opacity control:**
 
-![image](https://user-images.githubusercontent.com/26339368/47959722-b3060b00-dfc1-11e8-9d1d-92c40db0fbff.png)
-
-![image](https://user-images.githubusercontent.com/26339368/47801759-3a732600-dd05-11e8-8192-b17cb4de8ce0.png)
+![image](https://user-images.githubusercontent.com/26339368/48487900-820dad80-e7ed-11e8-9887-b80077008b39.png)
 
 :dart:  **Login Screen Background Image:**
 
 ![image](https://user-images.githubusercontent.com/26339368/47959793-573c8180-dfc3-11e8-84bc-ab654f8c50b5.png)
 
+:mega:  **Includes Preset Themes:**
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20"> **Clemson Theme (Go Tigers!):**
-
-![image](https://user-images.githubusercontent.com/26339368/48094361-fccc3c80-e1df-11e8-9695-6b9c510aa522.png)
-
-![image](https://user-images.githubusercontent.com/26339368/48094399-15d4ed80-e1e0-11e8-9d31-d14bad0269f2.png)
-
-:mega:  **Other Themes:**
-
-![image](https://user-images.githubusercontent.com/26339368/47803243-6e037f80-dd08-11e8-94d5-caf7ed1c6015.png)
-
+![image](https://user-images.githubusercontent.com/26339368/48488078-f2b4ca00-e7ed-11e8-8d4b-37d5b51f374b.png)
+![image](https://user-images.githubusercontent.com/26339368/48488101-ffd1b900-e7ed-11e8-8438-9ec7b91c98d9.png)
 
 :smirk:	**Considerations:**
 
