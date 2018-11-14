@@ -281,10 +281,18 @@ global $customizer;
                     <?php endif ?>
     
                     <label for="form-username"></label>        
-                    <input type="text" name="username" placeholder="<?= t('Username') ?>" >
+                    <input type="text" name="username" placeholder="<?= t('Username') ?>" style="
+                        margin: auto;
+                        display: block;
+                        border-radius: 5px;
+                    ">
                     <span class="form-required"></span>
                     <label for="form-password"></label>        
-                    <input type="password" name="password" placeholder="<?= t('Password') ?>" >
+                    <input type="password" name="password" placeholder="<?= t('Password') ?>" style="
+                        margin: auto;
+                        display: block;
+                        border-radius: 5px;
+                    ">
                     <span class="form-required"></span>
                     <label><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
                     <div style="margin-bottom: 10px !important;"></div>
