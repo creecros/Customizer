@@ -133,7 +133,7 @@ global $customizer;
             </tr>
         </table>
             
-
+        <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
         <?= $this->form->label(t('Login Link'), 'login_link') ?>
         <?= $this->form->text('login_link', $values, $errors, array('placeholder="https://example.kanboard.org/"')) ?>
         <p class="form-help login-link-desc"><?= e('Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)') ?></p>
@@ -301,6 +301,7 @@ global $customizer;
             </div> 
         </div>
         </div>
+        <?php endif ?>
         </div>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
