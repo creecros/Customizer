@@ -76,28 +76,24 @@ label:nth-of-type(2n) {
 } /* This hides (to maintain the gap) the text of the labels and also reduces the top margin */
 
 input::-webkit-input-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input::-moz-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input:-ms-input-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input::placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
