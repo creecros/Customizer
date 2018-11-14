@@ -32,6 +32,14 @@
 	background: <?= $customizer['login_btn_font_color'] ?>;
 	color: <?= $customizer['login_btn_color'] ?>;
 }
+	
+.preview-form-actions > .preview-login-btn {
+	font-variant-caps: all-small-caps;
+	text-align: center;
+	transition: cubic-bezier(0.1, 0.75, 0.57, 1) 0.4s;
+	-webkit-transition: cubic-bezier(0.1, 0.75, 0.57, 1) 0.4s;
+} 
+
 
 .preview-form-actions {
 	text-align: center;
