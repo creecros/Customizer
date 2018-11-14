@@ -71,9 +71,10 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
 	 
 	if ($this->configModel->get('use_custom_login', '') == 'checked') {
-        	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/logintop');
+        	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/login_with_custom');
+	} else {
+        	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/login_no_custom');
 	}
-
 	    
 	//Routes
         $this->route->addRoute('settings/customizer', 'CustomizerFileController', 'show', 'Customizer');
