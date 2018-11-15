@@ -304,10 +304,10 @@ global $customizer;
                 <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
             </div>
         </div>
-    </fieldset>
-</form>  
-    <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
-    <div class="login-accordian-panel mt-20">
-        <?= $this->hook->render('customizer:config:themecreator') ?>
-    </div>
-</div>
+        </form>  
+            <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
+            <div class="login-accordian-panel mt-20">
+                <?= $this->hook->render('customizer:config:themecreator') ?>
+            </div>
+        </div>
+</fieldset>
