@@ -119,7 +119,7 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>
-            <div class="form-actions" style="margin-bottom: 50px">
+            <div class="form-actions mb-20 ml-15">
                 <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
             </div>
     </div>
