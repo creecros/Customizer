@@ -2,9 +2,12 @@
 
 namespace Kanboard\Plugin\Customizer\Controller;
 
+require_once __DIR__.'/vendor/autoload.php';
+
 use Kanboard\Model\ConfigModel;
 use Kanboard\Model\LanguageModel;
 use Kanboard\Controller\BaseController;
+use luizbills\CSS_Generator\Generator as CSS_Generator;
 
 /**
  * Config Controller
@@ -33,5 +36,26 @@ class CustomizerConfigController extends BaseController
         }
 
           $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+    }
+    
+    public function create_theme()
+    {
+        $values =  $this->request->getValues();
+        
+        $options = [
+        // default values
+        // 'indentation' => '    ', // 4 spaces
+        ];
+        
+        $css = new CSS_Generator( $options );
+
+        // single selector
+        $css->add_rule( 'header', [ 'background-color' => $values['header_background'] );
+                                   
+        $minify = false;
+                                   
+        file_put_contents('plugins/Customizer/Assets/css/themes/' . $values['theme_name'], $css->get_output($minify));
+        
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
 }
