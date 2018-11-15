@@ -293,6 +293,10 @@ global $customizer;
         </div>
         <?php endif ?>
         </div>
+    	<button type="button" class="login-accordion"><?= t('Image Assets & Settings') ?></button>
+        <div class="login-accordian-panel-active mt-20">
+            <?= $this->hook->render('customizer:config:themecreator') ?>
+        </div>
         <?= $this->form->label(t('Theme'), 'themeSelection') ?>
         <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
