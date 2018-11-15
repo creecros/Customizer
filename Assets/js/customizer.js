@@ -35,3 +35,10 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+// Valid for the form id="settings" checkboxes, when the "change" event occurs, the module is sent.
+
+$(document).ready(function(){
+    $("#settings").on("change", "input:checkbox", function(){
+        $("#settings").submit();
+    });
+});
