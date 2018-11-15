@@ -119,7 +119,10 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>
-        </div>
+            <div class="form-actions" style="margin-bottom: 50px">
+                <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+            </div>
+    </div>
         
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
         <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
@@ -297,12 +300,11 @@ global $customizer;
         <div class="login-accordian-panel-active mt-20">
             <?= $this->form->label(t('Theme'), 'themeSelection') ?>
             <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
+            <div class="form-actions" style="margin-bottom: 50px">
+                <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+            </div>
         </div>
     </fieldset>
-
-    <div class="form-actions" style="margin-bottom: 50px">
-        <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
-    </div>
 </form>  
     <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
     <div class="login-accordian-panel-active mt-20">
