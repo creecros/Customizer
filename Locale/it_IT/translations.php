@@ -45,5 +45,5 @@ return [
     'You can see a preview only after saving' => 'Puoi vedere l\'anteprima solo dopo aver salvato',
     'Login Page Settings' => 'Impostazioni della pagina di accesso',
     '&nbsp;pixels high' => '&nbsp;altezza pixel',
-    'Use Custom Login Settings' => 'Usa le impostazioni di login personalizzate'
+    'Use Custom Login Settings' => 'Usa le impostazioni di accesso personalizzate'
 ];
