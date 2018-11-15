@@ -35,8 +35,3 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-//Toggle switch auto submit to form
-$jQuery("toggle").click(function() {
-    $jQuery("#search").trigger("submit");
-
-});
