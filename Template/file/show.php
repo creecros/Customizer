@@ -293,7 +293,7 @@ global $customizer;
         </div>
         <?php endif ?>
         </div>
-    	<button type="button" class="login-accordion"><?= t('Image Assets & Settings') ?></button>
+    	<button type="button" class="login-accordion"><?= t('Create a theme') ?></button>
         <div class="login-accordian-panel-active mt-20">
             <?= $this->hook->render('customizer:config:themecreator') ?>
         </div>
