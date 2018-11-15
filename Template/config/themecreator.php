@@ -19,4 +19,7 @@
       </tr>
     </table>  
   </div>
+  <div class="form-actions" style="margin-bottom: 50px">
+    <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+  </div>
 </form>
