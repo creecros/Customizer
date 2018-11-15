@@ -2,7 +2,7 @@
 
 namespace Kanboard\Plugin\Customizer\Controller;
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'../vendor/autoload.php';
 
 use Kanboard\Model\ConfigModel;
 use Kanboard\Model\LanguageModel;
