@@ -293,16 +293,19 @@ global $customizer;
         </div>
         <?php endif ?>
         </div>
-    	<button type="button" class="login-accordion"><?= t('Create a theme') ?></button>
+        <button type="button" class="login-accordion"><?= t('Manage Themes') ?></button>
         <div class="login-accordian-panel-active mt-20">
-            <?= $this->hook->render('customizer:config:themecreator') ?>
+            <?= $this->form->label(t('Theme'), 'themeSelection') ?>
+            <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
         </div>
-        <?= $this->form->label(t('Theme'), 'themeSelection') ?>
-        <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
     </fieldset>
 
     <div class="form-actions" style="margin-bottom: 50px">
         <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
     </div>
-</form>     
+</form>  
+    <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
+    <div class="login-accordian-panel-active mt-20">
+        <?= $this->hook->render('customizer:config:themecreator') ?>
+    </div>
 </div>
