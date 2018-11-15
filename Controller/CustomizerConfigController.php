@@ -47,10 +47,10 @@ class CustomizerConfigController extends BaseController
         // 'indentation' => '    ', // 4 spaces
         ];
         
-        $css = new CSS_Generator( $options );
+        $css = new CSS_Generator($options);
 
         // single selector
-        $css->add_rule( 'header', [ 'background-color' => $values['header_background'] );
+        $css->add_rule('header', ['background-color' => $values['header_background']]);
                                    
         $minify = false;
                                    
