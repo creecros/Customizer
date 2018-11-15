@@ -45,7 +45,7 @@ code {
 	float: left;
 	list-style: outside none none;
 	width: auto;
-	display: inline-block;
+	display: block;
 	margin: 0px 10px;
 } /* This places the upload link on the same line as the remove link */
 
@@ -53,7 +53,7 @@ code {
 	float: left;
 	list-style: outside none none;
 	width: auto;
-	display: inline-block;
+	display: block;
 	margin: 0px 10px;
 } /* This places the upload link on the same line as the remove link */
 
@@ -83,7 +83,13 @@ code {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .login-accordion:hover {
+.login-accordion:hover {
+    background-color: #f5f5f5;
+    color: #777777;
+    transition: 0.4s;
+}
+
+.current {
     background-color: #f5f5f5;
     color: #777777;
     transition: 0.4s;
