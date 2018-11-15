@@ -70,7 +70,8 @@ class Plugin extends Base
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
 	 
-	if ($this->configModel->get('use_custom_login', '') == 'checked') {
+	if ($this->configModel->get('use_custom_login', '') == 'checked') { 
+        	$this->template->hook->attach('customizer:config:style', 'customizer:layout/preview_style');
         	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/login_with_custom');
 	} else {
         	$this->template->hook->attach('template:auth:login-form:before', 'customizer:layout/login_no_custom');

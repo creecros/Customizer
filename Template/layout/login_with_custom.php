@@ -54,7 +54,6 @@ body  {
 } /* This moves the login button to the centre of the box and removes the useless padding above the login button.  Adds padding to bottom of login button. */
 
 label:nth-of-type(3n) {
-	font-size: smaller;
 	color: grey;
 	text-align: center;
 } /* This makes the 'remember me' smaller and centralised*/
@@ -76,28 +75,24 @@ label:nth-of-type(2n) {
 } /* This hides (to maintain the gap) the text of the labels and also reduces the top margin */
 
 input::-webkit-input-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input::-moz-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input:-ms-input-placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 } /* This styles the placeholder to emphasise it.  Cross-browser compatibility */
 
 input::placeholder {
-	font-weight: bold;
 	color: #000;
 	opacity: 1;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
