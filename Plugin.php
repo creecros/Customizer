@@ -69,6 +69,7 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
+	$this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator');    
 	 
 	if ($this->configModel->get('use_custom_login', '') == 'checked') { 
         	$this->template->hook->attach('customizer:config:style', 'customizer:layout/preview_style');
