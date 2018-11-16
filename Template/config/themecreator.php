@@ -1,6 +1,6 @@
 <form name="themecreator" id="themecreator" class="url-links" method="post" action="<?= $this->url->href('CustomizerConfigController', 'create_theme', array('plugin' => 'customizer', 'redirect' => 'application')) ?>" autocomplete="off">
 <?= $this->form->csrf() ?>
-  <div class="column-100">
+  <div class="column-100" style="min-height: 500px;">
     <?= t('Theme Name: ') ?><input type="text" name="theme_name" placeholder="<?= t('Theme Name') ?>" pattern="[a-zA-Z0-9]+" title="<?= t('it should only contain alphanumeric without spaces') ?>" required>
     <br>
     <br>

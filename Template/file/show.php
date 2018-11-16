@@ -10,7 +10,7 @@ global $customizer;
     <fieldset class="login-link-block panel">
 
     	<button type="button" class="login-accordion"><?= t('Image Assets & Settings') ?></button>
-        <div class="login-accordian-panel-active mt-20">
+        <div class="login-accordian-panel mt-10">
         <div class="panel header-logo-panel">
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header Image') ?></h3>
@@ -126,9 +126,9 @@ global $customizer;
         
         <button type="button" class="login-accordion"><?= t('Login Page Settings') ?></button>
         <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
-                <div class="login-accordian-panel-active mt-20">
+                <div class="login-accordian-panel mt-10">
         <?php else :?>
-                <div class="login-accordian-panel mt-20">
+                <div class="login-accordian-panel mt-10">
         <?php endif ?>
         <table>
             <tr>
@@ -297,7 +297,7 @@ global $customizer;
         <?php endif ?>
         </div>
         <button type="button" class="login-accordion"><?= t('Manage Themes') ?></button>
-        <div class="login-accordian-panel mt-20">
+        <div class="login-accordian-panel mt-10">
             <?= $this->form->label(t('Theme'), 'themeSelection') ?>
             <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
             <div class="form-actions" style="margin-bottom: 50px">
@@ -306,7 +306,7 @@ global $customizer;
         </div>
         </form>  
             <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
-            <div class="login-accordian-panel mt-20" style="min-height: 500px;">
+            <div class="login-accordian-panel mt-10">
                 <?= $this->hook->render('customizer:config:themecreator') ?>
             </div>
         </div>

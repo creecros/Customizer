@@ -16,24 +16,31 @@ $(document).on('input', 'input[name="loginlogo_size"]', function(e) {
 
 //Accordion for settings page
 
-var acc = document.getElementsByClassName("login-accordion");
-var i;
+document.addEventListener("DOMContentLoaded", function(event) { 
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        /* Toggle between adding and removing the "current" class,
-        to highlight the button that controls the panel */
-        this.classList.toggle("current");
 
-        /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+    var acc = document.getElementsByClassName("login-accordion");
+    var panel = document.getElementsByClassName('login-accordian-panel');
+    
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            var setClasses = !this.classList.contains('current');
+            setClass(acc, 'current', 'remove');
+            setClass(panel, 'show', 'remove');
+    
+            if (setClasses) {
+                this.classList.toggle("current");
+                this.nextElementSibling.classList.toggle("show");
+            }
         }
-    });
-}
+    }
+    
+    function setClass(els, className, fnName) {
+        for (var i = 0; i < els.length; i++) {
+            els[i].classList[fnName](className);
+        }
+    }
+});
 
 // Valid for the form id="settings" checkboxes, when the "change" event occurs, the module is sent.
 
