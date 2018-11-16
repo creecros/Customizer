@@ -306,7 +306,7 @@ global $customizer;
         </div>
         </form>  
             <button type="button" class="login-accordion"><?= t('Theme Creator') ?></button>
-            <div class="login-accordian-panel mt-20">
+            <div class="login-accordian-panel mt-20" style="min-height: 500px;">
                 <?= $this->hook->render('customizer:config:themecreator') ?>
             </div>
         </div>
