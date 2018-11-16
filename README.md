@@ -14,7 +14,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 * [header logo](#header-logo-rainbow)
   * set header logo size
-* [customizable login screen](#customizable-login-screen-gem)
+* [customizable login screen](#fully-customizable-login-screen-gem)
   * [login logo](#login-logo-peach)
   * [login page background image url](#login-screen-background-image-dart)
   * login logo link
@@ -45,9 +45,11 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ![image](https://user-images.githubusercontent.com/26339368/48488290-622ab980-e7ee-11e8-8efd-58d7b834a02f.png)
 
-## Customizable Login Screen :gem:
+## Fully Customizable Login Screen :gem:
 
-![image](https://user-images.githubusercontent.com/26339368/48487900-820dad80-e7ed-11e8-9887-b80077008b39.png)
+![image](https://user-images.githubusercontent.com/26339368/48627714-44428d80-e983-11e8-8451-2e873572007a.png)
+
+![image](https://user-images.githubusercontent.com/26339368/48627526-ca120900-e982-11e8-9870-fd469c553124.png)
 
 ## Login Screen Background Image :dart:
 
