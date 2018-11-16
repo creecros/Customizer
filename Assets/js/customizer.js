@@ -63,10 +63,25 @@ function OnColorChanged(selectedColor, inputId) {
             }
 }
 
+document.getElementById('loginbackground_color').oninput = function() {
+  document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value
+}
+
 function OnColorChanged(selectedColor, inputId) {
             if (inputId == "loginbackground_color") {
                 var rgbaBox = document.getElementById("preview");
                 rgbaBox.style.backgroundColor = selectedColor;
+            }
+}
+
+document.getElementById('login_shadow_color').oninput = function() {
+  document.getElementById('preview-form-login').style.color = document.getElementById('login_shadow_color').value
+}
+
+function OnColorChanged(selectedColor, inputId) {
+            if (inputId == "login_shadow_color") {
+                var rgbaBox = document.getElementById("preview-form-login");
+                rgbaBox.style.color = selectedColor;
             }
 }
 
