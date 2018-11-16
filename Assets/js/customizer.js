@@ -56,8 +56,11 @@ document.getElementById('loginpanel_color').oninput = function() {
   document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
 
-document.getElementById('loginpanel_color').onchange = function() {
-  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
+function OnColorChanged(selectedColor, inputId) {
+            if (inputId == "loginpanel_color") {
+                var rgbaBox = document.getElementById("preview-form-login");
+                rgbaBox.style.backgroundColor = selectedColor;
+            }
 }
 
 
