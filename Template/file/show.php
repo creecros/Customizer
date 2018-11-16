@@ -156,7 +156,7 @@ global $customizer;
                           <strong><?= t('Login Page Background Color') ?></strong>
                         </th>
                         <th>
-                          <input class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>">
+                          <input id="loginbackground_color" class="color" name="loginbackground_color" value="<?= $this->task->configModel->get('loginbackground_color','#ffffff') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -164,7 +164,7 @@ global $customizer;
                             <strong><?= t('Login Panel Shadow Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_shadow_color" value="<?= $this->task->configModel->get('login_shadow_color','#333') ?>">
+                            <input id="login_shadow_color" class="color" name="login_shadow_color" value="<?= $this->task->configModel->get('login_shadow_color','#333') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -172,7 +172,7 @@ global $customizer;
                             <strong><?= t('Login Panel Border Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>">
+                            <input id="login_border_color" class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>" onchange="document.getElementById('preview-form-login').style.border = document.getElementById('login_border').value + 'px solid ' + document.getElementById('login_border_color').value">
                         </th>
                     </tr>
                     <tr>
@@ -180,7 +180,7 @@ global $customizer;
                             <strong><?= t('Login Panel Border Thickness') ?></strong>
                         </th>
                         <th>
-                            <input type="range" name="login_border" min="0" max="10" value="<?= $this->task->configModel->get('login_border','0') ?>">
+                            <input id="login_border" type="range" name="login_border" min="0" max="10" value="<?= $this->task->configModel->get('login_border','0') ?>" onchange="document.getElementById('preview-form-login').style.border = document.getElementById('login_border').value + 'px solid ' + document.getElementById('login_border_color').value">
                         </th>
                     </tr>
                     <tr>
@@ -188,7 +188,7 @@ global $customizer;
                             <strong><?= t('Login Panel Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>">
+                            <input id="loginpanel_color" class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>" onchange="document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value">
                         </th>
                     </tr>
                     <tr>
@@ -196,7 +196,7 @@ global $customizer;
                             <strong><?= t('Login Panel Shadow Intensity') ?></strong>
                         </th>
                         <th>
-                            <input type="range" name="login_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_shadow','0') ?>">
+                            <input id="login_shadow" type="range" name="login_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_shadow','0') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -204,7 +204,7 @@ global $customizer;
                             <strong><?= t('Login Button Background Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_btn_color" value="<?= $this->task->configModel->get('login_btn_color','#3079ed') ?>">
+                            <input id="login_btn_color" class="color" name="login_btn_color" value="<?= $this->task->configModel->get('login_btn_color','#3079ed') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -212,7 +212,7 @@ global $customizer;
                             <strong><?= t('Login Button Shadow Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_btn_shadow_color" value="<?= $this->task->configModel->get('login_btn_shadow_color','#333') ?>">
+                            <input id="login_btn_shadow_color" class="color" name="login_btn_shadow_color" value="<?= $this->task->configModel->get('login_btn_shadow_color','#333') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -220,7 +220,7 @@ global $customizer;
                             <strong><?= t('Login Button Border Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_btn_border_color" value="<?= $this->task->configModel->get('login_btn_border_color','transparent') ?>">
+                            <input id="login_btn_border_color" class="color" name="login_btn_border_color" value="<?= $this->task->configModel->get('login_btn_border_color','transparent') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -228,7 +228,7 @@ global $customizer;
                             <strong><?= t('Login Button Shade Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_btn_shade_color" value="<?= $this->task->configModel->get('login_btn_shade_color','transparent') ?>">
+                            <input id="login_btn_shade_color" class="color" name="login_btn_shade_color" value="<?= $this->task->configModel->get('login_btn_shade_color','transparent') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -236,7 +236,7 @@ global $customizer;
                             <strong><?= t('Login Button Font Color') ?></strong>
                         </th>
                         <th>
-                            <input class="color" name="login_btn_font_color" value="<?= $this->task->configModel->get('login_btn_font_color','#ffffff') ?>">
+                            <input id="login_btn_font_color" class="color" name="login_btn_font_color" value="<?= $this->task->configModel->get('login_btn_font_color','#ffffff') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -244,7 +244,7 @@ global $customizer;
                             <strong><?= t('Login Button Shadow Intensity') ?></strong>
                         </th>
                         <th>
-                            <input type="range" name="login_btn_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_btn_shadow','0') ?>">
+                            <input id="login_btn_shadow" type="range" name="login_btn_shadow" min="0" max="20" value="<?= $this->task->configModel->get('login_btn_shadow','0') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -252,7 +252,7 @@ global $customizer;
                             <strong><?= t('Login Button Border Thickness') ?></strong>
                         </th>
                         <th>
-                            <input type="range" name="login_btn_border" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_border','0') ?>">
+                            <input id="login_btn_border" type="range" name="login_btn_border" min="0" max="10" value="<?= $this->task->configModel->get('login_btn_border','0') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -260,7 +260,7 @@ global $customizer;
                             <strong><?= t('Login Button Width') ?></strong>
                         </th>
                         <th>
-                            <input type="range" name="login_btn_width" min="95" max="300" value="<?= $this->task->configModel->get('login_btn_width','95') ?>">
+                            <input id="login_btn_width" type="range" name="login_btn_width" min="95" max="300" value="<?= $this->task->configModel->get('login_btn_width','95') ?>">
                         </th>
                     </tr>
                 </table>  
@@ -269,7 +269,7 @@ global $customizer;
             <div>
                 <p style="color: #f5f5f5;"><?= t('Preview') ?></p>
             </div>
-            <div class="preview-form-login">
+            <div id="preview-form-login" class="preview-form-login">
                     <?php if ($customizer['loginCheck']): ?>
                     <?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="' . $customizer['logoSize'] . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
                     <?php else: ?>
