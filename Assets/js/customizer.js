@@ -49,3 +49,9 @@ $(document).ready(function(){
         $("#settings").submit();
     });
 });
+
+//Live Preview
+
+document.getElementById('loginpanel_color').onchange = function() {
+  document.getElementById('preview-form-login').style.color = document.getElementById('loginpanel_color').value
+}
