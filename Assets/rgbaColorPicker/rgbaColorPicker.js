@@ -346,7 +346,7 @@ var rgbaColorPicker = (function (myOptions) {
                     //create choosers
                     that.S[i] = that.createElm("colorChooser", 1);
                     that.S[i].i = i;
-                    that.S[i].id = "test";
+                    that.S[i].id = '"' + colorInputs[j]['name'] . '"';
 
                     //that.S[i].arrow = that.createElm("colorChooserArrow", 1);
                     //that.S[i][appendCld](that.S[i].arrow);
