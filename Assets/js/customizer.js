@@ -56,22 +56,8 @@ document.getElementById('loginpanel_color').oninput = function() {
   document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
 
-function OnColorChanged(selectedColor, inputId) {
-            if (inputId == "loginpanel_color") {
-                var rgbaBox = document.getElementById("preview-form-login");
-                rgbaBox.style.backgroundColor = selectedColor;
-            }
-}
-
 document.getElementById('loginbackground_color').oninput = function() {
   document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value
-}
-
-function OnColorChanged(selectedColor, inputId) {
-            if (inputId == "loginbackground_color") {
-                var rgbaBox = document.getElementById("preview");
-                rgbaBox.style.backgroundColor = selectedColor;
-            }
 }
 
 document.getElementById('login_shadow_color').oninput = function() {
@@ -79,9 +65,17 @@ document.getElementById('login_shadow_color').oninput = function() {
 }
 
 function OnColorChanged(selectedColor, inputId) {
-            if (inputId == "login_shadow_color") {
+              if (inputId == "login_shadow_color") {
                 var rgbaBox = document.getElementById("preview-form-login");
                 rgbaBox.style.color = selectedColor;
-            }
+              }
+              if (inputId == "loginbackground_color") {
+                var rgbaBox = document.getElementById("preview");
+                rgbaBox.style.backgroundColor = selectedColor;
+              }
+              if (inputId == "loginpanel_color") {
+                var rgbaBox = document.getElementById("preview-form-login");
+                rgbaBox.style.backgroundColor = selectedColor;
+              }
 }
 
