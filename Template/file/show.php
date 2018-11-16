@@ -172,7 +172,7 @@ global $customizer;
                             <strong><?= t('Login Panel Border Color') ?></strong>
                         </th>
                         <th>
-                            <input id="login_border_color" class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>" onchange="document.getElementById('preview-form-login').style.border = document.getElementById('login_border').value + 'px solid ' + document.getElementById('login_border_color').value">
+                            <input id="login_border_color" class="color" name="login_border_color" value="<?= $this->task->configModel->get('login_border_color','#ffffff') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -180,7 +180,7 @@ global $customizer;
                             <strong><?= t('Login Panel Border Thickness') ?></strong>
                         </th>
                         <th>
-                            <input id="login_border" type="range" name="login_border" min="0" max="10" value="<?= $this->task->configModel->get('login_border','0') ?>" onchange="document.getElementById('preview-form-login').style.border = document.getElementById('login_border').value + 'px solid ' + document.getElementById('login_border_color').value">
+                            <input id="login_border" type="range" name="login_border" min="0" max="10" value="<?= $this->task->configModel->get('login_border','0') ?>">
                         </th>
                     </tr>
                     <tr>
@@ -188,7 +188,7 @@ global $customizer;
                             <strong><?= t('Login Panel Color') ?></strong>
                         </th>
                         <th>
-                            <input id="loginpanel_color" class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>" onchange="document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value">
+                            <input id="loginpanel_color" class="color" name="loginpanel_color" value="<?= $this->task->configModel->get('loginpanel_color','#ffffff') ?>">
                         </th>
                     </tr>
                     <tr>
