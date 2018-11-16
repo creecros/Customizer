@@ -344,6 +344,7 @@ var rgbaColorPicker = (function (myOptions) {
                     that.R[i] = colorInputs[j]; //that.R.push(colorInputs); will make the R[i].parentNode throw exception
                     that.R[i].i = i;
                     //create choosers
+                    that.S[i].setAttribute("id", colorInputs[j]['name']);
                     that.S[i] = that.createElm("colorChooser", 1);
                     that.S[i].i = i;
 
