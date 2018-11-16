@@ -53,5 +53,5 @@ $(document).ready(function(){
 //Live Preview
 
 document.getElementById('loginpanel_color').onchange = function() {
-  document.getElementById('preview-form-login').style.color = document.getElementById('loginpanel_color').value
+  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
