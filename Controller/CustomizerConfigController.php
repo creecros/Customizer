@@ -53,12 +53,15 @@ class CustomizerConfigController extends BaseController
         $css->add_rule('header', ['background-color' => $values['header_background']]);
                                    
         $minify = false;
+        
+        $extension = '.css';
+        $rename = str_replace('.', '', $values['theme_name']);
                                    
         if (file_exists(DATA_DIR . '/files/customizer/themes')) {
-          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $values['theme_name'], $css->get_output($minify));
+          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $rename . $extension, $css->get_output($minify));
         } else {
           mkdir(DATA_DIR . '/files/customizer/themes', 0755);
-          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $values['theme_name'], $css->get_output($minify));
+          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $rename . $extension, $css->get_output($minify));
         }
         
         $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
