@@ -63,4 +63,10 @@ function OnColorChanged(selectedColor, inputId) {
             }
 }
 
+function OnColorChanged(selectedColor, inputId) {
+            if (inputId == "loginbackground_color") {
+                var rgbaBox = document.getElementById("preview");
+                rgbaBox.style.backgroundColor = selectedColor;
+            }
+}
 
