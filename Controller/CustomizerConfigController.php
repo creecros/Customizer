@@ -54,7 +54,12 @@ class CustomizerConfigController extends BaseController
                                    
         $minify = false;
                                    
-        file_put_contents('plugins/Customizer/Assets/css/themes/' . $values['theme_name'], $css->get_output($minify));
+        if (file_exists(DATA_DIR . '/files/customizer/themes')) {
+          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $values['theme_name'], $css->get_output($minify));
+        } else {
+          mkdir(DATA_DIR . '/files/customizer/themes', 0755);
+          file_put_contents(DATA_DIR . '/files/customizer/themes/' . $values['theme_name'], $css->get_output($minify));
+        }
         
         $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
