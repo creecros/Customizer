@@ -56,6 +56,12 @@ document.getElementById('loginpanel_color').oninput = function() {
   document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
 
-document.getElementById('loginpanel_color').onchange = function() {
-  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').style.backgroundColor
-}
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutationRecord) {
+      document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').style.backgroundColor
+    });    
+});
+
+var target = document.getElementById('loginpanel_color');
+observer.observe(target, { attributes : true, attributeFilter : ['style'] });
+
