@@ -56,6 +56,6 @@ document.getElementById('loginpanel_color').oninput = function() {
   document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
 
-document.getElementById('loginpanel_color').onpropertychange = function() {
+document.getElementById('loginpanel_color').onchange = function() {
   document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
 }
