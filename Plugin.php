@@ -18,7 +18,9 @@ class Plugin extends Base
 		'Default' => ''
 		);
 	
-	$scanned_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+	$scanned_user_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+	$scanned_themes = array_merge($scanned_preset_themes, $scanned_user_themes);
 	    
 	foreach ($scanned_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
