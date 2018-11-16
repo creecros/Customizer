@@ -100,7 +100,6 @@ code {
 
 /* Style the accordion panel. Note: hidden by default */
 .login-accordian-panel {
-    background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: 0.4s ease-in-out;
