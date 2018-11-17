@@ -34,6 +34,11 @@
         </th>
       </tr>
       <tr>
+        <th colspan="2" class="title-creator">
+          <?= t('Submenu') ?>
+        </th>
+      <tr>
+      <tr>
         <th>
           <strong><?= t('Submenu Color') ?></strong>
         </th>

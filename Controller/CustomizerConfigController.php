@@ -65,6 +65,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['notification_icon']
             ]
         );
+        // Submenu
         $css->add_rule('.dropdown-submenu-open a', 
             [
                 'text-decoration' => 'none',
