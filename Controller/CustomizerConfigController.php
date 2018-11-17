@@ -49,8 +49,49 @@ class CustomizerConfigController extends BaseController
         
         $css = new CSS_Generator($options);
 
-        // single selector
-        $css->add_rule('header', ['background-color' => $values['header_background']]);
+        // Header
+        $css->add_rule('header', 
+            [
+             'background-color' => $values['header_background']
+            ]
+        );
+        $css->add_rule('header h1', 
+            [
+                'color' => $values['header_title']
+            ]
+        );
+        $css->add_rule('a i.web-notification-icon', 
+            [
+                'color' => $values['notification_icon']
+            ]
+        );
+        $css->add_rule('.dropdown-submenu-open a', 
+            [
+                'text-decoration' => 'none',
+                'color' => $values['dropdown_submenu_color']
+            ]
+        );
+        $css->add_rule('.dropdown-submenu-open li:not(.no-hover):hover', 
+            [
+                'background' => $values['dropdown_submenu_background_hover'],
+                'color' => $values['dropdown_submenu_color_hover']
+            ]
+        );
+        // Button
+        $css->add_rule('.btn-blue', 
+            [
+                'border-color' => $values['btn_border_color'],
+                'background' => $values['btn_background'],
+                'color' => $values['btn_text_color']
+            ]
+        );
+        $css->add_rule('.btn-blue:hover, .btn-blue:focus', 
+            [
+                'border-color' => $values['btn_border_color_hover'],
+                'background' => $values['btn_background_hover'],
+                'color' => $values['btn_text_color_hover']
+            ]
+        );
                                    
         $minify = false;
         

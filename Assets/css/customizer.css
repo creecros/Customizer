@@ -111,6 +111,11 @@ div.login-accordian-panel.show {
     max-height: 5000px;
 }
 
+.title-creator {
+	border-left: 5px solid #333;
+    padding-left: 8px;
+}
+
 /* 
 * Short classes 
 * m - for classes that set margin
