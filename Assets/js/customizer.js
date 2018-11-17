@@ -64,6 +64,17 @@ document.getElementById('login_shadow_color').oninput = function() {
   document.getElementById('preview-form-login').style.color = document.getElementById('login_shadow_color').value
 }
 
+document.getElementById('loginpanel_color').oninput = function() {
+  document.getElementById('preview-form-login').style.borderColor = document.getElementById('loginpanel_color').value
+}
+
+document.getElementById('login_btn_color').oninput = function() {
+  document.getElementsByClassName('preview-form-login').forEach(function(element) {
+    element.style.backgroundColor = document.getElementById('login_btn_color').value
+  });
+}
+
+
 function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_shadow_color") {
                 var rgbaBox = document.getElementById("preview-form-login");
@@ -76,6 +87,16 @@ function OnColorChanged(selectedColor, inputId) {
               if (inputId == "loginpanel_color") {
                 var rgbaBox = document.getElementById("preview-form-login");
                 rgbaBox.style.backgroundColor = selectedColor;
+              }
+              if (inputId == "login_border_color") {
+                var rgbaBox = document.getElementById("preview-form-login");
+                rgbaBox.style.borderColor = selectedColor;
+              }
+              if (inputId == "login_btn_color") {
+                var rgbaBox = document.getElementsByClassName("preview-login-btn");
+                rgbaBox.forEach(function(element) {
+                  element.style.backgroundColor = selectedColor;
+                });
               }
 }
 
