@@ -124,8 +124,7 @@ global $customizer;
             </div>
     </div>
         
-        <button type="button" class="login-accordion"><i class="fa fa-sign-in" aria-hidden="true"></i>
- <?= t('Login Page Settings') ?></button>
+        <button type="button" class="login-accordion"><i class="fa fa-sign-in" aria-hidden="true"></i> <?= t('Login Page Settings') ?></button>
         <?php if ($this->task->configModel->get('use_custom_login', '') == 'checked') : ?>
                 <div class="login-accordian-panel mt-10">
         <?php else :?>
