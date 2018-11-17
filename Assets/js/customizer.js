@@ -69,9 +69,7 @@ document.getElementById('loginpanel_color').oninput = function() {
 }
 
 document.getElementById('login_btn_color').oninput = function() {
-  document.getElementsByClassName('preview-form-login').forEach(function(element) {
-    element.style.backgroundColor = document.getElementById('login_btn_color').value
-  });
+  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value
 }
 
 
@@ -93,10 +91,8 @@ function OnColorChanged(selectedColor, inputId) {
                 rgbaBox.style.borderColor = selectedColor;
               }
               if (inputId == "login_btn_color") {
-                var rgbaBox = document.getElementsByClassName("preview-login-btn");
-                rgbaBox.forEach(function(element) {
-                  element.style.backgroundColor = selectedColor;
-                });
+                var rgbaBox = document.getElementById("preview-login-btn");
+                rgbaBox.style.backgroundColor = selectedColor;
               }
 }
 
