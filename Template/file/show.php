@@ -289,7 +289,7 @@ global $customizer;
                     <label style="color:grey"><input type="checkbox" name="remember_me" value="1" checked="checked" disabled>&nbsp; <?= t('Remember Me') ?></label> 
                     <div style="margin-bottom: 10px !important;"></div>
                     <div class="preview-form-actions">
-                        <button type="button" class="btn preview-login-btn"><?= t('Sign in') ?></button>
+                        <button type="button" id="preview-login-btn" class="btn preview-login-btn"><?= t('Sign in') ?></button>
                     </div>
             </div> 
         </div>
