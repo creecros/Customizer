@@ -27,7 +27,7 @@
 	border: <?= $customizer['login_btn_border'] ?>px solid <?= $customizer['login_btn_border_color'] ?>;
 	background: <?= $customizer['login_btn_color'] ?>;
 	color: <?= $customizer['login_btn_font_color'] ?>;
-	background-image: linear-gradient(-180deg, <?= $customizer['login_btn_color'] ?> 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
+	background-image: linear-gradient(-180deg, transparent 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
 	border-radius: 5px;
 	}
   
