@@ -72,6 +72,12 @@ document.getElementById('login_btn_color').oninput = function() {
   document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value
 }
 
+document.getElementById('login_btn_shadow_color').oninput = function() {
+  var slider = document.getElementById("login_btn_shadow");
+  var color = document.getElementById('login_shadow_color').value;
+  document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+}
+
 
 function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_shadow_color") {
@@ -93,6 +99,11 @@ function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_btn_color") {
                 var rgbaBox = document.getElementById("preview-login-btn");
                 rgbaBox.style.backgroundColor = selectedColor;
+              }
+              if (inputId == "login_btn_shadow_color") {
+                var rgbaBox = document.getElementById("preview-login-btn");
+                var slider = document.getElementById("login_btn_shadow");
+                rgbaBox.style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + selectedColor;
               }
 }
 
