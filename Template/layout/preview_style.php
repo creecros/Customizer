@@ -8,15 +8,16 @@
 	
 .preview-form-login {
 	background-color: <?= $customizer['loginpanel_color'] ?>;
-	-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-	-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
-	box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px <?= $customizer['login_shadow_color'] ?>;
+	-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px;
+	-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px;
+	box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px;
 	padding: 10px;
 	border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
 	border-radius: 5px;
 	text-align: center;
 	max-width: 350px;
-	margin: 5% auto 0;
+	margin: 5% auto 0;;
+	color: <?= $customizer['login_shadow_color'] ?>;
 }
 .preview-login-btn {
 	width: <?= $customizer['login_btn_width'] ?>px;
@@ -26,7 +27,7 @@
 	border: <?= $customizer['login_btn_border'] ?>px solid <?= $customizer['login_btn_border_color'] ?>;
 	background: <?= $customizer['login_btn_color'] ?>;
 	color: <?= $customizer['login_btn_font_color'] ?>;
-	background-image: linear-gradient(-180deg, <?= $customizer['login_btn_color'] ?> 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
+	background-image: linear-gradient(-180deg, transparent 0%, <?= $customizer['login_btn_shade_color'] ?> 90%);
 	border-radius: 5px;
 	}
   
