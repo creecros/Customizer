@@ -71,7 +71,18 @@ document.getElementById('login_border_color').oninput = function() {
 }
 
 document.getElementById('login_btn_color').oninput = function() {
+  var css = '.preview-login-btn:hover, .preview-login-btn:focus { border-color: ' + document.getElementById('login_border_color').value + ' background: ' + document.getElementById('login_btn_font_color').value + '	color: ' + document.getElementById('login_btn_color').value + ' }';
+  var style = document.createElement('style');
+
   document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
+  
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+  document.getElementsByTagName('head')[0].appendChild(style);
 }
 
 document.getElementById('login_btn_shadow_color').oninput = function() {
