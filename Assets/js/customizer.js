@@ -114,7 +114,7 @@ document.getElementById('login_shadow').oninput = function() {
 }
 
 document.getElementById('login_btn_width').oninput = function() {
-  var slider = document.getElementById("login_shadow").value;
+  var slider = document.getElementById("login_btn_width").value;
   document.getElementById('preview-login-btn').style.width = slider + 'px';
 }
 
