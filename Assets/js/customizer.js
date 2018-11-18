@@ -53,28 +53,43 @@ $(document).ready(function(){
 //Live Preview
 
 document.getElementById('loginpanel_color').oninput = function() {
-  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value
+  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value;
 }
 
 document.getElementById('loginbackground_color').oninput = function() {
-  document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value
+  document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value;
 }
 
 document.getElementById('login_shadow_color').oninput = function() {
-  document.getElementById('preview-form-login').style.color = document.getElementById('login_shadow_color').value
+  document.getElementById('preview-form-login').style.color = document.getElementById('login_shadow_color').value;
 }
 
 document.getElementById('loginpanel_color').oninput = function() {
-  document.getElementById('preview-form-login').style.borderColor = document.getElementById('loginpanel_color').value
+  document.getElementById('preview-form-login').style.borderColor = document.getElementById('loginpanel_color').value;
 }
 
 document.getElementById('login_btn_color').oninput = function() {
-  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value
+  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
 }
 
 document.getElementById('login_btn_shadow_color').oninput = function() {
   var slider = document.getElementById("login_btn_shadow").value;
-  var color = document.getElementById('login_shadow_color').value;
+  var color = document.getElementById('login_btn_shadow_color').value;
+  document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+}
+
+document.getElementById('login_btn_font_color').oninput = function() {
+  document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
+}
+
+document.getElementById('login_btn_shade_color').oninput = function() {
+  var color = document.getElementById('login_btn_shade_color').value;
+  document.getElementById('preview-login-btn').style.backgroundImage = 'linear-gradient(-180deg, transparent 0%, ' + color + ' 90%';
+}
+
+document.getElementById('login_btn_shadow').oninput = function() {
+  var slider = document.getElementById("login_btn_shadow").value;
+  var color = document.getElementById('login_btn_shadow_color').value;
   document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
 }
 
@@ -104,6 +119,14 @@ function OnColorChanged(selectedColor, inputId) {
                 var rgbaBox = document.getElementById("preview-login-btn");
                 var slider = document.getElementById("login_btn_shadow").value;
                 rgbaBox.style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + selectedColor;
+              }
+              if (inputId == "login_btn_font_color") {
+                var rgbaBox = document.getElementById("preview-login-btn");
+                rgbaBox.style.color = selectedColor;
+              }
+              if (inputId == "login_btn_font_color") {
+                var rgbaBox = document.getElementById("preview-login-btn");
+                rgbaBox.style.backgroundImage = 'linear-gradient(-180deg, transparent 0%, ' + selectedColor + ' 90%';
               }
 }
 
