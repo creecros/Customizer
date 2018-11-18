@@ -113,6 +113,11 @@ document.getElementById('login_shadow').oninput = function() {
   document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
 }
 
+document.getElementById('login_btn_width').oninput = function() {
+  var slider = document.getElementById("login_shadow").value;
+  document.getElementById('preview-login-btn').style.width = slider + 'px';
+}
+
 
 function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_shadow_color") {
