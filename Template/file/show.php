@@ -82,7 +82,7 @@ global $customizer;
         <table>
             <tr> 
                 <th width="25%"><strong><?= t('Login Logo Size') ?></strong></th>
-                <th><input type="range" name="loginlogo_size" min="20" max="100" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
+                <th><input type="range" name="loginlogo_size" min="20" max="500" value="<?= $this->task->configModel->get('loginlogo_size','50') ?>">
                     <login_logo_output><?= $this->task->configModel->get('loginlogo_size','50') ?></login_logo_output><?= t('&nbsp;pixels high') ?>
                 </th>
             </tr>
