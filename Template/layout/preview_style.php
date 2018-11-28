@@ -15,7 +15,7 @@
 	border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
 	border-radius: 5px;
 	text-align: center;
-	max-width: 350px;
+	max-width: max-content;
 	margin: 5% auto 0;;
 	color: <?= $customizer['login_shadow_color'] ?>;
 }
