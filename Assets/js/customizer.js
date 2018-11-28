@@ -128,6 +128,11 @@ document.getElementById('preview-login-btn').onmouseout = function() {
   document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
 }
 
+document.getElementById('form-background_url').oninput = function() {
+  var val = document.getElementById("form-background_url").value;
+  document.getElementById('preview').style.backgroundImage = 'url("' + val +'")';
+}
+
 function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_shadow_color") {
                 var rgbaBox = document.getElementById("preview-form-login");
