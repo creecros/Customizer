@@ -131,6 +131,7 @@ document.getElementById('preview-login-btn').onmouseout = function() {
 document.getElementById('form-background_url').oninput = function() {
   var val = document.getElementById("form-background_url").value;
   document.getElementById('preview').style.background = 'url("' + val +'") no-repeat center center';
+  document.getElementById('preview').style.backgroundSize = 'cover';
 }
 
 function OnColorChanged(selectedColor, inputId) {
