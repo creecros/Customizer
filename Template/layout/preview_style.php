@@ -5,6 +5,10 @@
 	margin: auto;
 	padding-top: 10px
 } /* This aligns the logo to the text.  Adds padding to top of logo. */
+
+.preview {
+	background-size: cover;
+}
 	
 	
 .preview-form-login {
