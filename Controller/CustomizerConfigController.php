@@ -65,34 +65,119 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['notification_icon']
             ]
         );
-        // Submenu
-        $css->add_rule('.dropdown-submenu-open a', 
+        // Body
+        $css->add_rule('body', 
             [
-                'text-decoration' => 'none',
-                'color' => $values['dropdown_submenu_color']
+                'background' => $value['background_color'],
+                'color' => $values['font_main']
             ]
         );
-        $css->add_rule('.dropdown-submenu-open li:not(.no-hover):hover', 
+        $css->add_rule('a:hover', 
             [
-                'background' => $values['dropdown_submenu_background_hover'],
-                'color' => $values['dropdown_submenu_color_hover']
+                'color' => $values['font_main']
             ]
         );
-        // Button
-        $css->add_rule('.btn-blue', 
+        $css->add_rule('a .fa', 
             [
-                'border-color' => $values['btn_border_color'],
-                'background' => $values['btn_background'],
-                'color' => $values['btn_text_color']
+                'color' => $values['font_main']
             ]
         );
-        $css->add_rule('.btn-blue:hover, .btn-blue:focus', 
+        $css->add_rule(['h1', 'h2'], 
             [
-                'border-color' => $values['btn_border_color_hover'],
-                'background' => $values['btn_background_hover'],
-                'color' => $values['btn_text_color_hover']
+                'color' => $values['font_main']
             ]
         );
+        $css->add_rule('.table-list-header a', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.table-list-header .table-list-header-count', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.table-list-row .table-list-title a', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.dropdown-menu-link-icon', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.page-header h2 a', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.sidebar>ul a:hover', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.sidebar>ul li.active a', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.task-list-icons a:hover', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.task-list-icons a:hover i', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('.subtask-cell a', 
+            [
+                'color' => $values['font_main']
+            ]
+        );
+        $css->add_rule('a', 
+            [
+                'color' => $values['font_link']
+            ]
+        );
+        $css->add_rule('.table-list-category a:hover', 
+            [
+                'color' => $values['font_link']
+            ]
+        );
+        $css->add_rule(['.subtask-cell a:hover', '.subtask-cell a:focus'], 
+            [
+                'color' => $values['font_link']
+            ]
+        );
+        $css->add_rule('', 
+            [
+                'color' => $values['font_secondary']
+            ]
+        );
+        $css->add_rule('', 
+            [
+                'color' => $values['font_secondary']
+            ]
+        );
+        $css->add_rule('', 
+            [
+                'color' => $values['font_secondary']
+            ]
+        );
+        $css->add_rule('', 
+            [
+                'color' => $values['font_secondary']
+            ]
+        );
+        $css->add_rule('', 
+            [
+                'color' => $values['font_secondary']
+            ]
+        );
+        
                                    
         $minify = false;
         
