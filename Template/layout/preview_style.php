@@ -7,7 +7,7 @@
 } /* This aligns the logo to the text.  Adds padding to top of logo. */
 
 #preview.panel {
-	background-size: cover;
+	background-size: cover!important;
 }
 	
 	
