@@ -167,7 +167,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_link']
             ]
         );
-        $css->add_rule('a:focus', 
+        $css->add_rule(['a:focus', 'a:hover'], 
             [
                 'color' => $values['font_link_focus']
             ]
