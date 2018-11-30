@@ -68,7 +68,7 @@
           <input class="color" name="font_link" value="">
         </th>
         <th>
-          <strong><?= t('Link Focus') ?></strong>
+          <strong><?= t('Link Hover & Focus') ?></strong>
         </th>
         <th>
           <input class="color" name="font_link_focus" value="">
