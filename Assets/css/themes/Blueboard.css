@@ -1,0 +1,265 @@
+/*!
+ * Blueboard by bgibout - Theme for Kanboard
+ * Licensed under the MIT license - blueboard/LICENSE
+ * https://github.com/bgibout/blueboard
+ * Copyright (c) 2017 bgibout
+ */
+
+body {
+    color: #868ba1;
+    background-color: #e9ecef;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-s
+}
+
+.page {
+    margin: 0;
+}
+
+header {
+    margin: 0 !important;
+    border: 0 !important;
+    background-color : #3B6998 !important;
+}
+
+.action-menu {
+	padding: 10px;
+}
+
+.views {
+	line-height: 30px;
+}
+
+.filter-box-component {
+	padding-top: 5px;
+}
+
+.project-header .dropdown-component {
+    margin-top: 4px;
+    margin-right: 5px;
+    float: left;
+    line-height: 30px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 2rem
+}
+
+.tooltip i.fa {
+    color: #fff;
+}
+
+.btn {
+    text-decoration: none;
+    border-radius: 0;
+    min-height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #3B6998;
+    border-color: #386491;
+    font-size: 12px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+label {
+    padding: 0px 40px 0 0px;
+	line-height: 25px;
+    vertical-align: middle;
+    font-size: .9rem;
+}
+
+/*
+	form {
+    margin-top: 40px;
+}
+*/
+
+fieldset {
+	background: #ffffff;
+}
+
+select, span.select2 {
+	width: 95% !important;
+}
+
+input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="text"]:not(.input-addon-field) {
+	padding: 0.65rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    height: auto
+}
+
+.select-dropdown-input {
+	border: none !important;
+}
+
+.select-dropdown-input-container .select-dropdown-chevron {
+	top: 10px;
+}
+
+.js-submit-buttons-rendered {
+    margin-top: 40px;
+}
+
+.page .page-header {
+    padding: 10px;
+    background: #343a40;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.page-header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#config-section .page-header a {
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.page-header a .fa {
+    color: #868e96;
+}
+
+.menus-container a .fa {
+    color: #ffffff;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.accordion-section {
+    margin: 20px;
+    background: #fff;
+    padding: 50px 30px;
+}
+
+.project-overview-column {
+    background: #fff;
+}
+
+.table-list {
+    font-size: 0.85em;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #ffffff;
+}
+
+.table-list-header {
+    background: #fbfbfb;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px 5px 0 0;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 3px;
+    height: 30px;
+}
+
+.table-list-row {
+    padding: 10px;
+}
+
+.sidebar-content {
+    background: #f8f9fa;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.sidebar-container {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-container .page-header {
+    background: none;
+}
+
+.sidebar {
+    margin-top: 20px;
+}
+
+.sidebar .js-select-dropdown-autocomplete-rendered {
+    padding: 10px;
+}
+
+
+.sidebar ul {
+    margin-top: 10px;
+}
+
+.sidebar ul:before {
+    content: "Navigation";
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 7px 15px;
+    display: block;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.sidebar ul>li {
+    padding: 5px 0 0 15px;
+    border-top: 1px solid #ced4da;
+}
+
+.sidebar ul>li:last-child {
+    border-bottom: 1px solid #ced4da;
+}
+
+.sidebar ul>li a {
+  color: #868e96;
+  font-size: 0.9rem;
+}
+
+.sidebar>ul li.active {
+    background-color: #f8f9fa    
+}
+
+.sidebar ul>li.active a {
+    color: #343a40;
+}
+
+#modal-box {
+    padding: 20px 20px 30px 20px;
+}
+
+table {
+    color: #000;
+}
+
+table.table-fixed th {
+    background: #3B6998;
+}
+table.table-fixed th, table.table-fixed th a {
+    color: #ffffff ;
+}
+
+table.table-fixed th, table.table-fixed td {
+    padding-left: 10px;
+}
+
+.board-add-icon i {
+	color: #3B6998;
+}
+
+
+@media (max-width: 768px) {
+	.sidebar {
+	max-width: 100%;
+	}
+}

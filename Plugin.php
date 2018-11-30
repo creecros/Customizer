@@ -18,10 +18,14 @@ class Plugin extends Base
 		'Default' => ''
 		);
 	
-	$scanned_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+	$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
 	    
-	foreach ($scanned_themes as $theme) {
+	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
+	}
+	foreach ($scanned_user_themes as $theme) {
+		$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
 	}
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
@@ -69,6 +73,7 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
+	$this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator');    
 	 
 	if ($this->configModel->get('use_custom_login', '') == 'checked') { 
         	$this->template->hook->attach('customizer:config:style', 'customizer:layout/preview_style');

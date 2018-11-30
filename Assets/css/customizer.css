@@ -3,6 +3,9 @@
 /*------ PAGE HEADER ------*/
 .logo > a > img {vertical-align:middle;} /* This aligns the logo certically to the text */
 
+.logo a {
+	opacity:1.0;
+}
 
 /*------ LOGIN PAGE-SPECIFIC STYLES MOVED TO logintop.php SO THEY WON'T AFFECT OTHER PARTS OF KANBOARD ------*/
 
@@ -97,9 +100,20 @@ code {
 
 /* Style the accordion panel. Note: hidden by default */
 .login-accordian-panel {
-    padding: 0 18px;
-    display: none;
+    max-height: 0;
     overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+div.login-accordian-panel.show {
+    opacity: 1;
+    max-height: 5000px;
+}
+
+.title-creator {
+	border-left: 5px solid #333;
+    padding-left: 8px;
 }
 
 /* 
