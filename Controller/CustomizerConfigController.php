@@ -68,13 +68,13 @@ class CustomizerConfigController extends BaseController
         // Body
         $css->add_rule('body', 
             [
-                'background' => $value['background_color'],
+                'background' => $values['background_color'],
                 'color' => $values['font_main']
             ]
         );
         $css->add_rule('ul.dropdown-submenu-open', 
             [
-                'background-color' => $value['background_color']
+                'background-color' => $values['background_color']
             ]
         ); 
         $css->add_rule('.dropdown-submenu-open a', 
@@ -228,11 +228,11 @@ class CustomizerConfigController extends BaseController
             ]
         ); 
         $css->add_raw('
-        .table-list-header{background:##efefef8c;border:1px solid #efefef42;border-radius:5px 5px 0 0;line-height:28px;padding-left:3px;padding-right:3px;}
+        .table-list-header{background:#efefef8c;border:1px solid #efefef42;border-radius:5px 5px 0 0;line-height:28px;padding-left:3px;padding-right:3px;}
         .table-list-row{padding-left:3px;padding-right:3px;border-bottom:1px solid #efefef42;border-right:1px solid #efefef42;}
         .table-list-row.table-border-left{border-left:1px solid #efefef42;}
         .table-list-row:nth-child(odd){background:##efefef30;}
-        .table-list-row:hover{background:##efefef22;border-bottom:1px solid ##efefef22;border-right:1px solid ##efefef22;}
+        .table-list-row:hover{background:#efefef22;border-bottom:1px solid #efefef22;border-right:1px solid #efefef22;}
         .dropdown-menu-link-icon{text-decoration:none;}
         .dropdown-submenu-open li{bottom-border:1px solid #efefef42;}
         .page-header h2{margin:0;padding:0;font-weight:bold;border-bottom:1px dotted #efefef42;}
