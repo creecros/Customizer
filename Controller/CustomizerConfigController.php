@@ -253,8 +253,8 @@ class CustomizerConfigController extends BaseController
         span.task-icon-age-total{border:1px solid #efefef42;padding:1px 3px 1px 3px;border-top-left-radius:3px;border-bottom-left-radius:3px;}
         span.task-icon-age-column{border:1px solid #efefef42;border-left:none;margin-left:-5px;padding:1px 3px 1px 3px;border-top-right-radius:3px;border-bottom-right-radius:3px;}
         .subtask-cell{padding:4px 10px;border-top:1px dotted #efefef42;border-left:1px dotted #efefef42;display:table-cell;vertical-align:middle;}
-        table th {text-align: left;padding: 0.5em 3px;border: 1px solid #efefef8c;background: #efefef8c;}
-        .views li {white-space: nowrap;background: #efefef8c;border: none;border-right: none;padding: 4px 8px;display: inline;}
+        table th {text-align: left;padding: 0.5em 3px;border:none;background: #efefef8c;}
+        .views li {white-space: nowrap;background: #efefef8c;border:none;border-right: none;padding: 4px 8px;display: inline;}
         ');
 
                                    
