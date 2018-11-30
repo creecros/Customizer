@@ -233,6 +233,7 @@ class CustomizerConfigController extends BaseController
             ]
         ); 
         $css->add_raw('
+        header {box-shadow: 0px -1px 5px 1px;border-bottom: none;}
         .project-header {margin-bottom: 8px;margin-top: 8px;}
         .panel{background-color: #efefef8c;border: 1px solid #efefef89;}
         .task-board{border-width: 3px;background: none!important;}
