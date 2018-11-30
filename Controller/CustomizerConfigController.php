@@ -239,7 +239,6 @@ class CustomizerConfigController extends BaseController
         .task-board{border-width: 3px;background: none!important;}
         div.task-board-recent {border-width: 3px;}
         table td {border:none;}
-        table th {border:none;}
         table th:first-child {border-top-left-radius:8px;}
         table th:last-child {border-top-right-radius:8px;}
         .table-list-header{background:#efefef8c;border:1px solid #efefef42;border-radius:5px 5px 0 0;line-height:28px;padding-left:3px;padding-right:3px;}
@@ -255,7 +254,7 @@ class CustomizerConfigController extends BaseController
         span.task-icon-age-column{border:1px solid #efefef42;border-left:none;margin-left:-5px;padding:1px 3px 1px 3px;border-top-right-radius:3px;border-bottom-right-radius:3px;}
         .subtask-cell{padding:4px 10px;border-top:1px dotted #efefef42;border-left:1px dotted #efefef42;display:table-cell;vertical-align:middle;}
         table th {text-align: left;padding: 0.5em 3px;border: 1px solid #efefef8c;background: #efefef8c;}
-        .views li {white-space: nowrap;background: #efefef8c;border: 1px solid #efefef8c;border-right: none;padding: 4px 8px;display: inline;}
+        .views li {white-space: nowrap;background: #efefef8c;border: none;border-right: none;padding: 4px 8px;display: inline;}
         ');
 
                                    
