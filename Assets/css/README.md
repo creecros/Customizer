@@ -18,3 +18,11 @@ Preset Themes that come with Customizer
 :partly_sunny: Breathe:
 
 ![image](https://user-images.githubusercontent.com/26339368/47761312-47086780-dc8e-11e8-9460-5b1ce4b54d5e.png)
+
+:blue_book: Blueboard 
+
+![image](https://user-images.githubusercontent.com/26339368/49310748-29a50400-f4ad-11e8-9734-eca2e5a558fc.png)
+
+:sparkles: Material
+
+![image](https://user-images.githubusercontent.com/26339368/49310723-1003bc80-f4ad-11e8-8c03-8390ecc78d20.png)
