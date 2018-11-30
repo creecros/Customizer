@@ -248,8 +248,8 @@ class CustomizerConfigController extends BaseController
         header {box-shadow: 0px -1px 5px 1px;border-bottom: none;}
         .project-header {margin-bottom: 8px;margin-top: 8px;}
         .panel{background-color: #efefef40;border: 1px solid #efefef40;}
-        .task-board{border-width: 3px;background: none!important;}
-        div.task-board-recent {border-width: 3px;}
+        .task-board{border-width: 2px;background: #efefef22!important;}
+        div.task-board-recent {border-width: 2px;}
         table td {border:none;}
         table th:first-child {border-top-left-radius:8px;}
         table th:last-child {border-top-right-radius:8px;}
