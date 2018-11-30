@@ -52,7 +52,8 @@ class CustomizerConfigController extends BaseController
         // Header
         $css->add_rule('header', 
             [
-             'background-color' => $values['header_background']
+             'background-color' => $values['header_background'],
+             'background-image' =>  'linear-gradient(-180deg, transparent 0%, '.$values['header_shade'].' 90%)'
             ]
         );
         $css->add_rule(['header h1', 'header a .fa'],
@@ -137,7 +138,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_main']
             ]
         );
-        $css->add_rule('.task-list-icons a:hover', 
+        $css->add_rule(['.task-list-icons a:hover', '.task-tags li'], 
             [
                 'color' => $values['font_main']
             ]
@@ -172,7 +173,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_link_focus']
             ]
         );
-        $css->add_rule(['.table-list-header a:hover', '.table-list-header a:focus'], 
+        $css->add_rule(['.table-list-header a:hover', '.table-list-header a:focus', '.task-board a'], 
             [
                 'color' => $values['font_secondary']
             ]
@@ -232,6 +233,12 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_main']
             ]
         ); 
+        $css->add_rule(['td a.dropdown-menu strong', 'td a.dropdown-menu strong i'],
+            [
+                'color' => $values['font_main']
+            ]
+        ); 
+        
         $css->add_raw('
         header {box-shadow: 0px -1px 5px 1px;border-bottom: none;}
         .project-header {margin-bottom: 8px;margin-top: 8px;}
