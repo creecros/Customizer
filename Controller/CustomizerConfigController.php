@@ -73,7 +73,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_main']
             ]
         );
-        $css->add_rule('ul.dropdown-submenu-open', 
+        $css->add_rule(['ul.dropdown-submenu-open', '.accordion-title h3'], 
             [
                 'background-color' => $values['background_color']
             ]
@@ -93,7 +93,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_main']
             ]
         );
-        $css->add_rule(['h1', 'h2'], 
+        $css->add_rule(['h1', 'h2', 'h3', '.accordion-toggle'], 
             [
                 'color' => $values['font_main']
             ]
@@ -138,7 +138,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_main']
             ]
         );
-        $css->add_rule(['.task-list-icons a:hover', '.task-tags li'], 
+        $css->add_rule('.task-list-icons a:hover', 
             [
                 'color' => $values['font_main']
             ]
@@ -188,7 +188,7 @@ class CustomizerConfigController extends BaseController
                 'color' => $values['font_secondary']
             ]
         );
-        $css->add_rule(['.page-header h2 a:focus', '.page-header h2 a:hover'], 
+        $css->add_rule(['.page-header h2 a:focus', '.page-header h2 a:hover', 'code'], 
             [
                 'color' => $values['font_secondary']
             ]
@@ -240,6 +240,11 @@ class CustomizerConfigController extends BaseController
         ); 
         
         $css->add_raw('
+        #task-summary h2 {color: unset;}
+        .comments .comment:hover {background: #eeeeee4f;}
+        .comments .comment:nth-child(even):not(.comment-highlighted):hover {background: #eeeeee4f;}
+        .comments .comment:nth-child(even):not(.comment-highlighted) {background: #eeeeee29;}
+        table.table-striped tr:nth-child(odd) {background: #eeeeee30;}
         header {box-shadow: 0px -1px 5px 1px;border-bottom: none;}
         .project-header {margin-bottom: 8px;margin-top: 8px;}
         .panel{background-color: #efefef8c;border: 1px solid #efefef89;}
