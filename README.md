@@ -8,7 +8,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
-![image](https://user-images.githubusercontent.com/26339368/48487642-cfd5e600-e7ec-11e8-9b23-a97c50da43f7.png)
+![image](https://user-images.githubusercontent.com/26339368/49309828-7fc47800-f4aa-11e8-809e-8cc9686a2a2d.png)
 
 **GUI to add a...**
 
@@ -29,6 +29,9 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
   * Clemson <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20">
+  * Blueboard :blue_book:
+  * Material :sparkles:
+* [theme creator](#theme-creator-notes_
 
 
 **...to your site without any backend coding or config settings.**
@@ -60,6 +63,12 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 ![image](https://user-images.githubusercontent.com/26339368/48488078-f2b4ca00-e7ed-11e8-8d4b-37d5b51f374b.png)
 ![image](https://user-images.githubusercontent.com/26339368/48488101-ffd1b900-e7ed-11e8-8438-9ec7b91c98d9.png)
 
+## Theme Creator :notes:
+
+![image](https://user-images.githubusercontent.com/26339368/49310331-0037a880-f4ac-11e8-878a-74d1086e5b8c.png)
+
+![image](https://user-images.githubusercontent.com/26339368/49310372-1ba2b380-f4ac-11e8-87a0-86d76565f0aa.png)
+
 ## Considerations :smirk:
 
 **Will probably not function fully with other CSS plugins that override templates related to layout or headers**
@@ -73,7 +82,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ## Future Enhancements :lollipop:
 
-- [ ] Custom Theme Creator with Color Pickers
+- [x] Custom Theme Creator with Color Pickers
 - [x] Preloaded Theme Selector
 - [x] Sizing options
 - [x] Increasing Compatibility
