@@ -25,6 +25,7 @@ class CustomizerConfigController extends BaseController
     public function save()
     {
      if (isset($_POST['remove'])) {
+        $values =  $this->request->getValues();
         $this->remove($values['themeSelection']);
      } else {
         
