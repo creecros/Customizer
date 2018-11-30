@@ -36,6 +36,7 @@
 	border-color: <?= $customizer['login_btn_border_color'] ?>;
 	background: <?= $customizer['login_btn_font_color'] ?>;
 	color: <?= $customizer['login_btn_color'] ?>;
+	background-image: unset;
 }
 	
 .preview-form-actions > .preview-login-btn {
