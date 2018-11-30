@@ -120,7 +120,7 @@ global $customizer;
     <?php endif ?>
     </div>
             <div class="form-actions mb-20 ml-15">
-                <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+                <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?></button>
             </div>
     </div>
         
@@ -264,7 +264,7 @@ global $customizer;
                         </th>
                     </tr>
                 </table>  
-        <p class="alert" style="max-width: 1000px;"><?= t('Changes must be saved in order to take effect.') ?> <button type="submit" class="btn btn-blue" style="float: right;margin-top: -6px;"><?= t('Save') ?></button></p>
+        <p class="alert" style="max-width: 1000px;"><?= t('Changes must be saved in order to take effect.') ?> <button type="submit" name="save" value="save" class="btn btn-blue" style="float: right;margin-top: -6px;"><?= t('Save') ?></button></p>
         <div class="panel" id="preview" style="background: url('<?= $customizer['backURL'] ?>') no-repeat center center;background-size: cover;height: 700px;max-width: 1000px;background-color: <?= $customizer['backColor'] ?>;">
             <div>
                 <p style="color: #f5f5f5;"><?= t('Preview') ?></p>
@@ -301,7 +301,7 @@ global $customizer;
             <?= $this->form->label(t('Theme'), 'themeSelection') ?>
             <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
             <div class="form-actions" style="margin-bottom: 50px">
-                <button type="submit" class="btn btn-blue"><?= t('Save') ?></button>
+                <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?></button><button type="submit" name="remove" value="remove" class="btn btn-red"><?= t('Remove') ?></button>
             </div>
         </div>
         </form>  
