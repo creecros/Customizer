@@ -31,7 +31,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
   * Clemson <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20">
   * Blueboard :blue_book:
   * Material :sparkles:
-* [theme creator](#theme-creator-notes_
+* [theme creator](#theme-creator-notes)
 
 
 **...to your site without any backend coding or config settings.**
@@ -65,9 +65,9 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 
 ## Theme Creator :notes:
 
-![image](https://user-images.githubusercontent.com/26339368/49310331-0037a880-f4ac-11e8-878a-74d1086e5b8c.png)
+![image](https://user-images.githubusercontent.com/26339368/49310587-aedbe900-f4ac-11e8-935f-e499c14eb830.png)
 
-![image](https://user-images.githubusercontent.com/26339368/49310372-1ba2b380-f4ac-11e8-87a0-86d76565f0aa.png)
+![image](https://user-images.githubusercontent.com/26339368/49310623-c024f580-f4ac-11e8-968e-a05762634b80.png)
 
 ## Considerations :smirk:
 
