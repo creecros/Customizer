@@ -248,7 +248,7 @@ class CustomizerConfigController extends BaseController
         .table-list-row:nth-child(odd){background:#efefef30;}
         .table-list-row:hover{background:#efefef32;border-bottom:1px solid #efefef32;border-right:1px solid #efefef32;}
         .dropdown-menu-link-icon{text-decoration:none;}
-        .dropdown-submenu-open li{bottom-border:1px solid #efefef42;}
+        .dropdown-submenu-open li{border-bottom:1px solid #efefef42;}
         .page-header h2{margin:0;padding:0;font-weight:bold;border-bottom:1px dotted #efefef42;}
         .sidebar>ul li{list-style-type:none;line-height:35px;border-bottom:1px dotted #efefef42;padding-left:13px;}
         span.task-icon-age-total{border:1px solid #efefef42;padding:1px 3px 1px 3px;border-top-left-radius:3px;border-bottom-left-radius:3px;}
