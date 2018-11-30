@@ -74,7 +74,7 @@ class CustomizerConfigController extends BaseController
         );
         $css->add_rule('ul.dropdown-submenu-open', 
             [
-                'background-color' => $value['background_color'],
+                'background-color' => $value['background_color']
             ]
         ); 
         $css->add_rule('.dropdown-submenu-open a', 
