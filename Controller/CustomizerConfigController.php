@@ -24,6 +24,10 @@ class CustomizerConfigController extends BaseController
      */
     public function save()
     {
+     if (isset($_POST['remove'])) {
+        $this->remove($values['themeSelection']);
+     } else {
+        
         $values =  $this->request->getValues();
         
         if (array_key_exists('use_custom_login', $values) === false) { $this->configModel->save(['use_custom_login' => '']); }
@@ -36,6 +40,13 @@ class CustomizerConfigController extends BaseController
         }
 
           $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+     }
+    }
+    
+    public function remove($file)
+    {
+        unlink($file);
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
     
     public function create_theme()
