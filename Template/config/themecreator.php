@@ -10,34 +10,34 @@
           <?= t('Header') ?>
         </th>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Header Background') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="header_background" value="">
-        </th>
-        <th>
+        </td>
+        <td>
           <strong><?= t('Header Shade') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="header_shade" value="">
-        </th>
+        </td>
       </tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Header Title') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="header_title" value="">
-        </th>
+        </td>
       </tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Notification Icon') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="notification_icon" value="">
-        </th>
+        </td>
       </tr>
       <tr>
         <th colspan="2" class="title-creator">
@@ -45,48 +45,48 @@
         </th>
       <tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Background Color') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="background_color" value="">
-        </th>
+        </td>
       </tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Main Font and Icons') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="font_main" value="">
-        </th>
-        <th>
+        </td>
+        <td>
           <strong><?= t('Secondary Fonts and Icons') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="font_secondary" value="">
-        </th>
+        </td>
       </tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Links') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="font_link" value="">
-        </th>
-        <th>
+        </td>
+        <td>
           <strong><?= t('Link Hover & Focus') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="font_link_focus" value="">
-        </th>
+        </td>
       </tr>
       <tr>
-        <th>
+        <td>
           <strong><?= t('Over due') ?></strong>
-        </th>
-        <th>
+        </td>
+        <td>
           <input class="color" name="font_overdue" value="">
-        </th>
+        </td>
       </tr>
     </table>    
   </div>
