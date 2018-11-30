@@ -16,6 +16,12 @@
         <th>
           <input class="color" name="header_background" value="">
         </th>
+        <th>
+          <strong><?= t('Header Shade') ?></strong>
+        </th>
+        <th>
+          <input class="color" name="header_shade" value="">
+        </th>
       </tr>
       <tr>
         <th>
