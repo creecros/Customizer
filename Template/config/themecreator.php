@@ -35,84 +35,51 @@
       </tr>
       <tr>
         <th colspan="2" class="title-creator">
-          <?= t('Submenu') ?>
+          <?= t('Body') ?>
         </th>
       <tr>
       <tr>
         <th>
-          <strong><?= t('Submenu Color') ?></strong>
+          <strong><?= t('Background Color') ?></strong>
         </th>
         <th>
-          <input class="color" name="dropdown_submenu_color" value="">
+          <input class="color" name="background_color" value="">
         </th>
       </tr>
       <tr>
         <th>
-          <strong><?= t('Submenu Background Hover') ?></strong>
+          <strong><?= t('Main Font and Icons') ?></strong>
         </th>
         <th>
-          <input class="color" name="dropdown_submenu_background_hover" value="">
+          <input class="color" name="font_main" value="">
+        </th>
+        <th>
+          <strong><?= t('Secondary Fonts and Icons') ?></strong>
+        </th>
+        <th>
+          <input class="color" name="font_secondary" value="">
         </th>
       </tr>
       <tr>
         <th>
-          <strong><?= t('Submenu Color Hover') ?></strong>
+          <strong><?= t('Links') ?></strong>
         </th>
         <th>
-          <input class="color" name="dropdown_submenu_color_hover" value="">
-        </th>
-      </tr>
-      <tr>
-        <th colspan="2" class="title-creator">
-          <?= t('Button') ?>
-        </th>
-      <tr>
-      <tr>
-        <th>
-          <strong><?= t('Button Border Color') ?></strong>
+          <input class="color" name="font_link" value="">
         </th>
         <th>
-          <input class="color" name="btn_border_color" value="">
+          <strong><?= t('Link Focus') ?></strong>
+        </th>
+        <th>
+          <input class="color" name="font_link_focus" value="">
         </th>
       </tr>
       <tr>
         <th>
-          <strong><?= t('Button Background Color') ?></strong>
+          <strong><?= t('Over due') ?></strong>
         </th>
         <th>
-          <input class="color" name="btn_background" value="">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <strong><?= t('Button Text Color') ?></strong>
-        </th>
-        <th>
-          <input class="color" name="btn_text_color" value="">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <strong><?= t('Button Border Color Hover') ?></strong>
-        </th>
-        <th>
-          <input class="color" name="btn_border_color_hover" value="">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <strong><?= t('Button Background Color Hover') ?></strong>
-        </th>
-        <th>
-          <input class="color" name="btn_background_hover" value="">
-        </th>
-      </tr>
-      <tr>
-        <th>
-          <strong><?= t('Button Text Color Hover') ?></strong>
-        </th>
-        <th>
-          <input class="color" name="btn_text_color_hover" value="">
+          <input class="color" name="font_overdue" value="">
         </th>
       </tr>
     </table>    
