@@ -301,7 +301,7 @@ global $customizer;
             <?= $this->form->label(t('Theme'), 'themeSelection') ?>
             <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
             <div class="form-actions" style="margin-bottom: 50px">
-                <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?></button><button type="submit" name="remove" value="remove" class="btn btn-red"><?= t('Remove') ?></button>
+                <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?> </button><button type="submit" name="remove" value="remove" class="btn btn-red"><?= t('Remove') ?></button>
             </div>
         </div>
         </form>  
