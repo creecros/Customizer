@@ -19,7 +19,10 @@ class Plugin extends Base
 		);
 	
 	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
-	$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
+	    
+	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
+		$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
+	}
 	    
 	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
@@ -120,7 +123,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.8.0';
+        return '1.8.1';
     }
     
     public function getPluginHomepage()
