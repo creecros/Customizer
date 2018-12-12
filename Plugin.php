@@ -12,7 +12,6 @@ class Plugin extends Base
     public function initialize()
     {
 	global $customizer; 
-	global $wasmaster; 
 	    
 	// Themes
 	$customizer['themes'] = array(
@@ -96,7 +95,11 @@ class Plugin extends Base
         $wasmaster = APP_VERSION;
         
         if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
-       
+        if (version_compare($wasmaster, '1.2.4') >= 0) {
+        	$this->template->setTemplateOverride('header/title', 'customizer:header/title');
+	} else {
+        	$this->template->setTemplateOverride('header/title', 'customizer:header/title_older_kb');
+	}
 	    
     }
 
