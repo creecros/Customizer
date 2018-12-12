@@ -1,4 +1,3 @@
-<?php global $wasmaster; ?>
 <h1>
     <?php if (null !== $this->task->customizerFileModel->getByType(1)) : ?>
     <span class="logo">
