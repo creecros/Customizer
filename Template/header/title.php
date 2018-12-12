@@ -19,13 +19,7 @@
             <?= $this->text->e($title) ?>
         <?php endif ?>
     </span>
-<?php if (version_compare($wasmaster, '1.2.4') >= 0) : ?>
     <?php if (! empty($description)): ?>
         <?= $this->app->tooltipHTML($description) ?>
-    <?php else: ?>
-        <small class="tooltip" title="<?= $this->text->markdownAttribute($description) ?>">
-            <i class="fa fa-info-circle"></i>
-        </small>
     <?php endif ?>
- <?php endif ?>
 </h1>
