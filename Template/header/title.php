@@ -22,7 +22,7 @@
 <?php if (version_compare($wasmaster, '1.2.4') >= 0) : ?>
     <?php if (! empty($description)): ?>
         <?= $this->app->tooltipHTML($description) ?>
-    <?php else ?>
+    <?php else: ?>
         <small class="tooltip" title="<?= $this->text->markdownAttribute($description) ?>">
             <i class="fa fa-info-circle"></i>
         </small>
