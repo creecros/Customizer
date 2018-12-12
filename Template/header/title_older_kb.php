@@ -19,6 +19,8 @@
         <?php endif ?>
     </span>
     <?php if (! empty($description)): ?>
-        <?= $this->app->tooltipHTML($description) ?>
+        <small class="tooltip" title="<?= $this->text->markdownAttribute($description) ?>">
+            <i class="fa fa-info-circle"></i>
+        </small>
     <?php endif ?>
 </h1>
