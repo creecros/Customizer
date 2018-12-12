@@ -11,7 +11,8 @@ class Plugin extends Base
 		
     public function initialize()
     {
-	global $customizer;
+	global $customizer; 
+	global $wasmaster; 
 	    
 	// Themes
 	$customizer['themes'] = array(
@@ -90,6 +91,12 @@ class Plugin extends Base
 	    
 	//Permissions for login page to access logos    
         $this->applicationAccessMap->add('CustomizerFileController', array('image', 'loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
+	    
+	//Get accurate version
+        $wasmaster = APP_VERSION;
+        
+        if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
+       
 	    
     }
 
