@@ -22,13 +22,13 @@ class Plugin extends Base
 	    
 	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
 		$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
-	}
+		foreach ($scanned_user_themes as $theme) {
+			$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
+		}
+	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755); }	
 	    
 	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
-	}
-	foreach ($scanned_user_themes as $theme) {
-		$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
 	}
 	    
 	if ($this->configModel->get('themeSelection', '') == '') {
