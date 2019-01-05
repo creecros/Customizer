@@ -78,6 +78,7 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
    * https://github.com/kenlog/nebula :dash:
    * https://github.com/kenlog/Moon :waning_gibbous_moon:
    * https://github.com/aljawaid/KanboardCSS :computer:
+   * https://github.com/kenlog/Essential
 
 *Make pull request to add other theme support, must come from theme maintainer.*
 
