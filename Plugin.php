@@ -25,7 +25,7 @@ class Plugin extends Base
 		foreach ($scanned_user_themes as $theme) {
 			$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
 		}
-	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755); }	
+	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755, true); }	
 	    
 	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
