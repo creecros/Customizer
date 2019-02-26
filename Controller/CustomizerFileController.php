@@ -52,8 +52,31 @@ class CustomizerFileController extends BaseController
         } else {
             try {
                 $this->response->withContentType($mimetype);
+                $this->response->withCache(5 * 86400, $etag);
+                $this->response->send();
+                $this->objectStorage->output($file['path']);
+            } catch (ObjectStorageException $e) {
+                $this->logger->error($e->getMessage());
+            }
+        }
+    }
+	
+    /**
+     * Output file without cache
+     *
+     * @param array $file
+     * @param $mimetype
+     */
+    protected function renderFileWithoutCache(array $file, $mimetype)
+    {
+        $etag = md5($file['path']);
+
+        if ($this->request->getHeader('If-None-Match') === '"'.$etag.'"') {
+            $this->response->status(304);
+        } else {
+            try {
+                $this->response->withContentType($mimetype);
                 $this->response->withOutCache();
-                // $this->response->withCache(5 * 86400, $etag);
                 $this->response->send();
                 $this->objectStorage->output($file['path']);
             } catch (ObjectStorageException $e) {
