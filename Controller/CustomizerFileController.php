@@ -52,8 +52,31 @@ class CustomizerFileController extends BaseController
         } else {
             try {
                 $this->response->withContentType($mimetype);
+                $this->response->withCache(5 * 86400, $etag);
+                $this->response->send();
+                $this->objectStorage->output($file['path']);
+            } catch (ObjectStorageException $e) {
+                $this->logger->error($e->getMessage());
+            }
+        }
+    }
+	
+    /**
+     * Output file without cache
+     *
+     * @param array $file
+     * @param $mimetype
+     */
+    protected function renderFileWithoutCache(array $file, $mimetype)
+    {
+        $etag = md5($file['path']);
+
+        if ($this->request->getHeader('If-None-Match') === '"'.$etag.'"') {
+            $this->response->status(304);
+        } else {
+            try {
+                $this->response->withContentType($mimetype);
                 $this->response->withOutCache();
-                // $this->response->withCache(5 * 86400, $etag);
                 $this->response->send();
                 $this->objectStorage->output($file['path']);
             } catch (ObjectStorageException $e) {
@@ -84,7 +107,19 @@ class CustomizerFileController extends BaseController
     {
 	if ($this->logoexists()) {
         $file = $this->customizerFileModel->getByType(1);
-        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 if ($this->configModel->get('enable_cache', '') == 'checked') {  
+       	 	$this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 } else {
+       	 	$this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 }
+	} 
+    }
+	
+    public function logo_setting()
+    {
+	if ($this->logoexists()) {
+        $file = $this->customizerFileModel->getByType(1);
+        $this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
 	} 
     }
 	
@@ -92,7 +127,19 @@ class CustomizerFileController extends BaseController
     {
 	if ($this->loginlogoexists()) {
         $file = $this->customizerFileModel->getByType(3);
-        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 if ($this->configModel->get('enable_cache', '') == 'checked') {  
+       	 	$this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 } else {
+       	 	$this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 }
+	}    
+    }
+	
+    public function loginlogo_setting()
+    {
+	if ($this->loginlogoexists()) {
+        $file = $this->customizerFileModel->getByType(3);
+        $this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
 	}    
     }
 	
@@ -100,7 +147,19 @@ class CustomizerFileController extends BaseController
     {
 	if ($this->iconexists()) {
         $file = $this->customizerFileModel->getByType(2);
-        $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 if ($this->configModel->get('enable_cache', '') == 'checked') {  
+       	 	$this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 } else {
+       	 	$this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 }
+	} 
+    }
+	
+    public function icon_setting()
+    {
+	if ($this->iconexists()) {
+        $file = $this->customizerFileModel->getByType(2);
+        $this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
 	} 
     }
     
@@ -142,7 +201,11 @@ class CustomizerFileController extends BaseController
     public function image()
     {
        	 $file = $this->customizerFileModel->getById($this->request->getIntegerParam('file_id'));
-       	 $this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 if ($this->configModel->get('enable_cache', '') == 'checked') {  
+       	 	$this->renderFileWithCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 } else {
+       	 	$this->renderFileWithoutCache($file, $this->helper->file->getImageMimeType($file['name']));
+	 }
     }
     
     /**

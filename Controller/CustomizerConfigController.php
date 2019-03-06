@@ -32,6 +32,7 @@ class CustomizerConfigController extends BaseController
         $values =  $this->request->getValues();
         
         if (array_key_exists('use_custom_login', $values) === false) { $this->configModel->save(['use_custom_login' => '']); }
+        if (array_key_exists('enable_cache', $values) === false) { $this->configModel->save(['enable_cache' => '']); }
         
         if ($this->configModel->save($values)) {
             $this->languageModel->loadCurrentLanguage();
