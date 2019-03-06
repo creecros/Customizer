@@ -123,7 +123,7 @@ global $customizer;
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Enable Cache') ?></strong>
-                        <p class="form-help enable-cache-desc"><?= e('Once enabled, site assets will begin to be cached for 5 days, you will need to clear cache to see any new images uploaded.') ?></p>
+                        <p class="form-help enable-cache-desc"><?= e('Once enabled, site assets will begin to be cached for 5 days, increasing speed of site. However, you will need to clear your cache to see any new images uploaded. The settings page, will be unaffected by this setting.') ?></p>
                 </th>
                 <th>
                     <label class="switch">
