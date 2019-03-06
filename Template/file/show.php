@@ -15,7 +15,7 @@ global $customizer;
     	<div class="panel-heading">
     		<h3 class="panel-title"><?= t('Header Image') ?></h3>
     	</div>
-        <img id="hl1" src="<?= $this->url->href('CustomizerFileController', 'logo', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="<?= $this->task->configModel->get('headerlogo_size', '30') ?>">
+        <img id="hl1" src="<?= $this->url->href('CustomizerFileController', 'logo_setting', array('plugin' => 'customizer', 'file_id' => $logo['id'])) ?>" alt="<?= $this->text->e($logo['name']) ?>" height="<?= $this->task->configModel->get('headerlogo_size', '30') ?>">
     <br>
     <br>
      <ul class="upload-link">
@@ -55,7 +55,7 @@ global $customizer;
     		<h3 class="panel-title"><?= t('Login Image') ?></h3>
     	</div>
      
-        <img id="ll1" src="<?= $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
+        <img id="ll1" src="<?= $this->url->href('CustomizerFileController', 'loginlogo_setting', array('plugin' => 'customizer', 'file_id' => $loginlogo['id'])) ?>" alt="<?= $this->text->e($loginlogo['name']) ?>" height="<?= $this->task->configModel->get('loginlogo_size', '50') ?>">
     <br>
     <br>
      <ul class="upload-link">
@@ -95,7 +95,7 @@ global $customizer;
     		<h3 class="panel-title"><?= t('Favicon Image') ?></h3>
     	</div>
       
-        <img src="<?= $this->url->href('CustomizerFileController', 'icon', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
+        <img src="<?= $this->url->href('CustomizerFileController', 'icon_setting', array('plugin' => 'customizer', 'file_id' => $flavicon['id'])) ?>" alt="<?= $this->text->e($flavicon['name']) ?>" height="16">
     <br>
     <br>
      <ul class="upload-link">
@@ -286,7 +286,7 @@ global $customizer;
             </div>
             <div id="preview-form-login" class="preview-form-login">
                     <?php if ($customizer['loginCheck']): ?>
-                    <?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo', array('plugin' => 'customizer')) .  '" height="' . $customizer['logoSize'] . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
+                    <?= $this->url->link('<img src="' . $this->url->href('CustomizerFileController', 'loginlogo_setting', array('plugin' => 'customizer')) .  '" height="' . $customizer['logoSize'] . '">', 'CustomizerFileController', 'link', array('plugin' => 'customizer')) ?> 
                     <?php else: ?>
                     <?= $this->url->link('K<span>B</span>', 'DashboardController', 'show', array(), false, '', t('Dashboard')) ?>
                     <?php endif ?>
