@@ -94,4 +94,5 @@ This plugin has been brought to you by a collective and ongoing effort of: [cree
 - [x] Preloaded Theme Selector
 - [x] Sizing options
 - [x] Increasing Compatibility
+- [x] Toggle switch to enable/disable cache for images related to Customizer sitewide
 
