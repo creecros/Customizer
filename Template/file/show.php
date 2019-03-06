@@ -119,7 +119,22 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>
-            <div class="form-actions mb-20 ml-15">
+        
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Enable Cache') ?></strong>
+                        <p class="form-help enable-cache-desc"><?= e('Once enabled, logos will be cached for 5 days, you will need to clear browser cache if you switch back to disabled.') ?></p>
+                </th>
+                <th>
+                    <label class="switch">
+                    <input id="toggle" name="enable_cache" type="checkbox" value="checked" <?= $this->task->configModel->get('enable_cache','') ?>>
+                    <span class="slider round"></span>
+                    </label>
+                </th>
+            </tr>
+        </table>
+        
+        <div class="form-actions mb-20 ml-15">
                 <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?></button>
             </div>
     </div>
