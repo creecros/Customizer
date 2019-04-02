@@ -10,7 +10,10 @@
 Customizer - it's like magic!
 ----------
 
-This plugin has been brought to you by a collective and ongoing effort of: [creecros](https://github.com/creecros), [vistree](https://github.com/vistree), [aljawaid](https://github.com/aljawaid) & [kenlog](https://github.com/kenlog) 
+Author: [creecros](https://github.com/creecros)
+Contributors: [kenlog](https://github.com/kenlog), [vistree](https://github.com/vistree), [aljawaid](https://github.com/aljawaid)
+
+If you need a Logo and Favicon, try using this simple logo generator: https://creecros.github.io/simple_logo_gen/
 
 :sparkles:	**Adds a settings panel Settings>Customizer:**
 
