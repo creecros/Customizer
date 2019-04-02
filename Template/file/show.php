@@ -133,7 +133,17 @@ global $customizer;
                 </th>
             </tr>
         </table>
-        
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Logo Generator') ?></strong>
+                   <p class="form-help enable-cache-desc"><?= e('Experimental Tool, to create simple logos for those in need.') ?></p>
+                </th>
+                <th>
+                    <a href="https://creecros.github.io/simple_logo_gen/">
+                        <img border="0" alt="logo_gen" src="plugins/Customizer/Assets/img/logo-gen.png">
+                    </a>
+                </th>
+        </table>
         <div class="form-actions mb-20 ml-15">
                 <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?></button>
             </div>
