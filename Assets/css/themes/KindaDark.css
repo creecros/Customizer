@@ -164,7 +164,7 @@ label {
 }
 table th {
 	text-align: left;
-	0.8em 3px 0.6em 3px
+	padding: 0.8em 3px 0.6em 3px;
 	border: 1px solid #eee;
 	background: #fbfbfb;
 }
@@ -429,4 +429,16 @@ select{
 .input-addon-item {
   background-color: #222427;
   color: #fff;
+}
+span.task-date-overdue {
+	opacity: 1.0;
+	color: #e90529;
+}
+.board-add-icon i:focus, .board-add-icon i:hover {
+	text-decoration: none;
+	color: #2BBF5F;
+}
+span.task-date-today {
+	opacity: 1.0;
+	color: #2c52e3;
 }
