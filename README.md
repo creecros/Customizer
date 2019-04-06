@@ -72,6 +72,10 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 ![image](https://user-images.githubusercontent.com/26339368/48488078-f2b4ca00-e7ed-11e8-8d4b-37d5b51f374b.png)
 ![image](https://user-images.githubusercontent.com/26339368/48488101-ffd1b900-e7ed-11e8-8438-9ec7b91c98d9.png)
 ![image](https://user-images.githubusercontent.com/26339368/49310809-64a73780-f4ad-11e8-81e6-82852275199a.png)
+:8ball: KindaDark 
+   
+<img src="https://i.imgur.com/Mw3DRBM.png" />   
+<br/>   
 
 ## Theme Creator :notes:
 
