@@ -27,6 +27,13 @@ Preset Themes that come with Customizer
 
 ![image](https://user-images.githubusercontent.com/26339368/49310723-1003bc80-f4ad-11e8-8c03-8390ecc78d20.png)
 
+:8ball: KindaDark 
+   
+<img src="https://i.imgur.com/Mw3DRBM.png" />   
+<br/>   
+   
+   
+   
 ## How to add your own css
 
 To add your own custom css files to Customizer, simply place your files in the `DATA_DIR . '/files/customizer/themes` folder. If that folder doesn't exist, create it, and then place your files in there. This will retain your custom themes through upgrades of both Kanboard or Customizer.
