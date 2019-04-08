@@ -119,6 +119,32 @@ global $customizer;
     </ul>
     <?php endif ?>
     </div>
+
+        <div class="panel avatar-sizing-panel">
+    	<div class="panel-heading">
+    		<h3 class="panel-title"><?= t('Avatar Icon') ?></h3>
+    	</div>
+        <?= $this->helper->dynamicAvatar->currentUserDynamic('avatar-preview') ?>
+    <br>
+    <br>
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Avatar Icon Size') ?></strong></th>
+                <th><input type="range" name="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
+                    <av_icon_output> <?= $this->task->configModel->get('av_size','20') ?></av_icon_output><?= t('&nbsp;pixels') ?>
+                </th>
+            </tr>            
+            <tr>
+                <th width="25%"><strong><?= t('Avatar Icon Radius') ?></strong></th>
+                <th><input type="range" name="av_radius" min="25" max="50" value="<?= $this->task->configModel->get('av_radius','50') ?>">
+                    <av_radius_output> <?= $this->task->configModel->get('av_radius','50') ?></av_radius_output><?= t('&nbsp;pixels') ?>
+                </th>
+            </tr>
+        </table>
+            
+    </div>    
+
+        
         
         <table>
             <tr>
