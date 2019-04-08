@@ -40,5 +40,6 @@
     </ul>
 </div>
 <style>
-.avatar-20 img {border-radius: <?= $this->task->configModel->get('av_radius', '50') ?>%}
+.avatar-dyn img {border-radius: <?= $this->task->configModel->get('av_radius', '50') ?>%}
+.avatar-dyn .avatar-letter {line-height:<?= $this->task->configModel->get('av_size', '20') ?>px;width:<?= $this->task->configModel->get('av_size', '20') ?>px;font-size:<?= $this->task->configModel->get('av_size', '20') / 2 ?>px;}
 </style>
