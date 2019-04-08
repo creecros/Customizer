@@ -14,6 +14,24 @@ $(document).on('input', 'input[name="loginlogo_size"]', function(e) {
   document.getElementById("ll1").style.height = e.currentTarget.value + "px";
 });
 
+var av_icon_output = $('av_icon_output')[0];
+
+$(document).on('input', 'input[name="av_size"]', function(e) {
+  av_icon_output.innerHTML = e.currentTarget.value;
+  document.getElementById("avatar-preview").style.lineHeight = e.currentTarget.value + "px";
+  document.getElementById("avatar-preview").style.width = e.currentTarget.value + "px";
+  document.getElementById("avatar-preview").style.fontSize = (e.currentTarget.value / 2) + "px";
+});
+
+var av_radius_output = $('av_radius_output')[0];
+
+$(document).on('input', 'input[name="av_radius"]', function(e) {
+  av_radius_output.innerHTML = e.currentTarget.value;
+  document.getElementById("avatar-preview").style.borderRadius = e.currentTarget.value + "%";
+});
+
+avatar-preview
+
 //Accordion for settings page
 
 document.addEventListener("DOMContentLoaded", function(event) { 
