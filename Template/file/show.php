@@ -137,7 +137,7 @@ global $customizer;
             <tr>
                 <th width="25%"><strong><?= t('Avatar Icon Radius') ?></strong></th>
                 <th><input type="range" name="av_radius" min="25" max="50" value="<?= $this->task->configModel->get('av_radius','50') ?>">
-                    <av_radius_output> <?= $this->task->configModel->get('av_radius','50') ?></av_radius_output><?= t('&nbsp;pixels') ?>
+                    <av_radius_output> <?= $this->task->configModel->get('av_radius','50') ?></av_radius_output><?= t('&nbsp;%') ?>
                 </th>
             </tr>
         </table>
