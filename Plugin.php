@@ -41,6 +41,7 @@ class Plugin extends Base
 	    
         //Helper
         $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
+        $this->helper->register('dynamicAvatar', '\Kanboard\Plugin\Customizer\Helper\DynamicAvatar');	    
 	    
 	//Check if login logo is set
         if (null !== $this->customizerFileModel->getByType(3)) { 
