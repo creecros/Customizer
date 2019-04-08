@@ -12,10 +12,20 @@ use Kanboard\Core\Base;
  */
 class DynamicAvatar extends AvatarHelper
 {
+    
+    public function dynamicRender($user_id, $username, $name, $email, $avatar_path, $css = 'avatar-left', $size = 48)
+    {
+        if (empty($user_id) && empty($username)) {
+            $html = $this->avatarManager->renderDefault($size);
+        } else {
+            $html = $this->avatarManager->render($user_id, $username, $name, $email, $avatar_path, $size);
+        }
+        return '<div class="avatar avatar-dyn '.$css.'">'.$html.'</div>';
+    }
 
     public function dynamic($user_id, $username, $name, $email, $avatar_path, $css = '', $size)
     {
-        return $this->render($user_id, $username, $name, $email, $avatar_path, $css, $size);
+        return $this->dynamicRender($user_id, $username, $name, $email, $avatar_path, $css, $size);
     }
 
     public function currentUserDynamic($css = '')
