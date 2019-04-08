@@ -1,5 +1,5 @@
 <div class="dropdown">
-    <a href="#" class="dropdown-menu dropdown-menu-link-icon"><?= $this->avatar->currentUserSmall('avatar-inline') ?><i class="fa fa-caret-down"></i></a>
+    <a href="#" class="dropdown-menu dropdown-menu-link-icon" style="display:flex;position:relative;align-items:center;flex-direction:row;"><?= $this->avatar->currentUserDynamic('avatar-inline') ?><i class="fa fa-caret-down"></i></a>
     <ul>
         <li class="no-hover"><strong><?= $this->text->e($this->user->getFullname()) ?></strong></li>
         <li>
@@ -39,3 +39,6 @@
         <?php endif ?>
     </ul>
 </div>
+<style>
+.avatar-20 img {border-radius: <?= $this->task->configModel->get('av_radius', '50') ?>%}
+</style>
