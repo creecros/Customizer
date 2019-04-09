@@ -19,12 +19,15 @@ var av_icon_output = $('av_icon_output')[0];
 $(document).on('input', 'input[name="av_size"]', function(e) {
   var siz = e.currentTarget.value;
   av_icon_output.innerHTML = siz;
+  if (document.querySelector(".avatar-preview .avatar-letter") !== null) {
   document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = siz + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.width = siz + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
+  } else {
   var link = document.querySelector(".avatar-dyn img").src;
   var changedLink = link.substring(0, link.length-2);
   document.querySelector(".avatar-dyn img").src = changedLink + siz;
+  }
 });
 
 var av_radius_output = $('av_radius_output')[0];
@@ -32,8 +35,11 @@ var av_radius_output = $('av_radius_output')[0];
 $(document).on('input', 'input[name="av_radius"]', function(e) {
   var rad = e.currentTarget.value;
   av_radius_output.innerHTML = rad;
+  if (document.querySelector(".avatar-preview .avatar-letter") !== null) {
   document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = rad + "%";
+  } else {
   document.querySelector(".avatar-dyn img").style.borderRadius = rad + "%";
+  }
 });
 
 
