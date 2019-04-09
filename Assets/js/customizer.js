@@ -24,9 +24,9 @@ $(document).on('input', 'input[name="av_size"]', function(e) {
   document.querySelector(".avatar-preview .avatar-letter").style.width = siz + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
   } else {
-  var link = document.querySelector(".avatar-dyn img").src;
+  var link = document.querySelector(".avatar-preview img").src;
   var changedLink = link.substring(0, link.length-2);
-  document.querySelector(".avatar-dyn img").src = changedLink + siz;
+  document.querySelector(".avatar-preview img").src = changedLink + siz;
   }
 });
 
@@ -38,7 +38,7 @@ $(document).on('input', 'input[name="av_radius"]', function(e) {
   if (document.querySelector(".avatar-preview .avatar-letter") !== null) {
   document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = rad + "%";
   } else {
-  document.querySelector(".avatar-dyn img").style.borderRadius = rad + "%";
+  document.querySelector(".avatar-preview img").style.borderRadius = rad + "%";
   }
 });
 
