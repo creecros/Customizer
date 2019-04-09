@@ -21,17 +21,17 @@ $(document).on('input', 'input[name="av_size"]', function(e) {
   document.getElementById("avatar-preview").style.lineHeight = e.currentTarget.value + "px";
   document.getElementById("avatar-preview").style.width = e.currentTarget.value + "px";
   document.getElementById("avatar-preview").style.fontSize = (e.currentTarget.value / 2) + "px";
-  var link = document.querySelector(".avatar-dyn img").href;
-  var changedLink = link.substring(0, str.length-2);
-  document.querySelector(".avatar-dyn img").href = changedLink + e.currentTarget.value;
+  var link = document.querySelector(".avatar-preview img").src;
+  var changedLink = link.substring(0, link.length-2);
+  document.querySelector(".avatar-preview img").src = changedLink + e.currentTarget.value;
 });
 
 var av_radius_output = $('av_radius_output')[0];
 
 $(document).on('input', 'input[name="av_radius"]', function(e) {
   av_radius_output.innerHTML = e.currentTarget.value;
-  document.querySelector(".avatar-dyn img").style.borderRadius = e.currentTarget.value + "%";
-  document.querySelector(".avatar-dyn div").style.borderRadius = e.currentTarget.value + "%";
+  document.querySelector(".avatar-preview img").style.borderRadius = e.currentTarget.value + "%";
+  document.querySelector(".avatar-preview div").style.borderRadius = e.currentTarget.value + "%";
 });
 
 //Accordion for settings page
