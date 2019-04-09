@@ -22,9 +22,9 @@ $(document).on('input', 'input[name="av_size"]', function(e) {
   document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = siz + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.width = siz + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
-  var link = document.querySelector(".avatar-preview img").src;
+  var link = document.querySelector(".avatar-dyn img").src;
   var changedLink = link.substring(0, link.length-2);
-  document.querySelector(".avatar-preview img").src = changedLink + siz;
+  document.querySelector(".avatar-dyn img").src = changedLink + siz;
 });
 
 var av_radius_output = $('av_radius_output')[0];
@@ -33,7 +33,7 @@ $(document).on('input', 'input[name="av_radius"]', function(e) {
   var rad = e.currentTarget.value;
   av_radius_output.innerHTML = rad;
   document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = rad + "%";
-  document.querySelector(".avatar-preview img").style.borderRadius = rad + "%";
+  document.querySelector(".avatar-dyn img").style.borderRadius = rad + "%";
 });
 
 
