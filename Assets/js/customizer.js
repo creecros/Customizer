@@ -14,7 +14,8 @@ $(document).on('input', 'input[name="loginlogo_size"]', function(e) {
   document.getElementById("ll1").style.height = e.currentTarget.value + "px";
 });
 
-document.getElementById('av_size').onchange = function() {
+document.getElementById('av_size').oninput = function() {
+  av_icon_output.innerHTML = document.getElementById('av_size').value;
   document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = document.getElementById('av_size').value + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.width = document.getElementById('av_size').value + "px";
   document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (document.getElementById('av_size').value / 2) + "px";
@@ -23,7 +24,8 @@ document.getElementById('av_size').onchange = function() {
   document.querySelector(".avatar-preview img").src = changedLink + document.getElementById('av_size').value;
 }
 
-document.getElementById('av_radius').onchange = function() {
+document.getElementById('av_radius').oninput = function() {
+  av_radius_output.innerHTML = document.getElementById('av_radius').value;
   document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = document.getElementById('av_radius').value + "%";
   document.querySelector(".avatar-preview img").style.borderRadius = document.getElementById('av_radius').value + "%";
 }
