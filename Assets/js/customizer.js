@@ -30,8 +30,8 @@ var av_radius_output = $('av_radius_output')[0];
 
 $(document).on('input', 'input[name="av_radius"]', function(e) {
   av_radius_output.innerHTML = e.currentTarget.value;
-  document.querySelector(".avatar-preview img").style.borderRadius = e.currentTarget.value + "%";
   document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = e.currentTarget.value + "%";
+  document.querySelector(".avatar-preview img").style.borderRadius = e.currentTarget.value + "%";
 });
 
 //Accordion for settings page
