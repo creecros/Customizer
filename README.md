@@ -43,6 +43,7 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
   * Clemson <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20">
   * Blueboard :blue_book:
   * Material :sparkles:
+  * KindaDark :8ball:
 * [theme creator](#theme-creator-notes)
 
 
