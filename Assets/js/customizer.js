@@ -18,9 +18,9 @@ var av_icon_output = $('av_icon_output')[0];
 
 $(document).on('input', 'input[name="av_size"]', function(e) {
   av_icon_output.innerHTML = e.currentTarget.value;
-  document.getElementById("avatar-preview").style.lineHeight = e.currentTarget.value + "px";
-  document.getElementById("avatar-preview").style.width = e.currentTarget.value + "px";
-  document.getElementById("avatar-preview").style.fontSize = (e.currentTarget.value / 2) + "px";
+  document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = e.currentTarget.value + "px";
+  document.querySelector(".avatar-preview .avatar-letter").style.width = e.currentTarget.value + "px";
+  document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (e.currentTarget.value / 2) + "px";
   var link = document.querySelector(".avatar-preview img").src;
   var changedLink = link.substring(0, link.length-2);
   document.querySelector(".avatar-preview img").src = changedLink + e.currentTarget.value;
@@ -31,7 +31,7 @@ var av_radius_output = $('av_radius_output')[0];
 $(document).on('input', 'input[name="av_radius"]', function(e) {
   av_radius_output.innerHTML = e.currentTarget.value;
   document.querySelector(".avatar-preview img").style.borderRadius = e.currentTarget.value + "%";
-  document.querySelector(".avatar-preview div").style.borderRadius = e.currentTarget.value + "%";
+  document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = e.currentTarget.value + "%";
 });
 
 //Accordion for settings page
