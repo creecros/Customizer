@@ -31,7 +31,7 @@ class DynamicAvatar extends AvatarHelper
     public function currentUserDynamic($css = '')
     {
         $user = $this->userSession->getAll();
-        return $this->dynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $css, $this->configModel->get('av_radius', '50'));
+        return $this->dynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $css, $this->configModel->get('av_size', '20'));
     }
     
     
