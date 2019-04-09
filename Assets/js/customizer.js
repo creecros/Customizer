@@ -14,21 +14,27 @@ $(document).on('input', 'input[name="loginlogo_size"]', function(e) {
   document.getElementById("ll1").style.height = e.currentTarget.value + "px";
 });
 
-document.getElementById('av_size').oninput = function() {
-  av_icon_output.innerHTML = document.getElementById('av_size').value;
-  document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = document.getElementById('av_size').value + "px";
-  document.querySelector(".avatar-preview .avatar-letter").style.width = document.getElementById('av_size').value + "px";
-  document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (document.getElementById('av_size').value / 2) + "px";
+var av_icon_output = $('av_icon_output')[0];
+
+$(document).on('input', 'input[name="av_size"]', function(e) {
+  var siz = e.currentTarget.value;
+  av_icon_output.innerHTML = siz;
+  document.querySelector(".avatar-preview .avatar-letter").style.lineHeight = siz + "px";
+  document.querySelector(".avatar-preview .avatar-letter").style.width = siz + "px";
+  document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
   var link = document.querySelector(".avatar-preview img").src;
   var changedLink = link.substring(0, link.length-2);
-  document.querySelector(".avatar-preview img").src = changedLink + document.getElementById('av_size').value;
-}
+  document.querySelector(".avatar-preview img").src = changedLink + siz;
+});
 
-document.getElementById('av_radius').oninput = function() {
-  av_radius_output.innerHTML = document.getElementById('av_radius').value;
-  document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = document.getElementById('av_radius').value + "%";
-  document.querySelector(".avatar-preview img").style.borderRadius = document.getElementById('av_radius').value + "%";
-}
+var av_radius_output = $('av_radius_output')[0];
+
+$(document).on('input', 'input[name="av_radius"]', function(e) {
+  var rad = e.currentTarget.value;
+  av_radius_output.innerHTML = rad;
+  document.querySelector(".avatar-preview .avatar-letter").style.borderRadius = rad + "%";
+  document.querySelector(".avatar-preview img").style.borderRadius = rad + "%";
+});
 
 
 //Accordion for settings page
