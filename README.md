@@ -36,7 +36,7 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
 * [favicon](#favicon-beginner)
-* [theme selector](#includes-preset-themes-mega) with 6 preloaded themes
+* [theme selector](#includes-preset-themes-mega) with 7 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
