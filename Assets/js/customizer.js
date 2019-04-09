@@ -30,8 +30,6 @@ $(document).on('input', 'input[name="av_radius"]', function(e) {
   document.getElementById("avatar-preview").style.borderRadius = e.currentTarget.value + "%";
 });
 
-avatar-preview
-
 //Accordion for settings page
 
 document.addEventListener("DOMContentLoaded", function(event) { 
