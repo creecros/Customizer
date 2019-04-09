@@ -130,13 +130,13 @@ global $customizer;
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Avatar Icon Size') ?></strong></th>
-                <th><input type="range" name="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
+                <th><input type="range" name="av_size" id="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
                     <av_icon_output> <?= $this->task->configModel->get('av_size','20') ?></av_icon_output><?= t('&nbsp;pixels') ?>
                 </th>
             </tr>            
             <tr>
                 <th width="25%"><strong><?= t('Avatar Icon Radius') ?></strong></th>
-                <th><input type="range" name="av_radius" min="25" max="50" value="<?= $this->task->configModel->get('av_radius','50') ?>">
+                <th><input type="range" name="av_radius" id="av_radius" min="25" max="50" value="<?= $this->task->configModel->get('av_radius','50') ?>">
                     <av_radius_output> <?= $this->task->configModel->get('av_radius','50') ?></av_radius_output><?= t('&nbsp;percent') ?>
                 </th>
             </tr>
