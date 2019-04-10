@@ -23,6 +23,9 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 * [header logo](#header-logo-rainbow)
   * set header logo size
+* [Upper right corner Avatar Icon](#avatar-icon-boy)
+  * set icon size
+  * set border radius
 * [customizable login screen](#fully-customizable-login-screen-gem)
   * [login logo](#login-logo-peach)
   * [login page background image url](#login-screen-background-image-dart)
@@ -33,13 +36,14 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
 * [favicon](#favicon-beginner)
-* [theme selector](#includes-preset-themes-mega) with 6 preloaded themes
+* [theme selector](#includes-preset-themes-mega) with 7 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:
   * Breathe :partly_sunny:
   * Clemson <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Clemson_Tigers_logo.svg/2000px-Clemson_Tigers_logo.svg.png" height="20">
   * Blueboard :blue_book:
   * Material :sparkles:
+  * KindaDark :8ball:
 * [theme creator](#theme-creator-notes)
 
 
@@ -52,6 +56,10 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 ## Header Logo :rainbow:
 
 ![image](https://user-images.githubusercontent.com/26339368/47369113-f9e62d80-d6b0-11e8-90e0-974c31b4b535.png)
+
+## Avatar Icon :boy:
+
+![image](https://user-images.githubusercontent.com/26339368/55774303-8bc8d380-5a62-11e9-8d59-6dc2a1c33387.png)
 
 ## Login Logo :peach:
 

@@ -41,6 +41,7 @@ class Plugin extends Base
 	    
         //Helper
         $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
+        $this->helper->register('dynamicAvatar', '\Kanboard\Plugin\Customizer\Helper\DynamicAvatar');	    
 	    
 	//Check if login logo is set
         if (null !== $this->customizerFileModel->getByType(3)) { 
@@ -70,6 +71,7 @@ class Plugin extends Base
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
+        $this->template->setTemplateOverride('header/user_dropdown', 'customizer:header/user_dropdown');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
@@ -133,7 +135,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.9.2';
+        return '1.10.0';
     }
     
     public function getPluginHomepage()

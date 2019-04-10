@@ -57,4 +57,13 @@
 
 .preview-form-required { display: none;} /* This removes the standard required asterisk */
 	
+.avatar-preview img, .avatar-preview div {
+	border-radius: <?= $this->task->configModel->get('av_radius','50') ?>%;
+}
+.avatar-preview .avatar-letter {
+    line-height: <?= $this->task->configModel->get('av_size','20') ?>px;
+    width: <?= $this->task->configModel->get('av_size','20') ?>px;
+    font-size: <?= $this->task->configModel->get('av_size','20') / 2 ?>px;
+}
+	
 </style>
