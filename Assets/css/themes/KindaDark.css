@@ -78,7 +78,7 @@ a .fa {
 	color: #222427;
 }
 .board-column-title .fa {
-	color: #fff;
+	color: #222427;
 }
 .task-board a {
 	color: #222427;
@@ -475,13 +475,6 @@ select {
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
 	background-color: #2c52e3;
-	color: #fff;
-}
-.board-swimlane-columns-1 th {
-	border: solid 0.3em #fff;
-}
-.board-swimlane-columns-1 * {
-	background-color: #222427;
 	color: #fff;
 }
 .board-column-header-task-count {
