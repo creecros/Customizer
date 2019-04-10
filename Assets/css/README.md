@@ -29,7 +29,7 @@ Preset Themes that come with Customizer
 
 :8ball: KindaDark 
    
-<img src="https://i.imgur.com/Mw3DRBM.png" />   
+<img src="https://i.imgur.com/Rg9RYwf.png" />   
 <br/>   
    
    
