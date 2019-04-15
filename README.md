@@ -19,11 +19,11 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 ![image](https://user-images.githubusercontent.com/26339368/49309828-7fc47800-f4aa-11e8-809e-8cc9686a2a2d.png)
 
-**GUI to add a...**
+**GUI to customize...**
 
 * [header logo](#header-logo-rainbow)
   * set header logo size
-* [Upper right corner Avatar Icon](#avatar-icon-boy)
+* [upper right corner Avatar Icon](#avatar-icon-boy)
   * set icon size
   * set border radius
 * [customizable login screen](#fully-customizable-login-screen-gem)
