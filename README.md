@@ -4,6 +4,10 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]()
 [![Downloads](https://img.shields.io/github/downloads/creecros/Customizer/total.svg)](https://github.com/creecros/Customizer/releases)
 
+Donate to help keep this project maintained.
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SEGNEVQFXHXGW&source=url">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /></a>
+
 **:star: If you use it, you should star it on Github!**
 *It's the least you can do for all the work put into it!*
 
