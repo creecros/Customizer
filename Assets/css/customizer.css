@@ -15,10 +15,10 @@
 
 code {
 	margin: 0;
-	padding: 2px 0.4em;
+	/*padding: 2px 0.4em;*/
 	background-color: rgba(27, 31, 35, 0.32);
 	border-radius: 3px;
-	color: #000;
+	color: #FFF;
 	font-family: Tahoma;
 	font-size: 95%!important;
 	letter-spacing: 1px;
