@@ -81,86 +81,88 @@ $(document).ready(function(){
 
 //Live Preview
 
-document.getElementById('loginpanel_color').oninput = function() {
-  document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value;
-}
+if (document.getElementById('loginpanel_color')) {
+  document.getElementById('loginpanel_color').oninput = function() {
+    document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value;
+  }
 
-document.getElementById('loginbackground_color').oninput = function() {
-  document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value;
-}
+  document.getElementById('loginbackground_color').oninput = function() {
+    document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value;
+  }
 
-document.getElementById('login_shadow_color').oninput = function() {
-  var slider = document.getElementById("login_shadow").value;
-  var color = document.getElementById('login_shadow_color').value;
-  document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
-}
+  document.getElementById('login_shadow_color').oninput = function() {
+    var slider = document.getElementById("login_shadow").value;
+    var color = document.getElementById('login_shadow_color').value;
+    document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+  }
 
-document.getElementById('login_border_color').oninput = function() {
-  document.getElementById('preview-form-login').style.borderColor = document.getElementById('login_border_color').value;
-}
+  document.getElementById('login_border_color').oninput = function() {
+    document.getElementById('preview-form-login').style.borderColor = document.getElementById('login_border_color').value;
+  }
 
-document.getElementById('login_btn_color').oninput = function() {
-  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
-}
+  document.getElementById('login_btn_color').oninput = function() {
+    document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
+  }
 
-document.getElementById('login_btn_shadow_color').oninput = function() {
-  var slider = document.getElementById("login_btn_shadow").value;
-  var color = document.getElementById('login_btn_shadow_color').value;
-  document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
-}
+  document.getElementById('login_btn_shadow_color').oninput = function() {
+    var slider = document.getElementById("login_btn_shadow").value;
+    var color = document.getElementById('login_btn_shadow_color').value;
+    document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+  }
 
-document.getElementById('login_btn_font_color').oninput = function() {
-  document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
-}
+  document.getElementById('login_btn_font_color').oninput = function() {
+    document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
+  }
 
-document.getElementById('login_btn_shade_color').oninput = function() {
-  var color = document.getElementById('login_btn_shade_color').value;
-  document.getElementById('preview-login-btn').style.backgroundImage = 'linear-gradient(-180deg, transparent 0%, ' + color + ' 90%';
-}
+  document.getElementById('login_btn_shade_color').oninput = function() {
+    var color = document.getElementById('login_btn_shade_color').value;
+    document.getElementById('preview-login-btn').style.backgroundImage = 'linear-gradient(-180deg, transparent 0%, ' + color + ' 90%';
+  }
 
-document.getElementById('login_btn_shadow').oninput = function() {
-  var slider = document.getElementById("login_btn_shadow").value;
-  var color = document.getElementById('login_btn_shadow_color').value;
-  document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
-}
+  document.getElementById('login_btn_shadow').oninput = function() {
+    var slider = document.getElementById("login_btn_shadow").value;
+    var color = document.getElementById('login_btn_shadow_color').value;
+    document.getElementById('preview-login-btn').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+  }
 
-document.getElementById('login_btn_border').oninput = function() {
-  var slider = document.getElementById("login_btn_border").value;
-  var color = document.getElementById('login_btn_border_color').value;
-  document.getElementById('preview-login-btn').style.border = slider + 'px solid ' + color;
-}
+  document.getElementById('login_btn_border').oninput = function() {
+    var slider = document.getElementById("login_btn_border").value;
+    var color = document.getElementById('login_btn_border_color').value;
+    document.getElementById('preview-login-btn').style.border = slider + 'px solid ' + color;
+  }
 
-document.getElementById('login_border').oninput = function() {
-  var slider = document.getElementById("login_border").value;
-  var color = document.getElementById('login_border_color').value;
-  document.getElementById('preview-form-login').style.border = slider + 'px solid ' + color;
-}
+  document.getElementById('login_border').oninput = function() {
+    var slider = document.getElementById("login_border").value;
+    var color = document.getElementById('login_border_color').value;
+    document.getElementById('preview-form-login').style.border = slider + 'px solid ' + color;
+  }
 
-document.getElementById('login_shadow').oninput = function() {
-  var slider = document.getElementById("login_shadow").value;
-  var color = document.getElementById('login_shadow_color').value;
-  document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
-}
+  document.getElementById('login_shadow').oninput = function() {
+    var slider = document.getElementById("login_shadow").value;
+    var color = document.getElementById('login_shadow_color').value;
+    document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+  }
 
-document.getElementById('login_btn_width').oninput = function() {
-  var slider = document.getElementById("login_btn_width").value;
-  document.getElementById('preview-login-btn').style.width = slider + 'px';
-}
+  document.getElementById('login_btn_width').oninput = function() {
+    var slider = document.getElementById("login_btn_width").value;
+    document.getElementById('preview-login-btn').style.width = slider + 'px';
+  }
 
-document.getElementById('preview-login-btn').onmouseover = function() {
-  document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_color').value;
-  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_font_color').value;
-}
+  document.getElementById('preview-login-btn').onmouseover = function() {
+    document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_color').value;
+    document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_font_color').value;
+  }
 
-document.getElementById('preview-login-btn').onmouseout = function() {
-  document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
-  document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
-}
+  document.getElementById('preview-login-btn').onmouseout = function() {
+    document.getElementById('preview-login-btn').style.backgroundColor = document.getElementById('login_btn_color').value;
+    document.getElementById('preview-login-btn').style.color = document.getElementById('login_btn_font_color').value;
+  }
 
-document.getElementById('form-background_url').oninput = function() {
-  var val = document.getElementById("form-background_url").value;
-  document.getElementById('preview').style.background = 'url("' + val +'") no-repeat center center';
-  document.getElementById('preview').style.backgroundSize = 'cover';
+  document.getElementById('form-background_url').oninput = function() {
+    var val = document.getElementById("form-background_url").value;
+    document.getElementById('preview').style.background = 'url("' + val +'") no-repeat center center';
+    document.getElementById('preview').style.backgroundSize = 'cover';
+  }
 }
 
 function OnColorChanged(selectedColor, inputId) {
