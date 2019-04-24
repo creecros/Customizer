@@ -312,4 +312,9 @@ class CustomizerFileModel extends Base
         $this->objectStorage->put($this->getThumbnailPath($destination_filename), $blob);
     }
     
+    public function getUserSessionId()
+    {
+        return $this->userSession->getId();
+    }
+    
 }
