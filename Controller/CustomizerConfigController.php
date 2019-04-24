@@ -45,6 +45,26 @@ class CustomizerConfigController extends BaseController
      }
     }
     
+    /**
+     * Save user theme
+     *
+     */
+    public function usertheme()
+    {
+        $user = $this->getUser();
+        $values =  $this->request->getValues();
+ 
+        if ($this->userMetadataModel->save($user['id'], $values)) {
+            $this->languageModel->loadCurrentLanguage();
+            $this->flash->success(t('Settings saved successfully.'));
+        } else {
+            $this->flash->failure(t('Unable to save your settings.'));
+        }
+
+        $this->response->redirect($this->helper->url->to('UserViewController', 'show', array('user_id' => $user['id'])), true);
+     
+    }
+    
     public function remove($file)
     {
         unlink($file);

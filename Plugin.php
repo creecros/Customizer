@@ -5,6 +5,9 @@ namespace Kanboard\Plugin\Customizer;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 use Kanboard\Core\Security\Role;
+use Kanboard\Event\AuthSuccessEvent;
+use Kanboard\Core\Security\AuthenticationManager;
+use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
 
 class Plugin extends Base
 {
@@ -15,7 +18,7 @@ class Plugin extends Base
 	    
 	// Themes
 	$customizer['themes'] = array(
-		'Default' => ''
+		'Default' => 'plugins/Customizer/Assets/css/theme.css'
 		);
 	
 	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
@@ -30,14 +33,8 @@ class Plugin extends Base
 	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
 	}
+      
 	    
-	if ($this->configModel->get('themeSelection', '') == '') {
-        file_put_contents('plugins/Customizer/Assets/css/theme.css', '');
-	} else {
-        file_put_contents('plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
-	}
-	    
-        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
 	    
         //Helper
         $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
@@ -71,6 +68,7 @@ class Plugin extends Base
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
+        $this->template->setTemplateOverride('user_modification/show', 'customizer:user_mod/show');
         $this->template->setTemplateOverride('header/user_dropdown', 'customizer:header/user_dropdown');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
@@ -104,10 +102,13 @@ class Plugin extends Base
 	}
 	    
     }
-
+  
     public function onStartup()
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+        $user_id = $this->customizerFileModel->getUserSessionId();
+        $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css' ));
+        $this->hook->on('template:layout:css', array('template' => $user_theme));
     }
     
     public function getClasses() {
@@ -148,3 +149,4 @@ class Plugin extends Base
         return '>=1.0.42';
     }
 }
+

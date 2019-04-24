@@ -79,6 +79,13 @@ $(document).ready(function(){
     });
 });
 
+// auto submit on change for user theme
+if (document.getElementById('userthemeSelection')) {
+    document.getElementById('userthemeSelection').onchange = function() {
+        document.getElementById('ts').submit();
+    }
+}
+
 //Live Preview
 
 if (document.getElementById('loginpanel_color')) {
