@@ -349,13 +349,44 @@ global $customizer;
         </div>
         <button type="button" class="login-accordion"><i class="fa fa-refresh" aria-hidden="true"></i> <?= t('Manage Themes') ?></button>
         <div class="login-accordian-panel mt-10">
+            <div class="panel header-logo-panel">
+            <h3 class="panel-title"><?= t('Global Themes') ?></h3>
             <?= $this->form->label(t('Theme'), 'themeSelection') ?>
             <?= $this->helper->themeHelper->reverseSelect('themeSelection', $customizer['themes'], $values, $errors) ?>  
+            <p class="form-help theme-select"><?= e('This will be the theme selection for all users who have not chosen their own theme.') ?></p>
             <div class="form-actions" style="margin-bottom: 50px">
                 <button type="submit" name="save" value="save" class="btn btn-blue"><?= t('Save') ?> </button><button type="submit" name="remove" value="remove" class="btn btn-red"><?= t('Remove') ?></button>
             </div>
+            </div>
+            </form> 
+
+            <form method="post" enctype="multipart/form-data" action="<?= $this->url->href('CustomizerConfigController', 'uploadcss', array('plugin' => 'customizer')) ?>">
+            <div class="panel header-logo-panel">
+    	        <h3 class="panel-title"><?= t('Upload a theme') ?></h3>
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" class="btn btn-blue" value="<?= t('Add Theme') ?>" name="submit">
+            </div>
+            </form>
+            <form method="post" enctype="multipart/form-data" action="<?= $this->url->href('CustomizerConfigController', 'resetUserThemes', array('plugin' => 'customizer')) ?>">
+            <div class="panel header-logo-panel">
+    	        <h3 class="panel-title"><?= t('Users themes option') ?></h3>
+                    <input type="submit" class="btn btn-red" value="<?= t('Reset All Users Themes') ?>" name="submit">
+            </div>
+            </form>
+            <form method="post" enctype="multipart/form-data" action="<?= $this->url->href('CustomizerConfigController', 'enableDisableThemes', array('plugin' => 'customizer')) ?>">
+            <div class="panel header-logo-panel">
+    	        <h3 class="panel-title"><?= t('Toggle Users themes') ?></h3>
+    	        <?php if ($this->task->configModel->get('toggle_user_themes', 'disable') == 'disable') : ?>
+                    <input type="submit" class="btn btn-blue" value="<?= t('Enable Users Themes') ?>" name="submit">
+                <?php else :?>
+                    <input type="submit" class="btn btn-red" value="<?= t('Disable Users Themes') ?>" name="submit">
+                <?php endif ?>
+            </div>
+            </form>
+            
+            
         </div>
-        </form>  
+         
             <button type="button" class="login-accordion"><i class="fa fa-magic" aria-hidden="true"></i> <?= t('Theme Creator') ?></button>
             <div class="login-accordian-panel mt-10">
                 <?= $this->hook->render('customizer:config:themecreator') ?>

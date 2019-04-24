@@ -20,13 +20,19 @@ class Plugin extends Base
 	$customizer['themes'] = array(
 		'Default' => 'plugins/Customizer/Assets/css/theme.css'
 		);
-	
+		
+    $scanned_temp_themes = array_diff(scandir('plugins/Customizer/Assets/css/userthemes'), array('..', '.'));
 	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+
+	foreach ($scanned_temp_themes as $theme) {
+		unlink('plugins/Customizer/Assets/css/userthemes/' . $theme);
+	}
 	    
 	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
 		$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
 		foreach ($scanned_user_themes as $theme) {
-			$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
+		    copy(DATA_DIR . '/files/customizer/themes/' . $theme, 'plugins/Customizer/Assets/css/userthemes/' . $theme);
+			$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/userthemes/' . $theme;
 		}
 	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755, true); }	
 	    
@@ -68,7 +74,6 @@ class Plugin extends Base
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
-        $this->template->setTemplateOverride('user_modification/show', 'customizer:user_mod/show');
         $this->template->setTemplateOverride('header/user_dropdown', 'customizer:header/user_dropdown');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
@@ -76,7 +81,12 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
-	$this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator');    
+	    $this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator'); 
+	    
+	if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
+	    $this->template->setTemplateOverride('user_modification/show', 'customizer:user_mod/show');
+	}
+
 	 
 	if ($this->configModel->get('use_custom_login', '') == 'checked') { 
         	$this->template->hook->attach('customizer:config:style', 'customizer:layout/preview_style');
@@ -108,7 +118,12 @@ class Plugin extends Base
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
         $user_id = $this->customizerFileModel->getUserSessionId();
         $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css' ));
-        $this->hook->on('template:layout:css', array('template' => $user_theme));
+        $default_theme = $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css');
+        if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
+            $this->hook->on('template:layout:css', array('template' => $user_theme));
+        } else {
+            $this->hook->on('template:layout:css', array('template' => $default_theme));
+        }
     }
     
     public function getClasses() {
@@ -136,7 +151,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.11.0';
+        return '1.10.1';
     }
     
     public function getPluginHomepage()

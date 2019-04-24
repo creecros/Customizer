@@ -65,8 +65,76 @@ class CustomizerConfigController extends BaseController
      
     }
     
+    /**
+     * Reset all User themes
+     *
+     */
+    public function resetUserThemes()
+    {
+        $users = $this->userModel->getAll();
+        foreach ($users as $user) {
+            $this->userMetadataModel->remove($user['id'], 'themeSelection');
+        }
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+    }
+    
+    /**
+     * Toggle User themes
+     *
+     */
+    public function enableDisableThemes()
+    {
+        $status = $this->configModel->get('toggle_user_themes', 'disable');
+        
+        if ($status == 'disable') { $this->configModel->save(['toggle_user_themes' => 'enable']); } else { $this->configModel->save(['toggle_user_themes' => 'disable']); }
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+    }
+    
+    
+    /**
+     * Upload css theme
+     *
+     */
+    public function uploadcss()
+    {
+        $target_dir = DATA_DIR . '/files/customizer/themes/';
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $this->flash->failure(t('Sorry, file already exists.'));
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 1000000) {
+            $this->flash->failure(t('Sorry, your file is too large.'));
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "css") {
+            $this->flash->failure(t('Sorry, only CSS files are allowed.'));
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            $this->flash->failure(t('Sorry, your file was not uploaded.'));
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                $this->flash->success(t('Theme file uploaded successfully.'));
+            } else {
+                $this->flash->failure(t('Sorry, there was an error uploading your file.'));
+            }
+        }
+        
+        $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
+    }
+    
     public function remove($file)
     {
+        $filename = basename($file);
+        if (file_exists(DATA_DIR . '/files/customizer/themes/' . $filename)) { unlink(DATA_DIR . '/files/customizer/themes/' . $filename); }
         unlink($file);
         $this->response->redirect($this->helper->url->to('CustomizerFileController', 'show', array('plugin' => 'Customizer')));
     }
