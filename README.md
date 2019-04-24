@@ -25,6 +25,8 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 **GUI to customize...**
 
+## New Feature! Users can now select their own themes!
+
 * [header logo](#header-logo-rainbow)
   * set header logo size
 * [upper right corner Avatar Icon](#avatar-icon-boy)
