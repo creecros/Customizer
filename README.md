@@ -40,6 +40,11 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
 * [favicon](#favicon-beginner)
+* theme management
+  * can upload css files to add to theme selection
+  * can remove themes from interface
+  * can enable/disable user themes (i.e. one global theme for everyone, or users get to select their own theme)
+  * admins can reset all users themes to default
 * [theme selector](#includes-preset-themes-mega) with 7 preloaded themes
   * Github :octocat:
   * Galaxy :milky_way:

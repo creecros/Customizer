@@ -5,6 +5,9 @@ namespace Kanboard\Plugin\Customizer;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 use Kanboard\Core\Security\Role;
+use Kanboard\Event\AuthSuccessEvent;
+use Kanboard\Core\Security\AuthenticationManager;
+use Kanboard\Plugin\Customizer\Model\CustomizerFileModel;
 
 class Plugin extends Base
 {
@@ -15,29 +18,29 @@ class Plugin extends Base
 	    
 	// Themes
 	$customizer['themes'] = array(
-		'Default' => ''
+		'Default' => 'plugins/Customizer/Assets/css/theme.css'
 		);
-	
+		
+    $scanned_temp_themes = array_diff(scandir('plugins/Customizer/Assets/css/userthemes'), array('..', '.'));
 	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+
+	foreach ($scanned_temp_themes as $theme) {
+		unlink('plugins/Customizer/Assets/css/userthemes/' . $theme);
+	}
 	    
 	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
 		$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
 		foreach ($scanned_user_themes as $theme) {
-			$customizer['themes'][rtrim($theme, '.css')] = DATA_DIR . '/files/customizer/themes/' . $theme;
+		    copy(DATA_DIR . '/files/customizer/themes/' . $theme, 'plugins/Customizer/Assets/css/userthemes/' . $theme);
+			$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/userthemes/' . $theme;
 		}
 	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755, true); }	
 	    
 	foreach ($scanned_preset_themes as $theme) {
 		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
 	}
+      
 	    
-	if ($this->configModel->get('themeSelection', '') == '') {
-        file_put_contents('plugins/Customizer/Assets/css/theme.css', '');
-	} else {
-        file_put_contents('plugins/Customizer/Assets/css/theme.css', fopen($this->configModel->get('themeSelection', ''), 'r'));
-	}
-	    
-        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/theme.css'));
 	    
         //Helper
         $this->helper->register('themeHelper', '\Kanboard\Plugin\Customizer\Helper\ThemeHelper');
@@ -78,7 +81,12 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
-	$this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator');    
+	    $this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator'); 
+	    
+	if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
+	    $this->template->setTemplateOverride('user_modification/show', 'customizer:user_mod/show');
+	}
+
 	 
 	if ($this->configModel->get('use_custom_login', '') == 'checked') { 
         	$this->template->hook->attach('customizer:config:style', 'customizer:layout/preview_style');
@@ -104,10 +112,18 @@ class Plugin extends Base
 	}
 	    
     }
-
+  
     public function onStartup()
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+        $user_id = $this->customizerFileModel->getUserSessionId();
+        $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css' ));
+        $default_theme = $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css');
+        if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
+            $this->hook->on('template:layout:css', array('template' => $user_theme));
+        } else {
+            $this->hook->on('template:layout:css', array('template' => $default_theme));
+        }
     }
     
     public function getClasses() {
@@ -135,7 +151,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.10.1';
+        return '1.11.0';
     }
     
     public function getPluginHomepage()
@@ -148,3 +164,4 @@ class Plugin extends Base
         return '>=1.0.42';
     }
 }
+
