@@ -117,17 +117,6 @@ class Plugin extends Base
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
         $user_id = $this->customizerFileModel->getUserSessionId();
-        
-        if ($user_id != 0 && $this->configModel->get('customizer_refresh_page', 'no') == 'logged') { $this->configModel->save(['customizer_refresh_page' => 'no']); }
-    
-        if ($user_id == 0 && $this->configModel->get('customizer_refresh_page', 'no') == 'no') { 
-            $this->configModel->save(['customizer_refresh_page' => 'yes']);
-            $this->response->redirect($this->helper->url->to('DashboardController', 'show'));
-        } else if ($user_id == 0 && $this->configModel->get('customizer_refresh_page', 'no') == 'yes') {
-            $this->configModel->save(['customizer_refresh_page' => 'logged']);
-            $this->response->redirect($this->helper->url->to('AuthController', 'login'));
-        } 
-       
         $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css' ));
         $default_theme = $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css');
         if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
@@ -162,7 +151,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.11.2';
+        return '1.11.3';
     }
     
     public function getPluginHomepage()
