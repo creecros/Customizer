@@ -75,6 +75,7 @@ class Plugin extends Base
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/title', 'customizer:header/title');
         $this->template->setTemplateOverride('header/user_dropdown', 'customizer:header/user_dropdown');
+        $this->template->setTemplateOverride('board/task_avatar', 'customizer:board/task_avatar');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
@@ -151,7 +152,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.11.3';
+        return '1.12.0';
     }
     
     public function getPluginHomepage()

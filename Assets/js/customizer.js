@@ -42,6 +42,34 @@ $(document).on('input', 'input[name="av_radius"]', function(e) {
   }
 });
 
+var b_av_icon_output = $('b_av_icon_output')[0];
+
+$(document).on('input', 'input[name="b_av_size"]', function(e) {
+  var siz = e.currentTarget.value;
+  b_av_icon_output.innerHTML = siz;
+  if (document.querySelector(".b-avatar-preview .avatar-letter") !== null) {
+  document.querySelector(".b-avatar-preview .avatar-letter").style.lineHeight = siz + "px";
+  document.querySelector(".b-avatar-preview .avatar-letter").style.width = siz + "px";
+  document.querySelector(".b-avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
+  } else {
+  var link = document.querySelector(".b-avatar-preview img").src;
+  var changedLink = link.substring(0, link.length-2);
+  document.querySelector(".b-avatar-preview img").src = changedLink + siz;
+  }
+});
+
+var b_av_radius_output = $('b_av_radius_output')[0];
+
+$(document).on('input', 'input[name="b_av_radius"]', function(e) {
+  var rad = e.currentTarget.value;
+  b_av_radius_output.innerHTML = rad;
+  if (document.querySelector(".b-avatar-preview .avatar-letter") !== null) {
+  document.querySelector(".b-avatar-preview .avatar-letter").style.borderRadius = rad + "%";
+  } else {
+  document.querySelector(".b-avatar-preview img").style.borderRadius = rad + "%";
+  }
+});
+
 
 //Accordion for settings page
 

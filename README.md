@@ -30,6 +30,9 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 * [upper right corner Avatar Icon](#avatar-icon-boy)
   * set icon size
   * set border radius
+* [task board Avatar Icon](#avatar-icon-girl)
+  * set icon size
+  * set border radius
 * [customizable login screen](#fully-customizable-login-screen-gem)
   * [login logo](#login-logo-peach)
   * [login page background image url](#login-screen-background-image-dart)
@@ -69,6 +72,10 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 ## Avatar Icon :boy:
 
 ![image](https://user-images.githubusercontent.com/26339368/55774303-8bc8d380-5a62-11e9-8d59-6dc2a1c33387.png)
+
+## Avatar Icon :girl:
+
+![image](https://user-images.githubusercontent.com/26339368/59513842-ae73d000-8e89-11e9-94b5-ae27a0f8c651.png)
 
 ## Login Logo :peach:
 

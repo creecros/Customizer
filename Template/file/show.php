@@ -122,22 +122,46 @@ global $customizer;
 
         <div class="panel avatar-sizing-panel">
     	<div class="panel-heading">
-    		<h3 class="panel-title"><?= t('Avatar Icon') ?></h3>
+    		<h3 class="panel-title"><?= t('Header Avatar Icon') ?></h3>
     	</div>
         <?= $this->helper->dynamicAvatar->currentUserDynamic('avatar-preview') ?>
     <br>
     <br>
         <table>
             <tr>
-                <th width="25%"><strong><?= t('Avatar Icon Size') ?></strong></th>
+                <th width="25%"><strong><?= t('Header Avatar Icon Size') ?></strong></th>
                 <th><input type="range" name="av_size" id="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
                     <av_icon_output> <?= $this->task->configModel->get('av_size','20') ?></av_icon_output><?= t('&nbsp;pixels') ?>
                 </th>
             </tr>            
             <tr>
-                <th width="25%"><strong><?= t('Avatar Icon Radius') ?></strong></th>
+                <th width="25%"><strong><?= t('Header Avatar Icon Radius') ?></strong></th>
                 <th><input type="range" name="av_radius" id="av_radius" min="0" max="50" value="<?= $this->task->configModel->get('av_radius','50') ?>">
                     <av_radius_output> <?= $this->task->configModel->get('av_radius','50') ?></av_radius_output><?= t('&nbsp;percent') ?>
+                </th>
+            </tr>
+        </table>
+            
+    </div>    
+
+        <div class="panel b-avatar-sizing-panel">
+    	<div class="panel-heading">
+    		<h3 class="panel-title"><?= t('Task Board Avatar Icon') ?></h3>
+    	</div>
+        <?= $this->helper->dynamicAvatar->boardCurrentUserDynamic('b-avatar-preview') ?>
+    <br>
+    <br>
+        <table>
+            <tr>
+                <th width="25%"><strong><?= t('Avatar Icon Size') ?></strong></th>
+                <th><input type="range" name="b_av_size" id="b_av_size" min="20" max="50" value="<?= $this->task->configModel->get('b_av_size','20') ?>">
+                    <b_av_icon_output> <?= $this->task->configModel->get('b_av_size','20') ?></b_av_icon_output><?= t('&nbsp;pixels') ?>
+                </th>
+            </tr>            
+            <tr>
+                <th width="25%"><strong><?= t('Avatar Icon Radius') ?></strong></th>
+                <th><input type="range" name="b_av_radius" id="b_av_radius" min="0" max="50" value="<?= $this->task->configModel->get('b_av_radius','50') ?>">
+                    <b_av_radius_output> <?= $this->task->configModel->get('b_av_radius','50') ?></b_av_radius_output><?= t('&nbsp;percent') ?>
                 </th>
             </tr>
         </table>
