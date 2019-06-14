@@ -65,5 +65,14 @@
     width: <?= $this->task->configModel->get('av_size','20') ?>px;
     font-size: <?= $this->task->configModel->get('av_size','20') / 2 ?>px;
 }
+
+.b-avatar-preview img, .b-avatar-preview div {
+	border-radius: <?= $this->task->configModel->get('b_av_radius','50') ?>%;
+}
+.b-avatar-preview .avatar-letter {
+    line-height: <?= $this->task->configModel->get('b_av_size','20') ?>px;
+    width: <?= $this->task->configModel->get('b_av_size','20') ?>px;
+    font-size: <?= $this->task->configModel->get('b_av_size','20') / 2 ?>px;
+}
 	
 </style>
