@@ -27,10 +27,10 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 * [header logo](#header-logo-rainbow)
   * set header logo size
-* [upper right corner Avatar Icon](#avatar-icon-boy)
+* [upper right corner Avatar Icon](#header-avatar-icon-boy)
   * set icon size
   * set border radius
-* [task board Avatar Icon](#avatar-icon-girl)
+* [task board Avatar Icon](#task-board-avatar-icon-girl)
   * set icon size
   * set border radius
 * [customizable login screen](#fully-customizable-login-screen-gem)
