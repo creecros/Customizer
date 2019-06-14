@@ -69,11 +69,11 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 ![image](https://user-images.githubusercontent.com/26339368/47369113-f9e62d80-d6b0-11e8-90e0-974c31b4b535.png)
 
-## Avatar Icon :boy:
+## Header Avatar Icon :boy:
 
 ![image](https://user-images.githubusercontent.com/26339368/55774303-8bc8d380-5a62-11e9-8d59-6dc2a1c33387.png)
 
-## Avatar Icon :girl:
+## Task Board Avatar Icon :girl:
 
 ![image](https://user-images.githubusercontent.com/26339368/59513842-ae73d000-8e89-11e9-94b5-ae27a0f8c651.png)
 
