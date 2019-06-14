@@ -48,5 +48,12 @@ class DynamicAvatar extends AvatarHelper
     {
         return $this->boardDynamicRender($user_id, $username, $name, $email, $avatar_path, $css, $size);
     }
+    
+    public function boardCurrentUserDynamic($css = '')
+    {
+        $user = $this->userSession->getAll();
+        return $this->boardDynamic($user['id'], $user['username'], $user['name'], $user['email'], $user['avatar_path'], $css, $this->configModel->get('b_av_size', '20'));
+    }
+
 
  }
