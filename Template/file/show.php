@@ -167,7 +167,10 @@ global $customizer;
         </table>
             
     </div>    
-
+<style>
+.avatar-bdyn img, .avatar-bdyn div {border-radius: <?= $this->task->configModel->get('b_av_radius', '50') ?>%}
+.avatar-bdyn .avatar-letter {line-height:<?= $this->task->configModel->get('b_av_size', '20') ?>px;width:<?= $this->task->configModel->get('b_av_size', '20') ?>px;font-size:<?= $this->task->configModel->get('b_av_size', '20') / 2 ?>px;}
+</style>
         
         
         <table>
