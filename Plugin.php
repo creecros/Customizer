@@ -103,7 +103,10 @@ class Plugin extends Base
         $this->applicationAccessMap->add('CustomizerFileController', array('image', 'loginlogo', 'logo', 'link', 'logoexists', 'linkexists'), Role::APP_PUBLIC);
 	    
 	//Get accurate version
-        $wasmaster = APP_VERSION;
+        $wasmaster = str_replace('v', '', APP_VERSION);
+        $wasmaster = preg_replace('/\s+/', '', $wasmaster);
+        
+        error_log("version = " . strval($wasmaster),0);
         
         if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
         if (version_compare($wasmaster, '1.2.4') >= 0) {
@@ -152,7 +155,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.12.0';
+        return '1.12.1';
     }
     
     public function getPluginHomepage()
