@@ -66,6 +66,8 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 **...to your site without any backend coding or config settings.**
 
+**Want more customization? Take a look at [BlueTek](https://github.com/BlueTeck)'s [BoardCustomizer](https://github.com/BlueTeck/kanboard_plugin_boardcustomizer) plugin**
+
 ## Favicon :beginner:	
 
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
