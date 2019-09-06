@@ -30,6 +30,7 @@ body  {
 		border: <?= $customizer['login_border'] ?>px solid <?= $customizer['login_border_color'] ?>;
 	        border-radius: 5px;
 	        max-width: max-content;
+	        text-align: center;
 }
 .login-btn {
 	width: <?= $customizer['login_btn_width'] ?>px;

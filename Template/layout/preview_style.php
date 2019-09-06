@@ -7,7 +7,7 @@
 } /* This aligns the logo to the text.  Adds padding to top of logo. */
 	
 	
-.preview-form-login {
+.preview-form-login, .preview-form-note {
 	background-color: <?= $customizer['loginpanel_color'] ?>;
 	-webkit-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px;
 	-moz-box-shadow: 0px 0px <?= $customizer['login_shadow'] ?>px <?= $customizer['login_shadow'] * .1 ?>px;
@@ -18,7 +18,6 @@
 	text-align: center;
 	max-width: max-content;
 	margin: 5% auto 0;;
-	color: <?= $customizer['login_shadow_color'] ?>;
 }
 .preview-login-btn {
 	width: <?= $customizer['login_btn_width'] ?>px;

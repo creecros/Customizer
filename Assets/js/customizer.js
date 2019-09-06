@@ -119,20 +119,27 @@ if (document.getElementById('userthemeSelection')) {
 if (document.getElementById('loginpanel_color')) {
   document.getElementById('loginpanel_color').oninput = function() {
     document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value;
+    document.getElementById('preview-form-note').style.backgroundColor = document.getElementById('loginpanel_color').value;
   }
 
   document.getElementById('loginbackground_color').oninput = function() {
     document.getElementById('preview').style.backgroundColor = document.getElementById('loginbackground_color').value;
+  }
+  
+  document.getElementById('form-login_note').oninput = function() {
+    document.getElementById('preview-form-note').innerHTML = document.getElementById('form-login_note').value;
   }
 
   document.getElementById('login_shadow_color').oninput = function() {
     var slider = document.getElementById("login_shadow").value;
     var color = document.getElementById('login_shadow_color').value;
     document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+    document.getElementById('preview-form-note').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
   }
-
+  
   document.getElementById('login_border_color').oninput = function() {
     document.getElementById('preview-form-login').style.borderColor = document.getElementById('login_border_color').value;
+    document.getElementById('preview-form-note').style.borderColor = document.getElementById('login_border_color').value;
   }
 
   document.getElementById('login_btn_color').oninput = function() {
@@ -170,14 +177,16 @@ if (document.getElementById('loginpanel_color')) {
     var slider = document.getElementById("login_border").value;
     var color = document.getElementById('login_border_color').value;
     document.getElementById('preview-form-login').style.border = slider + 'px solid ' + color;
+    document.getElementById('preview-form-note').style.border = slider + 'px solid ' + color;
   }
 
   document.getElementById('login_shadow').oninput = function() {
     var slider = document.getElementById("login_shadow").value;
     var color = document.getElementById('login_shadow_color').value;
     document.getElementById('preview-form-login').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
+    document.getElementById('preview-form-note').style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + color;
   }
-
+  
   document.getElementById('login_btn_width').oninput = function() {
     var slider = document.getElementById("login_btn_width").value;
     document.getElementById('preview-login-btn').style.width = slider + 'px';
@@ -202,20 +211,21 @@ if (document.getElementById('loginpanel_color')) {
 
 function OnColorChanged(selectedColor, inputId) {
               if (inputId == "login_shadow_color") {
-                var rgbaBox = document.getElementById("preview-form-login");
-                rgbaBox.style.color = selectedColor;
+                var slider = document.getElementById("login_shadow").value;
+                document.getElementById("preview-form-login").style.color = selectedColor;
+                document.getElementById("preview-form-note").style.boxShadow = '0px 0px ' + slider + 'px ' + slider * 0.1 + 'px ' + selectedColor;
               }
               if (inputId == "loginbackground_color") {
                 var rgbaBox = document.getElementById("preview");
                 rgbaBox.style.backgroundColor = selectedColor;
               }
               if (inputId == "loginpanel_color") {
-                var rgbaBox = document.getElementById("preview-form-login");
-                rgbaBox.style.backgroundColor = selectedColor;
+                document.getElementById("preview-form-login").style.backgroundColor = selectedColor;
+                document.getElementById("preview-form-note").style.backgroundColor = selectedColor;
               }
               if (inputId == "login_border_color") {
-                var rgbaBox = document.getElementById("preview-form-login");
-                rgbaBox.style.borderColor = selectedColor;
+                document.getElementById("preview-form-login").style.borderColor = selectedColor;
+                document.getElementById("preview-form-note").style.borderColor = selectedColor;
               }
               if (inputId == "login_btn_color") {
                 var rgbaBox = document.getElementById("preview-login-btn");

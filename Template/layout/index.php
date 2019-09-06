@@ -43,3 +43,5 @@
 
     <?= $this->hook->render('template:auth:login-form:after') ?>
 </div>
+
+<?= $this->hook->render('template:auth:login-form:newbox') ?>

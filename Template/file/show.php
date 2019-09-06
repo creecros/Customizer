@@ -227,6 +227,9 @@ global $customizer;
         <?= $this->form->label(t('Login Background Image URL'), 'background_url') ?>
         <?= $this->form->text('background_url', $values, $errors, array('placeholder="https://source.unsplash.com/random"')) ?>
         <p class="form-help background-img-link-desc"><?= e('Example: <code>https://source.unsplash.com/random</code> (URL for a background image on the login page, centered, autoscale, no-repeat)') ?></p>
+        <?= $this->form->label(t('Login page note'), 'login_note') ?>
+        <?= $this->form->textarea('login_note', $values, $errors, array('placeholder="Welcome to Kanboard!"')) ?>
+        <p class="form-help login-note-desc"><?= e('Hint: Use HTML formatting to customize your note further.') ?></p>
         <div class="column-100">
                 <table>
                     <tr>
@@ -369,7 +372,17 @@ global $customizer;
                     <div class="preview-form-actions">
                         <button type="button" id="preview-login-btn" class="btn preview-login-btn"><?= t('Sign in') ?></button>
                     </div>
+                <?php if ($this->app->config('password_reset') == 1): ?>
+                    <div class="reset-password">
+                        <?= $this->url->link(t('Forgot password?'), 'PasswordResetController', 'create') ?>
+                    </div>
+                <?php endif ?>
             </div> 
+            <div id="preview-form-note" class="preview-form-note">
+                <div class="login-note">
+                    <?= $customizer['login_note'] ?>
+                </div>
+            </div>
         </div>
         </div>
         <?php endif ?>

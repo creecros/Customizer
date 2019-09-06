@@ -70,6 +70,7 @@ class Plugin extends Base
 	$customizer['login_btn_shadow'] = $this->configModel->get('login_btn_shadow', '0');
 	$customizer['login_btn_border'] = $this->configModel->get('login_btn_border', '0');
 	$customizer['login_btn_width'] = $this->configModel->get('login_btn_width', '95');
+	$customizer['login_note'] = $this->configModel->get('login_note', '');
 	    
         //Templates and Assets
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
@@ -83,7 +84,10 @@ class Plugin extends Base
         $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
 	    $this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator'); 
-	    
+
+	if ($customizer['login_note'] != '') {
+	    $this->template->hook->attach('template:auth:login-form:newbox', 'customizer:layout/note'); 
+	}
 	if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
 	    $this->template->setTemplateOverride('user_modification/show', 'customizer:user_mod/show');
 	}
@@ -153,7 +157,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.12.2';
+        return '1.13.0';
     }
     
     public function getPluginHomepage()
