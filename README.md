@@ -47,6 +47,7 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
   * set login panel color
   * panel shadow adjustment (no shadow to heavy shadow with color adjustment)
   * panel border adjustment (no border to thick border with color adjustment)
+  * add a [custom note panel](#login-screen-custom-note-book) on login screen
 * [favicon](#favicon-beginner)
 * theme management
   * can upload css files to add to theme selection
@@ -97,6 +98,10 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 ## Login Screen Background Image :dart:
 
 ![image](https://user-images.githubusercontent.com/26339368/47959793-573c8180-dfc3-11e8-84bc-ab654f8c50b5.png)
+
+## Login Screen Custom Note :book:
+
+![image](https://user-images.githubusercontent.com/26339368/64443449-e6ad3800-d09f-11e9-8d77-49e05db75e89.png)
 
 ## Includes Preset Themes :mega:
 
