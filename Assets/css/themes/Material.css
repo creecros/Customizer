@@ -15,6 +15,10 @@ body
 	background-color:#f1f1f1!important
 }
 
+div#modal-box {
+    width: max-content!important;
+}
+
 .logo a {
     opacity: 1;
     color: inherit;
