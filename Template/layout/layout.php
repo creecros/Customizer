@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<?= $this->app->jsLang() ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -58,7 +58,6 @@
           data-login-url="<?= $this->url->href('AuthController', 'login') ?>"
           data-keyboard-shortcut-url="<?= $this->url->href('DocumentationController', 'shortcuts') ?>"
           data-timezone="<?= $this->app->getTimezone() ?>"
-          data-js-lang="<?= $this->app->jsLang() ?>"
           data-js-date-format="<?= $this->app->getJsDateFormat() ?>"
           data-js-time-format="<?= $this->app->getJsTimeFormat() ?>"
           data-js-modal-close-msg="<?= t('Close window?\\n\\nChanges that you made have not been saved.') ?>"
