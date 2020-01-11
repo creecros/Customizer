@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<?= $this->app->jsLang() ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
