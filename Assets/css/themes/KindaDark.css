@@ -98,6 +98,26 @@ a .fa {
   color: #222427;
 }
 
+.task-board-header .fa {
+    color: #222427;
+}
+
+.board-swimlane-header .fa {
+    color: #222427;
+}
+
+.subtasks-table .fa {
+    color: #dedede;
+}
+
+.subtasks-table .fa.fa-check-square-o {
+    color: #222427!important;
+}
+
+.subtasks-table .fa.fa-square-o {
+    color: #222427!important;
+}
+
 .board-column-title .fa {
   color: #222427;
 }
