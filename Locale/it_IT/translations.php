@@ -19,7 +19,7 @@ return [
     'Remove Favicon' => 'Rimuovi favicon',
     'Links & Settings' => 'Collegamenti e impostazioni',
     'Login Link' => 'Link di accesso',
-    'Example: <code>https://example.kanboard.org/</code> (used as logo link on login page)' => 'Esempio: <code> https://example.kanboard.org </code> (utilizzato come collegamento logo sulla pagina di accesso)',
+    'Example: <code class="examples">https://example.kanboard.org/</code> (used as logo link on login page)' => 'Esempio: <code class="examples"> https://example.kanboard.org </code> (utilizzato come collegamento logo sulla pagina di accesso)',
     'Login Page Background Color' => 'Colore di sfondo della pagina di accesso',
     'Login Panel Shadow Color' => 'Colore dell\'ombra del pannello di accesso',
     'Login Panel Border Color' => 'Colore del bordo del pannello di accesso',
