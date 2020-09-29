@@ -47,6 +47,15 @@ header h1 {
     line-height: 2rem
 }
 
+header .web-notification-icon {
+    color: #D45353 !important;
+}
+
+a i.web-notification-icon:focus,
+a i.web-notification-icon:hover {
+    color: #000 !important;
+}
+
 .tooltip i.fa {
     color: #fff;
 }
@@ -227,7 +236,7 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
 }
 
 .sidebar>ul li.active {
-    background-color: #f8f9fa    
+    background-color: #f8f9fa
 }
 
 .sidebar ul>li.active a {
