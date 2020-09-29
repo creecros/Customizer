@@ -117,6 +117,9 @@ if (document.getElementById('userthemeSelection')) {
 //Live Preview
 
 if (document.getElementById('loginpanel_color')) {
+
+if (document.getElementById('form-login_note').value === '') { document.getElementById('preview-form-note').style.display = "none"; } else { document.getElementById('preview-form-note').style.display = "block"; }
+
   document.getElementById('loginpanel_color').oninput = function() {
     document.getElementById('preview-form-login').style.backgroundColor = document.getElementById('loginpanel_color').value;
     document.getElementById('preview-form-note').style.backgroundColor = document.getElementById('loginpanel_color').value;
@@ -128,6 +131,7 @@ if (document.getElementById('loginpanel_color')) {
   
   document.getElementById('form-login_note').oninput = function() {
     document.getElementById('preview-form-note').innerHTML = document.getElementById('form-login_note').value;
+    if (document.getElementById('form-login_note').value === '') { document.getElementById('preview-form-note').style.display = "none"; } else { document.getElementById('preview-form-note').style.display = "block"; }
   }
 
   document.getElementById('login_shadow_color').oninput = function() {
