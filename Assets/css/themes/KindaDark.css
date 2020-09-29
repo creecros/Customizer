@@ -461,6 +461,10 @@ ul.dropdown-submenu-open {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
 }
 
+.markdown h1 {
+  color: #242729;
+}
+
 a i.web-notification-icon {
   color: #D45353;
 }
