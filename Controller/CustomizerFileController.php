@@ -87,20 +87,24 @@ class CustomizerFileController extends BaseController
     
     public function show()
     {
-        $logo = $this->customizerFileModel->getByType(1);
-        $flavicon = $this->customizerFileModel->getByType(2);
-	$loginlogo = $this->customizerFileModel->getByType(3);
-        $logopath = $logo['path'];
-        $flaviconpath = $flavicon['path'];
-        $this->response->html($this->helper->layout->config('customizer:file/show', array(
-            'logo' => $logo,
-            'title' => t('Settings').' &gt; '.t('Customizer'),
-            'flavicon' => $flavicon,
-            'logopath' => $logopath,
-            'flaviconpath' => $flaviconpath, 
-            'loginlogo' => $loginlogo
-        )));
-        
+        $logo         = $this->customizerFileModel->getByType(1)?? ['id' => null, 'name' => null];
+        $flavicon     = $this->customizerFileModel->getByType(2) ?? ['id' => null, 'name' => null];
+        $loginlogo    = $this->customizerFileModel->getByType(3) ?? ['id' => null, 'name' => null];
+        $logopath     = $logo['path'] ?? null;
+        $flaviconpath = $flavicon['path'] ?? null;
+        $this->response->html(
+            $this->helper->layout->config(
+                'customizer:file/show',
+                [
+                    'logo'         => $logo,
+                    'title'        => t('Settings') . ' &gt; ' . t('Customizer'),
+                    'flavicon'     => $flavicon,
+                    'logopath'     => $logopath,
+                    'flaviconpath' => $flaviconpath,
+                    'loginlogo'    => $loginlogo,
+                ]
+            )
+        );
     }
     
     public function logo()
