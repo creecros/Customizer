@@ -15,29 +15,31 @@ class Plugin extends Base
     public function initialize()
     {
 	global $customizer; 
-	    
+	
+	$plugin_folder = basename(PLUGINS_DIR);
+
 	// Themes
 	$customizer['themes'] = array(
-		'Default' => 'plugins/Customizer/Assets/css/theme.css'
+		'Default' => $plugin_folder.'/Customizer/Assets/css/theme.css'
 		);
 		
-    $scanned_temp_themes = array_diff(scandir('plugins/Customizer/Assets/css/userthemes'), array('..', '.'));
-	$scanned_preset_themes = array_diff(scandir('plugins/Customizer/Assets/css/themes'), array('..', '.'));
+    $scanned_temp_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/userthemes'), array('..', '.'));
+	$scanned_preset_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/themes'), array('..', '.'));
 
 	foreach ($scanned_temp_themes as $theme) {
-		unlink('plugins/Customizer/Assets/css/userthemes/' . $theme);
+		unlink($plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme);
 	}
 	    
 	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
 		$scanned_user_themes = array_diff(scandir(DATA_DIR . '/files/customizer/themes'), array('..', '.'));
 		foreach ($scanned_user_themes as $theme) {
-		    copy(DATA_DIR . '/files/customizer/themes/' . $theme, 'plugins/Customizer/Assets/css/userthemes/' . $theme);
-			$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/userthemes/' . $theme;
+		    copy(DATA_DIR . '/files/customizer/themes/' . $theme, $plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme);
+			$customizer['themes'][rtrim($theme, '.css')] = $plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme;
 		}
 	} else { mkdir(DATA_DIR . '/files/customizer/themes', 0755, true); }	
 	    
 	foreach ($scanned_preset_themes as $theme) {
-		$customizer['themes'][rtrim($theme, '.css')] = 'plugins/Customizer/Assets/css/themes/' . $theme;
+		$customizer['themes'][rtrim($theme, '.css')] = $plugin_folder.'/Customizer/Assets/css/themes/' . $theme;
 	}
       
 	    
@@ -79,10 +81,10 @@ class Plugin extends Base
         $this->template->setTemplateOverride('board/task_avatar', 'customizer:board/task_avatar');
         $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
         $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
-        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
-        $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
-        $this->hook->on('template:layout:css', array('template' => 'plugins/Customizer/Assets/css/customizer.css'));
-        $this->hook->on('template:layout:js', array('template' => 'plugins/Customizer/Assets/js/customizer.js'));
+        $this->hook->on('template:layout:css', array('template' => $plugin_folder.'/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.css'));
+        $this->hook->on('template:layout:js', array('template' => $plugin_folder.'/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
+        $this->hook->on('template:layout:css', array('template' => $plugin_folder.'/Customizer/Assets/css/customizer.css'));
+        $this->hook->on('template:layout:js', array('template' => $plugin_folder.'/Customizer/Assets/js/customizer.js'));
 	    $this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator'); 
 
 	if ($customizer['login_note'] != '') {
@@ -123,8 +125,8 @@ class Plugin extends Base
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
         $user_id = $this->customizerFileModel->getUserSessionId();
-        $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css' ));
-        $default_theme = $this->configModel->get('themeSelection', 'plugins/Customizer/Assets/css/theme.css');
+        $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', $plugin_folder.'/Customizer/Assets/css/theme.css' ));
+        $default_theme = $this->configModel->get('themeSelection', $plugin_folder.'/Customizer/Assets/css/theme.css');
         if ($this->configModel->get('toggle_user_themes', 'disable') == 'enable') {
             $this->hook->on('template:layout:css', array('template' => $user_theme));
         } else {

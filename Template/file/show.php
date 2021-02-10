@@ -1,5 +1,6 @@
 <?php 
 global $customizer; 
+$plugin_folder = basename(PLUGINS_DIR);
 ?>
 
 <?= $this->hook->render('customizer:config:style') ?>
@@ -193,7 +194,7 @@ global $customizer;
                 </th>
                 <th>
                     <a href="https://creecros.github.io/simple_logo_gen/">
-                        <img border="0" alt="logo_gen" src="/plugins/Customizer/Assets/img/logo-gen.png">
+                        <img border="0" alt="logo_gen" src="/<?= $plugin_folder ?>/Customizer/Assets/img/logo-gen.png">
                     </a>
                 </th>
         </table>
