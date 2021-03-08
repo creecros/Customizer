@@ -28,7 +28,7 @@ class Plugin extends Base
 	$scanned_preset_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/themes'), array('..', '.'));
 
 	foreach ($scanned_temp_themes as $theme) {
-		if($theme != '.gitignore') { unlink($plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme); }
+		unlink($plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme);
 	}
 	    
 	if (file_exists(DATA_DIR . '/files/customizer/themes')) {
