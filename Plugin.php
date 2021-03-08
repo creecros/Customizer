@@ -19,6 +19,7 @@ class Plugin extends Base
 	$plugin_folder = basename(PLUGINS_DIR);
 
 	// Themes
+	if (!file_exists($plugin_folder.'/Customizer/Assets/css/userthemes')) { mkdir($plugin_folder.'/Customizer/Assets/css/userthemes', 0755, true); }
 	$customizer['themes'] = array(
 		'Default' => $plugin_folder.'/Customizer/Assets/css/theme.css'
 		);
