@@ -124,6 +124,7 @@ class Plugin extends Base
     public function onStartup()
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+        $plugin_folder = basename(PLUGINS_DIR);
         $user_id = $this->customizerFileModel->getUserSessionId();
         $user_theme = $this->userMetadataModel->get($user_id, 'themeSelection', $this->configModel->get('themeSelection', $plugin_folder.'/Customizer/Assets/css/theme.css' ));
         $default_theme = $this->configModel->get('themeSelection', $plugin_folder.'/Customizer/Assets/css/theme.css');
@@ -159,7 +160,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.13.6';
+        return '1.13.7';
     }
     
     public function getPluginHomepage()
