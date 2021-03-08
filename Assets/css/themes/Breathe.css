@@ -20,7 +20,7 @@ a{
 .sidebar>ul a:hover{
 	color:#007BA8;
 }
-div.task-board-recent {
+div.task-board {
 	box-shadow: none;
 	border-bottom: 6px solid rgba(0, 0, 0, 0.3);
 }
