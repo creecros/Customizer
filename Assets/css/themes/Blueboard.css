@@ -129,7 +129,7 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
 }
 
 .page-header a {
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
 }
 
