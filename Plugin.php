@@ -24,9 +24,8 @@ class Plugin extends Base
 		'Default' => $plugin_folder.'/Customizer/Assets/css/theme.css'
 		);
 		
-    $scanned_temp_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/userthemes'), array('..', '.'));
-	$scanned_preset_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/themes'), array('..', '.'));
-
+    	$scanned_temp_themes = array_diff(scandir($plugin_folder.'/Customizer/Assets/css/userthemes'), array('..', '.'));
+	$scanned_preset_themes = is_dir($plugin_folder.'/Customizer/Assets/css/themes')?array_diff(scandir($plugin_folder.'/Customizer/Assets/css/themes'), array('..', '.')):array();
 	foreach ($scanned_temp_themes as $theme) {
 		unlink($plugin_folder.'/Customizer/Assets/css/userthemes/' . $theme);
 	}
