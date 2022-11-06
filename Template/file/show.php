@@ -131,7 +131,8 @@ $plugin_folder = basename(PLUGINS_DIR);
         <table>
             <tr>
                 <th width="25%"><strong><?= t('Header Avatar Icon Size') ?></strong></th>
-                <th><input type="range" name="av_size" id="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
+                <th><input type="hidden" id="av_path" name="av_path" value="<?= $this->helper->dynamicAvatar->getUser()['avatar_path'] ?>">
+                    <input type="range" name="av_size" id="av_size" min="20" max="50" value="<?= $this->task->configModel->get('av_size','20') ?>">
                     <av_icon_output> <?= $this->task->configModel->get('av_size','20') ?></av_icon_output><?= t('&nbsp;pixels') ?>
                 </th>
             </tr>            

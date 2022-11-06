@@ -85,6 +85,7 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => $plugin_folder.'/Customizer/Assets/rgbaColorPicker/rgbaColorPicker.js'));
         $this->hook->on('template:layout:css', array('template' => $plugin_folder.'/Customizer/Assets/css/customizer.css'));
         $this->hook->on('template:layout:js', array('template' => $plugin_folder.'/Customizer/Assets/js/customizer.js'));
+        $this->hook->on('template:layout:js', array('template' => $plugin_folder.'/Customizer/Assets/js/md5.js'));
 	    $this->template->hook->attach('customizer:config:themecreator', 'customizer:config/themecreator'); 
 
 	if ($customizer['login_note'] != '') {
@@ -160,7 +161,7 @@ class Plugin extends Base
     
     public function getPluginVersion()
     {
-        return '1.13.8';
+        return '1.14.0';
     }
     
     public function getPluginHomepage()

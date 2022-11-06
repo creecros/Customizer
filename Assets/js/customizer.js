@@ -25,8 +25,15 @@ $(document).on('input', 'input[name="av_size"]', function(e) {
   document.querySelector(".avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
   } else {
   var link = document.querySelector(".avatar-preview img").src;
+  var oldhash = link.substring(
+    link.indexOf("hash=") + 5, 
+    link.lastIndexOf("&size=")
+    );
+  var path = document.getElementById("av_path").value;
+  var newhash = md5(path + siz);
   var changedLink = link.substring(0, link.length-2);
-  document.querySelector(".avatar-preview img").src = changedLink + siz;
+  newchangedlink = changedLink.replace(oldhash, newhash);
+  document.querySelector(".avatar-preview img").src = newchangedlink + siz;
   }
 });
 
@@ -53,8 +60,15 @@ $(document).on('input', 'input[name="b_av_size"]', function(e) {
   document.querySelector(".b-avatar-preview .avatar-letter").style.fontSize = (siz / 2) + "px";
   } else {
   var link = document.querySelector(".b-avatar-preview img").src;
+  var oldhash = link.substring(
+    link.indexOf("hash=") + 5, 
+    link.lastIndexOf("&size=")
+    );
+  var path = document.getElementById("av_path").value;
+  var newhash = md5(path + siz);
   var changedLink = link.substring(0, link.length-2);
-  document.querySelector(".b-avatar-preview img").src = changedLink + siz;
+  newchangedlink = changedLink.replace(oldhash, newhash);
+  document.querySelector(".b-avatar-preview img").src = newchangedlink + siz;
   }
 });
 
