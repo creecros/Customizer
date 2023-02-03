@@ -24,7 +24,7 @@ Customizer - it's like magic!
 
 If you need a Logo and Favicon, try using this simple logo generator: https://creecros.github.io/simple_logo_gen/
 
-:sparkles:	**Adds a settings panel Settings>Customizer:**
+:sparkles:  **Adds a settings panel Settings>Customizer:**
 
 ![image](https://user-images.githubusercontent.com/26339368/49309828-7fc47800-f4aa-11e8-809e-8cc9686a2a2d.png)
 
@@ -69,7 +69,7 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 **Want more customization? Take a look at [BlueTek](https://github.com/BlueTeck)'s [BoardCustomizer](https://github.com/BlueTeck/kanboard_plugin_boardcustomizer) plugin**
 
-## Favicon :beginner:	
+## Favicon :beginner:   
 
 ![image](https://user-images.githubusercontent.com/26339368/47174055-a43f0900-d2dd-11e8-9932-430e11b74fea.png)
 
