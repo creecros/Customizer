@@ -837,7 +837,8 @@ input[type="text"]:not(.input-addon-field) {
     padding-left: 4px;
     font-family: sans-serif;
     -webkit-appearance: none;
-    -moz-appearance: none
+    -moz-appearance: none;
+    appearance: none;
 }
 
 input[type="number"]::-webkit-input-placeholder,
@@ -1097,7 +1098,8 @@ ul.form-errors li {
     color: #999;
     margin: 0;
     -webkit-appearance: none;
-    -moz-appearance: none
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .input-addon-field:first-child {
@@ -1237,6 +1239,7 @@ a.btn {
 .btn {
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     font-size: 1.2em;
     font-weight: normal;
     cursor: pointer;
@@ -1246,7 +1249,7 @@ a.btn {
     margin: 0;
     border: 1px solid #ddd;
     background: #f5f5f5;
-    color: #333
+    color: #333;
 }
 
 .btn:hover,
@@ -2342,6 +2345,7 @@ td.board-column-task-collapsed {
 .board-rotation {
     white-space: nowrap;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
