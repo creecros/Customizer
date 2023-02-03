@@ -8,7 +8,7 @@
 body {
     color: #868ba1;
     background-color: #e9ecef;
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-s
+    font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
 }
 
 .page {
@@ -44,7 +44,7 @@ header h1 {
     color: #ffffff;
     font-weight: 600;
     font-size: 1.1rem;
-    line-height: 2rem
+    line-height: 2rem;
 }
 
 header .web-notification-icon {
@@ -71,7 +71,7 @@ a i.web-notification-icon:hover {
     font-size: 12px;
     text-align: center;
     padding-left: 15px;
-    padding-right: 15px
+    padding-right: 15px;
 }
 
 label {
@@ -106,7 +106,7 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 2px;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    height: auto
+    height: auto;
 }
 
 .select-dropdown-input {
@@ -236,7 +236,7 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
 }
 
 .sidebar>ul li.active {
-    background-color: #f8f9fa
+    background-color: #f8f9fa;
 }
 
 .sidebar ul>li.active a {
@@ -255,7 +255,7 @@ table.table-fixed th {
     background: #3B6998;
 }
 table.table-fixed th, table.table-fixed th a {
-    color: #ffffff ;
+    color: #ffffff;
 }
 
 table.table-fixed th, table.table-fixed td {

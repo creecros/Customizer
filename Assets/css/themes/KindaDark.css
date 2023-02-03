@@ -16,22 +16,22 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-	/* Chrome/Opera/Safari */
+    /* Chrome/Opera/Safari */
   color: #3c3c3c;
 }
 
 ::-moz-placeholder {
-	/* Firefox 19+ */
+    /* Firefox 19+ */
   color: #3c3c3c;
 }
 
 :-ms-input-placeholder {
-	/* IE 10+ */
+    /* IE 10+ */
   color: #3c3c3c;
 }
 
 :-moz-placeholder {
-	/* Firefox 18- */
+    /* Firefox 18- */
   color: #3c3c3c;
 }
 
