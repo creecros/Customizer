@@ -32,7 +32,7 @@ th,td {
 }
 header {
 	border-bottom: none;
-	box-shadow: 0px 1px 3px 0 rgba(46,61,73,.12);
+	box-shadow: 0 1px 3px 0 rgba(46,61,73,.12);
 	padding: 15px 10px;
 	margin-bottom: 15px;
 	background-color: #e8fbff!important;
@@ -55,7 +55,7 @@ label {
 	margin-bottom: 8px;
 	padding: 12px;
 	border-radius: 6px;
-	box-shadow: 0px 5px 5px 0 rgba(46,61,73,.12);
+	box-shadow: 0 5px 5px 0 rgba(46,61,73,.12);
 	border: none;
 }
 .task-board-title {
@@ -253,7 +253,7 @@ a i.web-notification-icon {
 	padding: 7px;
 	border-radius: 7px;
 	border-left: 2px solid #e9e9e9;
-	box-shadow: 1px 0px 7px 0 rgba(46,61,73,.12);
+	box-shadow: 1px 0 7px 0 rgba(46,61,73,.12);
 }
 input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
 	color: #000;

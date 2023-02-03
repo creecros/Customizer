@@ -75,7 +75,7 @@ a i.web-notification-icon:hover {
 }
 
 label {
-    padding: 0px 40px 0 0px;
+    padding: 0 40px 0 0;
 	line-height: 25px;
     vertical-align: middle;
     font-size: .9rem;
