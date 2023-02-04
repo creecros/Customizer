@@ -644,8 +644,8 @@ textarea
 
 textarea:focus
 {
-    -webkit-box-shadow:none;
-    box-shadow:none
+    -webkit-box-shadow: none;
+    box-shadow: none
 }
 
 .select2-container--default,.select2-selection--single
