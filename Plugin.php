@@ -113,7 +113,7 @@ class Plugin extends Base
         $wasmaster = str_replace('v', '', APP_VERSION);
         $wasmaster = preg_replace('/\s+/', '', $wasmaster);
         
-        if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
+        if (strpos(APP_VERSION, 'master') !== false || strpos(APP_VERSION, 'main') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
         if (version_compare($wasmaster, '1.2.4') >= 0) {
         	$this->template->setTemplateOverride('header/title', 'customizer:header/title');
 	} else {
