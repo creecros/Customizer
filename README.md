@@ -124,11 +124,12 @@ If you need a Logo and Favicon, try using this simple logo generator: https://cr
 
 **Will probably not function fully with other CSS plugins that override templates related to layout or headers**
 
-## Theme Plugins that support Customizer
+## Theme & Other Plugins that support Customizer
    * https://github.com/kenlog/nebula :dash:
    * https://github.com/kenlog/Moon :waning_gibbous_moon:
    * https://github.com/aljawaid/KanboardCSS :computer:
    * https://github.com/kenlog/Essential
+   * [ApplicationBranding](https://github.com/aljawaid/ApplicationBranding)
 
 *Make pull request to add other theme support, must come from theme maintainer.*
 
