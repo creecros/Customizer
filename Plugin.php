@@ -74,12 +74,6 @@ class Plugin extends Base
 	$customizer['login_btn_width'] = $this->configModel->get('login_btn_width', '95');
 	$customizer['login_note'] = $this->configModel->get('login_note', '');
 	    
-        //Templates and Assets
-        if (!file_exists('plugins/ApplicationBranding')) {
-            $this->template->setTemplateOverride('header/title', 'customizer:header/title');
-            $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
-            $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
-        }
 
         $this->template->hook->attach('template:config:sidebar', 'customizer:config/sidebar');
         $this->template->setTemplateOverride('header/user_dropdown', 'customizer:header/user_dropdown');
@@ -122,6 +116,19 @@ class Plugin extends Base
 	} else {
         	$this->template->setTemplateOverride('header/title', 'customizer:header/title_older_kb');
 	}
+	
+	        //Templates and Assets
+    if (!file_exists('plugins/ApplicationBranding')) {
+        $this->template->setTemplateOverride('header/title', 'customizer:header/title');
+        if (strpos(APP_VERSION, 'master') !== false || strpos(APP_VERSION, 'main') !== false && file_exists('ChangeLog')) { $wasmaster = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
+            if (version_compare($wasmaster, '1.2.29') >= 0) {
+                $this->template->setTemplateOverride('layout', 'customizer:layout/layout_1229');
+            } else {
+                $this->template->setTemplateOverride('layout', 'customizer:layout/layout');
+            }
+            
+        $this->template->setTemplateOverride('auth/index', 'customizer:layout/index');
+    }
 	    
     }
   
