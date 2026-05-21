@@ -129,17 +129,21 @@ input[type="number"], input[type="date"], input[type="email"], input[type="passw
 }
 
 .page-header a {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
 }
 
+.page-header a:hover {
+    color: #d0d0d0;
+}
+
 #config-section .page-header a {
-    color: #000;
+    color: #ffffff;
     font-size: 0.8rem;
 }
 
 .page-header a .fa {
-    color: #868e96;
+    color: #ffffff;
 }
 
 .menus-container a .fa {
@@ -271,4 +275,24 @@ table.table-fixed th, table.table-fixed td {
 	.sidebar {
 	max-width: 100%;
 	}
+}
+
+.project-header {
+    overflow: hidden;
+}
+
+.project-header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#board-container {
+    clear: both;
+}
+
+.board-column-title,
+.board-column-title .dropdown-menu,
+.board-column-header-task-count {
+    white-space: nowrap;
 }
